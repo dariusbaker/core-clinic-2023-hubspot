@@ -1,0 +1,82 @@
+<aside class="package-banner package-banner--{{ module.style.color_option }}">
+  <div class="package-banner__header">
+    <h1 class="
+      package-banner__title
+      h4">
+      {{ module.title }}
+    </h1>
+    <div class="package-banner__desc">
+      {{ module.desc }}
+    </div>
+  </div>
+  <div class="package-banner__list">
+    {% for package in module.packages %}
+      <div class="package-banner__item">
+        {# package card #}
+        <article class="package-card {{ package.badge_text is truthy ? "package-card--badge" : "" }}">
+          {% if package.badge_text is truthy %}
+            <div class="
+              package-card__badge
+              badge">
+              <i class="
+                package-card__badge-icon
+                icon icon--s
+                fas fa-star">
+              </i>
+              {{ package.badge_text }}
+            </div>
+          {% endif %}
+          <div class="package-card__body {{ package.badge_text is truthy ? "package-card__body--badge" : "" }}">
+            <div class="package-card__header">
+              <h1 class="
+                package-card__title
+                h5">
+                {{ package.title }}
+              </h1>
+              <div class="package-card__price-grp">
+                <div class="
+                  package-card__price
+                  h3">
+                  {{ package.price }}
+                </div>
+                <div class="package-card__label">
+                  {{ package.label_text }}
+                </div>
+              </div>
+            </div>
+            <div class="package-card__buy-grp">
+              <div class="package-card__button-wrap">
+                {% if package.is_mb_enabled %}
+                  <healcode-widget
+                    data-version="0.2"
+                    data-link-class="package-card__button button button--s"
+                    data-site-id="{{ widget_data.site_config.mindbody.site_id }}"
+                    data-mb-site-id="{{ widget_data.site_config.mindbody.mb_site_id }}"
+                    data-type="pricing-link"
+                    data-inner-html="{{ package.button_text }}"
+                    data-service-id="{{ package.service_id }}"
+                  />
+                {% else %}
+                  {% set href = package.link.url.href || '' %}
+                  {% set rel = (package.link.open_in_new_tab ? 'noopener ' : null) ~ (package.link.no_follow ? 'nofollow' : null) %}
+                  <a
+                    {% if package.link.open_in_new_tab %}target="_blank"{% endif %}
+                    href="{{ href }}"
+                    rel ="{{ rel }}"
+                    class="
+                      package-card__button
+                      button button--s">
+                    {{ package.button_text }}
+                  </a>
+                {% endif %}
+              </div>
+              <div class="package-card__excerpt">
+                {{ package.excerpt }}
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    {% endfor %}
+  </div>
+</aside>

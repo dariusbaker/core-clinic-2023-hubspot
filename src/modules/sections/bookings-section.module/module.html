@@ -1,0 +1,70 @@
+<section class="bookings-section">
+  <div class="bookings-section__header">
+    <h1 class="
+      bookings-section__title
+      section-header__title
+      h4">
+      {{ module.title }}
+    </h1>
+    <div class="
+      bookings-section__desc
+      section-header__desc">
+      {{ module.desc }}
+    </div>
+    {% if module.is_link_enabled %}
+      {% set href = module.link.url.href || '' %}
+      {% set rel = (module.link.open_in_new_tab ? 'noopener ' : null) ~ (module.link.no_follow ? 'nofollow' : null) %}
+      <a
+        {% if module.link.open_in_new_tab %}target="_blank"{% endif %}
+        href="{{ href }}"
+        rel ="{{ rel }}"
+        class="
+          bookings-section__button
+          section-header__button
+          button">
+        {{ module.button_text }}
+      </a>
+    {% endif %}
+  </div>
+  <div class="bookings-section__list">
+    {% for booking in module.bookings %}
+      <div class="bookings-section__item">
+        <article class="booking-card">
+          <img
+            src="{{ booking.thumb.src }}"
+            alt="{{ booking.thumb.alt }}"
+            class="
+              booking-card__thumb
+              img">
+          <div class="booking-card__body">
+            <div class="booking-card__body-content">
+              <h1 class="
+                booking-card__title
+                h3">
+                {{ booking.title }}
+              </h1>
+              <div class="
+                booking-card__locations
+                locations-line">
+                {% for location in booking.locations %}
+                  {{ location }}{{ loop.last ? "" : ", " }}
+                {% endfor %}
+              </div>
+            </div>
+            {% set href = booking.link.url.href || '' %}
+            {% set rel = (booking.link.open_in_new_tab ? 'noopener ' : null) ~ (booking.link.no_follow ? 'nofollow' : null) %}
+            <a
+              {% if booking.link.open_in_new_tab %}target="_blank"{% endif %}
+              href="{{ href }}"
+              rel ="{{ rel }}"
+              class="
+                booking-card__button
+                button button--s button--light-green">
+              {{ booking.button_text }}
+            </a>
+          </div>
+        </article>
+      </div>
+    {% endfor %}
+  </div>
+</section>

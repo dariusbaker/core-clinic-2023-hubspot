@@ -1,0 +1,22 @@
+<!--
+  templateType: email_subscription_preferences_page
+  isAvailableForNewContent: true
+  label: Core Collective - email subscription preferences
+-->
+{% extends '../layouts/base.html' %}
+
+{% block body %}
+  <main class="body-container-wrapper">
+    <div class="body-container body-container--s">
+      <section class="f-section">
+        <div class="
+          f-row
+          systems-page">
+          {% module 'subscription_preferences'
+            path='@hubspot/email_subscriptions'
+          %}
+        </div>
+      </section>
+    </div>
+  </main>
+{% endblock body %}

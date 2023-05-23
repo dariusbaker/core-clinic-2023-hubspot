@@ -1,0 +1,4 @@
+.link:hover,
+.link:focus {
+  color: var(--dark-grey);
+}

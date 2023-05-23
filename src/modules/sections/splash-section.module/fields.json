@@ -1,0 +1,164 @@
+[ {
+  "id" : "title",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : true,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Section title"
+}, {
+  "id" : "is_dark_theme",
+  "name" : "is_dark_theme",
+  "display_width" : null,
+  "label" : "Dark theme",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : false
+}, {
+  "id" : "slates",
+  "name" : "slates",
+  "display_width" : null,
+  "label" : "Slates",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 4,
+    "max" : 6,
+    "sorting_label_field" : "slate.title",
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "slate.title",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Slate title",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Item title"
+  }, {
+    "id" : "slate.kicker",
+    "name" : "kicker",
+    "display_width" : null,
+    "label" : "Kicker",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Item kicker text"
+  }, {
+    "id" : "slate.thumb",
+    "name" : "thumb",
+    "display_width" : null,
+    "label" : "Thumbnail",
+    "required" : true,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://via.placeholder.com/480.png",
+      "alt" : null
+    }
+  }, {
+    "id" : "slate.link",
+    "name" : "link",
+    "display_width" : null,
+    "label" : "Link",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "href" : "https://google.com",
+        "type" : "EXTERNAL"
+      },
+      "no_follow" : false,
+      "open_in_new_tab" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "title" : "Item title",
+    "kicker" : "Item kicker text",
+    "thumb" : {
+      "size_type" : "auto",
+      "src" : "https://via.placeholder.com/480.png",
+      "alt" : null
+    },
+    "link" : {
+      "url" : {
+        "href" : "https://google.com",
+        "type" : "EXTERNAL"
+      },
+      "no_follow" : false,
+      "open_in_new_tab" : false
+    }
+  }, {
+    "title" : "Item title",
+    "kicker" : "Item kicker text",
+    "thumb" : {
+      "size_type" : "auto",
+      "src" : "https://via.placeholder.com/480.png",
+      "alt" : null
+    },
+    "link" : {
+      "url" : {
+        "href" : "https://google.com",
+        "type" : "EXTERNAL"
+      },
+      "no_follow" : false,
+      "open_in_new_tab" : false
+    }
+  }, {
+    "title" : "Item title",
+    "kicker" : "Item kicker text",
+    "thumb" : {
+      "size_type" : "auto",
+      "src" : "https://via.placeholder.com/480.png",
+      "alt" : null
+    },
+    "link" : {
+      "url" : {
+        "href" : "https://google.com",
+        "type" : "EXTERNAL"
+      },
+      "no_follow" : false,
+      "open_in_new_tab" : false
+    }
+  }, {
+    "title" : "Item title",
+    "kicker" : "Item kicker text",
+    "thumb" : {
+      "size_type" : "auto",
+      "src" : "https://via.placeholder.com/480.png",
+      "alt" : null
+    },
+    "link" : {
+      "url" : {
+        "href" : "https://google.com",
+        "type" : "EXTERNAL"
+      },
+      "no_follow" : false,
+      "open_in_new_tab" : false
+    }
+  } ]
+} ]

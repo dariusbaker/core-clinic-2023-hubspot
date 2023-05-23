@@ -1,0 +1,136 @@
+<nav class="blog-pagination-nav">
+  {% set page_list = [-2, -1, 0, 1, 2] %}
+  {% if contents.total_page_count - current_page_num == 1 %}{% set offset = -1 %}
+  {% elif contents.total_page_count - current_page_num == 0 %}{% set offset = -2 %}
+  {% elif current_page_num == 2 %}{% set offset = 1 %}
+  {% elif current_page_num == 1 %}{% set offset = 2 %}
+  {% else %}{% set offset = 0 %}{% endif %}
+  {# prev set #}
+  <div class="blog-pagination-nav__prev-set">
+    {% if last_page_num %}
+      <a
+        href="{{ blog_page_link(last_page_num) }}"
+        class="
+          blog-pagination-nav__a
+          a">
+        Prev
+      </a>
+    {% endif %}
+    {% if contents.total_page_count > 5 %}
+      {% if current_page_num >= 4 %}
+        <a
+          href="{{ blog_page_link(1) }}"
+          class="
+            blog-pagination-nav__a
+            a">
+          1
+        </a>
+        <a
+          href="{% if current_page_num <= 5 %}{{ blog_page_link(1) }}{% else %}{{ blog_page_link(current_page_num - 5) }}{% endif %}"
+          class="
+            blog-pagination-nav__a
+            a">
+          ...
+        </a>
+      {% endif %}
+    {% endif %}
+  </div>
+
+  {# list #}
+  <div class="blog-pagination-nav__list">
+    {% for page in page_list %}
+      {% set this_page = current_page_num + page + offset %}
+      {% if this_page > 0 and this_page <= contents.total_page_count %}
+        <a
+          href="{{ blog_page_link(this_page) }}"
+          class="
+            {% if this_page == current_page_num %}blog-pagination-nav__a--active{% endif %}
+            blog-pagination-nav__a
+            a">
+          {{ this_page }}
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  {# next set #}
+  <div class="blog-pagination-nav__next-set">
+    {% if contents.total_page_count > 5 %}
+      {% if contents.total_page_count - current_page_num > 2 %}
+        <a
+          href="{% if contents.total_page_count - current_page_num <= 5 %}{{ contents.total_page_count }}{% else %}{{ blog_page_link(current_page_num + 5) }}{% endif %}"
+          class="
+            blog-pagination-nav__a
+            a">
+          ...
+        </a>
+        <a
+          href="{{ blog_page_link(contents.total_page_count) }}"
+          class="
+            blog-pagination-nav__a
+            a">
+          {{ contents.total_page_count }}
+        </a>
+      {% endif %}
+    {% endif %}
+    {% if next_page_num %}
+      <a
+        href="{{ blog_page_link(current_page_num + 1) }}"
+        class="
+          blog-pagination-nav__a
+          a">
+        Next
+      </a>
+    {% endif %}
+  </div>
+</nav>
+
+{# {% if contents.total_page_count > 1 %}
+  <nav class="blog-pagination-nav">
+    {% set page_list = [-2, -1, 0, 1, 2] %}
+    {% if contents.total_page_count - current_page_num == 1 %}
+      {% set offset = -1 %}
+    {% elif contents.total_page_count - current_page_num == 0 %}
+      {% set offset = -2 %}
+    {% elif current_page_num == 2 %}
+      {% set offset = 1 %}
+    {% elif current_page_num == 1 %}
+      {% set offset = 2 %}
+    {% else %}
+      {% set offset = 0 %}
+    {% endif %}
+    <a
+      class="
+        {{ if !last_page_num ? "blog-pagination-nav__prev--disabled" : "" }}
+        blog-pagination-nav__prev
+        a"
+      href="
+        blog-pagination-nav__prev
+        {{ blog_page_link(last_page_num) }}">
+      Prev
+    </a>
+    <div class="blog-pagination-nav__list">
+      {% for page in page_list %}
+        {% set this_page = current_page_num + page + offset %}
+        {% if this_page > 0 and this_page <= contents.total_page_count %}
+          <a
+            class="
+              {{ if this_page == current_page_num ? "blog-pagination-nav__a--active" : "" }}
+              blog-pagination-nav__a
+              a"
+            href="{{ blog_page_link(this_page) }}">
+            {{ this_page }}
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <a
+      class="
+        {{ if !next_page_num ? 'blog-pagination-nav__next--disabled' : "" }}
+        blog-pagination-nav__next
+        a"
+      href="{{ blog_page_link(current_page_num + 1) }}">
+      Next
+    </a>
+  </nav>
+{% endif %} #}

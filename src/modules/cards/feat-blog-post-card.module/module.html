@@ -1,0 +1,55 @@
+<article class="feat-blog-post-card">
+  {% if content.featured_image %}
+    <img
+      src="{{ content.featured_image }}"
+      alt="{{ content.featured_image_alt_text }}"
+      class="
+        feat-blog-post-card__thumb
+        img">
+  {% endif %}
+  <div class="
+    feat-blog-post-card__gradient-overlay
+    gradient-overlay gradient-overlay--left"></div>
+  <div class="feat-blog-post-card__body">
+    <a
+      href="{{ content.absolute_url }}"
+      class="
+        feat-blog-post-card__a
+        a">
+      <h1 class="
+        feat-blog-post-card__title
+        h5">
+        {{ content.name }}
+      </h1>
+      <time
+        datetime="{{ content.publish_date | datetimeformat('%Y-%m-%e %H:%M:%S') }}"
+        class="time time--dark">
+        {{ content.publish_date | datetimeformat('%e %b %Y') }}
+      </time>
+    </a>
+    {% if content.tag_list is truthy %}
+      <div class="feat-blog-post-card__tags">
+        <ul class="
+          feat-blog-post-card__tag-list
+          card-tag-list__list
+          list">
+          {% for tag in content.tag_list %}
+            <li class="
+              feat-blog-post-card__tag-item
+              card-tag-list__item
+              li">
+              <a
+                href="{{ blog_tag_url(group.id, tag.slug) }}"
+                class="
+                  feat-blog-post-card__tag
+                  card-tag-list__tag
+                  a">
+                {{ tag.name }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  </div>
+</article>

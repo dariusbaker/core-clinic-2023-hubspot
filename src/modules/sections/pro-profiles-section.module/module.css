@@ -1,0 +1,202 @@
+.pro-profiles-section__title {
+  margin-bottom: var(--space-5);
+}
+
+.pro-profiles-section__filter {
+  margin-bottom: var(--space-5);
+}
+
+.pro-profiles-section__filter-title {
+  margin-bottom: var(--space-3);
+}
+
+.pro-profiles-section__item + .pro-profiles-section__item {
+  border-top: var(--border-width-1) solid var(--grey);
+}
+
+@media (min-width: 480px) {
+  .pro-profiles-section__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--space-5));
+    margin-left: calc(-1 * var(--space-5));
+  }
+
+  .pro-profiles-section__item {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-top: var(--space-5);
+    padding-left: var(--space-5);
+  }
+
+  .pro-profiles-section__item + .pro-profiles-section__item {
+    margin-top: 0;
+    padding-top: var(--space-5);
+    border-top: 0;
+  }
+}
+
+@media (min-width: 960px) {
+  .pro-profiles-section__item {
+    flex: 0 0 calc(100% / 3);
+    max-width: calc(100% / 3);
+  }
+}
+
+@media (min-width: 1280px) {
+  .pro-profiles-section__item {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+/* variant: featured */
+@media (min-width: 960px) {
+  .pro-profiles-section__item--feat {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .pro-profiles-section__item--feat {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+
+/* card */
+.pro-profile-card {
+  height: 100%;
+  background: var(--white);
+}
+
+.pro-profile-card__a {
+  display: flex;
+  align-items: flex-start;
+  height: 100%;
+  padding: var(--space-4) var(--space-3) var(--space-3);
+}
+
+.pro-profile-card__a:hover {
+  color: var(--dark-grey);
+}
+
+.pro-profile-card__thumb {
+  flex: 0 0 3rem;
+  max-width: 3rem;
+  margin-right: var(--space-2);
+  transition: opacity var(--transition-time-fast);
+  border-radius: var(--border-radius-3);
+}
+
+.pro-profile-card__a:hover .pro-profile-card__thumb {
+  opacity: var(--opacity-dim);
+}
+
+.pro-profile-card__body {
+  flex: 1 1 auto;
+  margin-left: var(--space-1);
+}
+
+.pro-profile-card__title {
+  margin-bottom: var(--space-1);
+  font-size: var(--font-scale-6);
+}
+
+.pro-profile-card__specs {
+  margin-bottom: var(--space-1);
+  font-size: var(--font-scale-7);
+}
+
+.pro-profile-card__org {
+  color: var(--dark-grey);
+  font-size: var(--font-scale-8);
+  font-weight: 700;
+  letter-spacing: var(--track);
+  text-transform: uppercase;
+}
+
+@media (max-width: 479px) {
+  .pro-profile-card {
+    box-shadow: none;
+  }
+}
+
+@media (min-width: 480px) {
+  .pro-profile-card {
+    border-radius: var(--border-radius-3);
+  }
+
+  .pro-profile-card__a {
+    padding-top: var(--space-3);
+    padding-right: var(--space-4);
+  }
+}
+
+@media (max-width: 959px) {
+  .pro-profile-card__title {
+    font-size: var(--font-scale-7);
+  }
+}
+
+/* variant: featured */
+@media (min-width: 960px) {
+  .pro-profile-card--feat {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .pro-profile-card--feat .pro-profile-card__a {
+    display: block;
+    height: 100%;
+    padding: 0;
+  }
+
+  .pro-profile-card--feat .pro-profile-card__thumb,
+  .pro-profile-card--feat .pro-profile-card__body {
+    flex: 1 1 auto;
+    max-width: none;
+  }
+
+  .pro-profile-card--feat .pro-profile-card__thumb {
+    margin-right: 0;
+    border-radius: 0;
+  }
+
+  .pro-profile-card--feat .pro-profile-card__body {
+    margin-left: 0;
+    padding: var(--space-3);
+  }
+
+  .pro-profile-card--feat .pro-profile-card__title {
+    margin-bottom: var(--space-3);
+  }
+
+  .pro-profile-card--feat .pro-profile-card__specs {
+    margin-bottom: var(--space-5);
+  }
+}
+
+/* JS enhancements */
+.pro-profiles-section__filter-list:not(:empty) {
+  margin-top: calc(-1 * var(--space-2));
+}
+
+.pro-profiles-section__filter-list .button {
+  margin-top: var(--space-2);
+  margin-right: var(--space-2);
+  border-color: var(--dark-grey);
+  background: var(--dark-grey);
+  color: var(--grey);
+}
+
+.pro-profiles-section__filter-list .button[data-active='true'] {
+  border-color: var(--black);
+  background: var(--black);
+  color: var(--light-green);
+}
+
+.pro-profiles-section__item[data-hidden='true'] {
+  display: none;
+}

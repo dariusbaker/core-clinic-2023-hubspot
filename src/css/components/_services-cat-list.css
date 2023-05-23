@@ -1,0 +1,25 @@
+.services-cat-list__item + .services-cat-list__item {
+  margin-top: var(--space-1);
+}
+
+.services-cat-list__item-content {
+  display: inline-flex;
+  align-items: center;
+}
+
+.services-cat-list__badge,
+.services-cat-list__label {
+  flex: 0 0 auto;
+}
+
+.services-cat-list__badge {
+  margin-right: var(--space-3);
+}
+
+.services-cat-list__label {
+  font-size: var(--font-scale-8);
+  font-weight: 700;
+  letter-spacing: var(--track);
+  line-height: var(--line-height-solid);
+  text-transform: uppercase;
+}

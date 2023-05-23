@@ -1,0 +1,4 @@
+.small-desc {
+  font-size: var(--font-scale-7);
+  letter-spacing: var(--track);
+}

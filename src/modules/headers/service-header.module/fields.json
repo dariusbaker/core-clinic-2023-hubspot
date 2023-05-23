@@ -1,0 +1,76 @@
+[ {
+  "id" : "title",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : true,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Page title"
+}, {
+  "id" : "desc",
+  "name" : "desc",
+  "display_width" : null,
+  "label" : "Description",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>One to two lines describing this page</p>"
+}, {
+  "id" : "footnotes",
+  "name" : "footnotes",
+  "display_width" : null,
+  "label" : "Footnotes",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : null,
+    "sorting_label_field" : "footnote.desc",
+    "default" : 1
+  },
+  "children" : [ {
+    "id" : "footnote.type",
+    "name" : "type",
+    "display_width" : null,
+    "label" : "Type",
+    "required" : true,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "note", "Note" ], [ "tip", "Tip" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "note"
+  }, {
+    "id" : "footnote.desc",
+    "name" : "desc",
+    "display_width" : null,
+    "label" : "Description",
+    "required" : true,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>One to two lines of item footnote</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "type" : "note",
+    "desc" : "<p>One to two lines of item footnote</p>"
+  } ]
+}, {
+  "id" : "is_dark_theme",
+  "name" : "is_dark_theme",
+  "display_width" : null,
+  "label" : "Dark theme",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : false
+} ]

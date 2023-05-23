@@ -1,0 +1,12 @@
+.announcement-bar {
+  color: var(--dark-grey);
+  font-size: var(--font-scale-8);
+  font-weight: 600;
+  letter-spacing: var(--track);
+  line-height: var(--line-height-tight);
+  text-align: center;
+}
+
+.announcement-bar p {
+  max-width: none;
+}

@@ -1,0 +1,33 @@
+<section class="groups">
+  <div class="groups__list">
+    {% for group in module.groups %}
+      <div class="groups__item">
+        <article class="group-card">
+          {% set href = group.link.url.href || '' %}
+          {% set rel = (group.link.open_in_new_tab ? 'noopener ' : null) ~ (group.link.no_follow ? 'nofollow' : null) %}
+          <a
+            {% if group.link.open_in_new_tab %}target="_blank"{% endif %}
+            href="{{ href }}"
+            rel ="{{ rel }}"
+            class="
+              group-card__a
+              a">
+            <img
+              src="{{ group.thumb.src }}"
+              alt="{{ group.thumb.alt }}"
+              class="
+                group-card__thumb
+                img">
+            <div class="
+              group-card__overlay
+              gradient-overlay">
+            </div>
+            <h1 class="
+              group-card__title
+              h5">{{ group.title }}</h1>
+          </a>
+        </article>
+      </div>
+    {% endfor %}
+  </div>
+</section>

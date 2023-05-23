@@ -1,0 +1,21 @@
+.card-tag-list__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--space-3));
+}
+
+.card-tag-list__item {
+  margin-left: var(--space-3);
+}
+
+.card-tag-list__tag {
+  color: var(--dark-grey);
+  font-size: var(--font-scale-8);
+  font-weight: 700;
+  letter-spacing: var(--track);
+  text-transform: uppercase;
+}
+
+.card-tag-list__tag:hover {
+  color: var(--mid-grey);
+}

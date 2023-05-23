@@ -1,0 +1,63 @@
+.banner {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius-3);
+  background: var(--black);
+  color: var(--white);
+}
+
+.banner__bg-img {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  opacity: var(--opacity-dim);
+}
+
+.banner__gradient-overlay {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.banner__body {
+  position: relative;
+  z-index: 3;
+  padding: var(--space-6) var(--space-5);
+}
+
+.banner__kicker {
+  margin-bottom: var(--space-2);
+  color: var(--beige);
+}
+
+.banner__title {
+  margin-bottom: 0;
+}
+
+.banner__desc {
+  margin-top: var(--space-3);
+}
+
+.banner__button {
+  margin-top: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .banner__body {
+    padding: var(--space-7) var(--space-6);
+  }
+}
+
+@media (min-width: 960px) {
+  .banner__body {
+    padding: var(--space-8) var(--space-7);
+  }
+}

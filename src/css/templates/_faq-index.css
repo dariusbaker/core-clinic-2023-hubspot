@@ -1,0 +1,16 @@
+.faq-index__topic-row + .faq-index__topic-row .faq-index__topic-row-content {
+  padding-top: var(--space-8);
+  border-top: var(--border-width-1) solid var(--grey);
+}
+
+@media (min-width: 960px) {
+  .faq-index__topic-row + .faq-index__topic-row .faq-index__topic-row-content {
+    padding-top: var(--space-10);
+  }
+}
+
+@media (min-width: 1280px) {
+  .faq-index__topic-row + .faq-index__topic-row .faq-index__topic-row-content {
+    padding-top: var(--space-12);
+  }
+}

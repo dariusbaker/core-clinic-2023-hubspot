@@ -1,0 +1,11 @@
+{% if widget_data.site_config.content.is_announcement_published %}
+  <div class="header-announcement-bar">
+    <div class="content-wrapper content-wrapper--l">
+      <div class="content-wrapper__section">
+        <div class="announcement-bar">
+          {{ module.desc }}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}

@@ -1,0 +1,64 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Pricing
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+  <main class="body-container-wrapper body-container-wrapper--light">
+    {% dnd_area 'body_area'
+      class='body-container',
+      label='Body area',
+    %}
+      {% dnd_section %}
+        {% dnd_column %}
+          {# header #}
+          {% dnd_row %}
+            {% dnd_module
+              path='/core-collective-theme/modules/headers/page-header',
+              label="Page header",
+            %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+
+          {# standard pricing packages #}
+          {% dnd_row %}
+            {% dnd_module
+              path='/core-collective-theme/modules/sections/pricings-section',
+              label="Pricings section",
+            %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
+
+    {% dnd_area 'footer_area'
+      class='body-container',
+      label='Footer area',
+    %}
+      {% dnd_section %}
+        {% dnd_column %}
+          {# corporate wellness banner #}
+          {% dnd_row %}
+            {% dnd_module
+              path='/core-collective-theme/modules/banners/banner',
+              label="Banner",
+            %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+
+          {# faq #}
+          {% dnd_row %}
+            {% dnd_module
+              path='/core-collective-theme/modules/sections/faq-section',
+              label="FAQ section",
+            %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
+  </main>
+{% endblock body %}

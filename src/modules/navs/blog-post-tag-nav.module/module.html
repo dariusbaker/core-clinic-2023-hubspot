@@ -1,0 +1,15 @@
+{% if content.tag_list %}
+  <nav class="blog-post-tag-nav">
+    <div class="blog-post-tag-nav__list">
+      {% for tag in content.tag_list %}
+        <a
+          href="{{ blog_tag_url(group.id, tag.slug) }}"
+          class="
+            blog-post-tag-nav__tag
+            button button--s button--black">
+          {{ tag.name }}
+        </a>
+      {% endfor %}
+    </div>
+  </nav>
+{% endif %}

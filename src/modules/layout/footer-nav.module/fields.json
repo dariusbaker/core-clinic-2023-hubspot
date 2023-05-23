@@ -1,0 +1,200 @@
+[ {
+  "id" : "description",
+  "name" : "description",
+  "display_width" : null,
+  "label" : "Description",
+  "required" : false,
+  "locked" : true,
+  "children" : [ {
+    "id" : "description.clinic",
+    "name" : "clinic",
+    "display_width" : null,
+    "label" : "Clinic",
+    "required" : true,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>One to two lines describing Core Clinic</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group"
+}, {
+  "id" : "quick_nav",
+  "name" : "quick_nav",
+  "display_width" : null,
+  "label" : "Quick navigation",
+  "required" : true,
+  "locked" : true,
+  "type" : "menu"
+}, {
+  "id" : "services_nav",
+  "name" : "services_nav",
+  "display_width" : null,
+  "label" : "Services navigation",
+  "required" : true,
+  "locked" : true,
+  "type" : "menu"
+}, {
+  "id" : "main_nav",
+  "name" : "main_nav",
+  "display_width" : null,
+  "label" : "Main navigation",
+  "required" : true,
+  "locked" : true,
+  "type" : "menu"
+}, {
+  "id" : "social_nav",
+  "name" : "social_nav",
+  "display_width" : null,
+  "label" : "Social navigation",
+  "required" : false,
+  "locked" : true,
+  "occurrence" : {
+    "min" : 1,
+    "max" : null,
+    "sorting_label_field" : "social.account",
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "social.account",
+    "name" : "account",
+    "display_width" : null,
+    "label" : "Account",
+    "required" : true,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "facebook", "Facebook" ], [ "twitter", "Twitter" ], [ "instagram", "Instagram" ], [ "linkedin", "LinkedIn" ], [ "youtube", "YouTube" ], [ "pinterest", "Pinterest" ], [ "envelope", "Email" ], [ "link", "Website" ], [ "whatsapp", "Whatsapp" ], [ "custom_icon", "Custom icon" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "facebook"
+  }, {
+    "id" : "social.custom_icon",
+    "name" : "custom_icon",
+    "display_width" : null,
+    "label" : "Custom icon",
+    "required" : true,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "social.account",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "custom_icon",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "icon_set" : "fontawesome-5.0.10",
+    "type" : "icon",
+    "default" : {
+      "name" : "hubspot"
+    }
+  }, {
+    "id" : "social.link",
+    "name" : "link",
+    "display_width" : null,
+    "label" : "Link",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "supported_types" : [ "EXTERNAL", "EMAIL_ADDRESS" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "href" : "https://google.com",
+        "type" : "EXTERNAL"
+      },
+      "no_follow" : false,
+      "open_in_new_tab" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "account" : "facebook",
+    "link" : {
+      "url" : {
+        "href" : "https://facebook.com",
+        "type" : "EXTERNAL"
+      },
+      "no_follow" : false,
+      "open_in_new_tab" : false
+    }
+  }, {
+    "account" : "twitter",
+    "link" : {
+      "url" : {
+        "href" : "https://twitter.com",
+        "type" : "EXTERNAL"
+      },
+      "no_follow" : false,
+      "open_in_new_tab" : false
+    }
+  }, {
+    "account" : "instagram",
+    "link" : {
+      "url" : {
+        "href" : "https://instagram.com",
+        "type" : "EXTERNAL"
+      },
+      "no_follow" : false,
+      "open_in_new_tab" : false
+    }
+  }, {
+    "account" : "linkedin",
+    "link" : {
+      "url" : {
+        "href" : "https://linkedin.com",
+        "type" : "EXTERNAL"
+      },
+      "no_follow" : false,
+      "open_in_new_tab" : false
+    }
+  } ]
+}, {
+  "id" : "legal_nav",
+  "name" : "legal_nav",
+  "display_width" : null,
+  "label" : "Legal navigation",
+  "required" : true,
+  "locked" : true,
+  "type" : "menu"
+}, {
+  "id" : "copyright",
+  "name" : "copyright",
+  "display_width" : null,
+  "label" : "Copyright",
+  "required" : false,
+  "locked" : true,
+  "children" : [ {
+    "id" : "copyright.logo",
+    "name" : "logo",
+    "display_width" : null,
+    "label" : "Logo",
+    "required" : true,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://via.placeholder.com/40.png",
+      "alt" : null
+    }
+  }, {
+    "id" : "copyright.desc",
+    "name" : "desc",
+    "display_width" : null,
+    "label" : "Description",
+    "required" : true,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>One to two lines describing this item</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group"
+} ]

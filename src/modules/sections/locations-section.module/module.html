@@ -1,0 +1,70 @@
+<section class="locations">
+  <div class="locations__header">
+    <h1 class="
+      locations__title
+      section-header__title
+      h4">
+      {{ module.title }}
+    </h1>
+    <div class="
+      locations__desc
+      section-header__desc">
+      {{ module.desc }}
+    </div>
+  </div>
+  <div class="locations__list-wrap">
+    <div class="locations__list">
+      {% for location in module.locations %}
+        <div class="locations__item">
+          <article class="location-card">
+            <i class="
+              location-card__icon
+              icon icon--l
+              fas fa-map-marker-alt">
+            </i>
+            <h1 class="
+              location-card__title
+              h3">
+              {{ location.title }}
+            </h1>
+            <div class="location-card__address">
+              {{ location.address }}
+            </div>
+            <ul class="
+              location-card__tel-list
+              list">
+            {% for item in location.tel %}
+              <li class="
+                location-card__tel-item
+                li">
+                <a
+                  href="tel:{{ item }}"
+                  class="
+                    location-card__tel
+                    a link">
+                  {{ item }}
+                </a>
+              </li>
+            {% endfor %}
+            </ul>
+            {% if location.link %}
+              {% set href = location.link.url.href || '' %}
+              {% set rel = (location.link.open_in_new_tab ? 'noopener ' : null) ~ (location.link.no_follow ? 'nofollow' : null) %}
+              <div class="location-card__a-wrap">
+                <a
+                  {% if location.link.open_in_new_tab %}target="_blank"{% endif %}
+                  href="{{ href }}"
+                  rel ="{{ rel }}"
+                  class="
+                    location-card__a
+                    a lead">
+                  {{ location.button_text }}
+                </a>
+              </div>
+            {% endif %}
+          </article>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

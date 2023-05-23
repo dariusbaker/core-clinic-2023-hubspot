@@ -1,0 +1,51 @@
+<section class="
+  {{ module.is_dark_theme ? "splash-section--dark" : "" }}
+  splash-section">
+  <h2 class="
+    splash-section__subtitle
+    h4">
+    {{ module.title }}
+  </h2>
+  <div class="splash-section__list-wrap">
+    <div class="splash-section__list">
+      {% for slate in module.slates %}
+        <div class="splash-section__item splash-section__item--{{loop.length}}-{{loop.index}}">
+          <article class="splash-card splash-card--{{loop.length}}-{{loop.index}}">
+            {% set href = slate.link.url.href || '' %}
+            {% set rel = (slate.link.open_in_new_tab ? 'noopener ' : null) ~ (slate.link.no_follow ? 'nofollow' : null) %}
+            <a
+              {% if slate.link.open_in_new_tab %}target="_blank"{% endif %}
+              href="{{ href }}"
+              rel ="{{ rel }}"
+              class="
+                splash-card__a
+                a">
+              <img
+                src="{{ slate.thumb.src }}"
+                alt="{{ slate.thumb.alt }}"
+                class="splash-card__thumb">
+              <div class="
+                splash-card__overlay
+                gradient-overlay">
+              </div>
+              <div class="splash-card__body-wrap">
+                <div class="splash-card__body">
+                  <h2 class="
+                    splash-card__kicker
+                    h6">
+                    {{ slate.kicker }}
+                  </h2>
+                  <h2 class="
+                    splash-card__title
+                    h3">
+                    {{ slate.title }}
+                  </h2>
+                </div>
+              </div>
+            </a>
+          </article>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

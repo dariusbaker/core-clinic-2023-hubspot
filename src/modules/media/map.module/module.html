@@ -1,0 +1,7 @@
+<div
+  class="map"
+  id="{{ module.title | lower | replace(' ', '-') }}"
+  data-center='{{ module.center | tojson }}'
+  data-zoom="{{ module.zoom }}"
+  data-markers='{{ module.markers | tojson }}'>
+</div>

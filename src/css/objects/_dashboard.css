@@ -1,0 +1,8 @@
+.private-list__item {
+  display: block;
+}
+
+.private-list__item::before {
+  content: '';
+  padding-right: 0;
+}

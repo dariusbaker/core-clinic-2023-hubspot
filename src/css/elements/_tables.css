@@ -1,0 +1,29 @@
+/* Table */
+table {
+  margin-bottom: var(--space-5);
+  border: var(--border-width-2) solid var(--grey);
+}
+
+tbody + tbody {
+  border-top: var(--border-width-2) solid var(--grey);
+}
+
+/* Table Cells */
+th,
+td {
+  padding: var(--space-3);
+  border: var(--border-width-2) solid var(--grey);
+  vertical-align: top;
+}
+
+/* Table Header */
+thead th,
+thead td {
+  border-bottom: var(--border-width-2) solid var(--grey);
+  font-size: var(--font-scale-7);
+  font-weight: 700;
+  letter-spacing: var(--track-wide);
+  line-height: var(--line-height-solid);
+  text-transform: uppercase;
+  vertical-align: bottom;
+}

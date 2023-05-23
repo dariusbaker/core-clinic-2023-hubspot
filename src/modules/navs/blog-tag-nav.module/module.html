@@ -1,0 +1,31 @@
+{% set tags = blog_tags(group.id, 250) %}
+{% if tags is truthy %}
+  <nav class="blog-tag-nav">
+    {% if module.title is truthy %}
+      <div class="blog-tag-nav__header">
+        <h1 class="
+          blog-tag-nav__title
+          h5">
+          {{ module.title }}
+        </h1>
+      </div>
+    {% endif %}
+    <ul class="
+      blog-tag-nav__list
+      list">
+      {% for tag in tags %}
+        <li class="
+          blog-tag-nav__item
+          li">
+          <a
+            href="{{ blog_tag_url(group.id, tag.slug) }}"
+            class="
+              blog-tag-nav__tag
+              a">
+            {{ tag }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+{% endif %}

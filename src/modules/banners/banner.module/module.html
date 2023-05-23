@@ -1,0 +1,35 @@
+<aside class="banner">
+  <img
+    src="{{ module.bg_img.src }}"
+    alt="{{ module.bg_img.alt }}"
+    class="banner__bg-img">
+  <div class="
+    banner__gradient-overlay
+    gradient-overlay gradient-overlay--left"></div>
+  <div class="banner__body">
+    <div class="
+      banner__kicker
+      h6">
+      {{ module.kicker }}
+    </div>
+    <h1 class="
+      banner__title
+      h3">
+      {{ module.title }}
+    </h1>
+    <div class="banner__desc">
+      {{ module.desc }}
+    </div>
+    {% set href = module.link.url.href || '' %}
+    {% set rel = (module.link.open_in_new_tab ? 'noopener ' : null) ~ (module.link.no_follow ? 'nofollow' : null) %}
+    <a
+      {% if module.link.open_in_new_tab %}target="_blank"{% endif %}
+      href="{{ href }}"
+      rel ="{{ rel }}"
+      class="
+        banner__button
+        button">
+      {{ module.button_text }}
+    </a>
+  </div>
+</aside>

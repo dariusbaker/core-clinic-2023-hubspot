@@ -1,0 +1,10 @@
+[ {
+  "id" : "desc",
+  "name" : "desc",
+  "display_width" : null,
+  "label" : "Description",
+  "required" : true,
+  "locked" : true,
+  "type" : "richtext",
+  "default" : "<p>One line describing this item</p>"
+} ]

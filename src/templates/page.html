@@ -1,0 +1,40 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Page
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+  <main class="body-container-wrapper">
+    {% dnd_area 'header_area'
+      class='body-container body-container--s',
+      label='Header area',
+    %}
+      {# header #}
+      {% dnd_section %}
+        {% dnd_module
+          path='/core-collective-theme/modules/headers/page-header',
+          label="Page header",
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
+
+    {% dnd_area 'body_area'
+      class='body-container body-container--s body-container--pull-top',
+      label='Body area',
+    %}
+      {# content #}
+      {% dnd_section %}
+        {% dnd_module "rich_text"
+          path="@hubspot/rich_text",
+          label="Body" %}
+          {% module_attribute "html" %}
+            <p>Page content</p>
+          {% end_module_attribute %}
+        {% end_dnd_module %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
+  </main>
+{% endblock body %}

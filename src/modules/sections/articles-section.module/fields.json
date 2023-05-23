@@ -1,0 +1,112 @@
+[ {
+  "id" : "title",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : true,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Section title"
+}, {
+  "id" : "desc",
+  "name" : "desc",
+  "display_width" : null,
+  "label" : "Description",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>One to two lines describing this section</p>"
+}, {
+  "id" : "articles",
+  "name" : "articles",
+  "display_width" : null,
+  "label" : "articles",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : null,
+    "sorting_label_field" : "article.title",
+    "default" : 1
+  },
+  "children" : [ {
+    "id" : "article.title",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Name",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Item name"
+  }, {
+    "id" : "article.excerpt",
+    "name" : "excerpt",
+    "display_width" : null,
+    "label" : "Excerpt",
+    "required" : true,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>One to two lines describing this item</p>"
+  }, {
+    "id" : "article.thumb",
+    "name" : "thumb",
+    "display_width" : null,
+    "label" : "Thumbnail",
+    "required" : true,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://via.placeholder.com/640x360.png",
+      "alt" : null
+    }
+  }, {
+    "id" : "article.link",
+    "name" : "link",
+    "display_width" : null,
+    "label" : "Link",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "href" : "https://google.com",
+        "type" : "EXTERNAL"
+      },
+      "no_follow" : false,
+      "open_in_new_tab" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "title" : "Item name",
+    "excerpt" : "<p>One to two lines describing this item</p>",
+    "thumb" : {
+      "size_type" : "auto",
+      "src" : "https://via.placeholder.com/640x360.png",
+      "alt" : null
+    },
+    "link" : {
+      "url" : {
+        "href" : "https://google.com",
+        "type" : "EXTERNAL"
+      },
+      "no_follow" : false,
+      "open_in_new_tab" : false
+    }
+  } ]
+} ]

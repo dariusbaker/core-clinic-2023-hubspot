@@ -1,0 +1,124 @@
+/* wrappers */
+.content-wrapper {
+  padding: 0 var(--space-5);
+}
+
+.content-wrapper__section {
+  max-width: var(--wrap);
+  margin: 0 auto;
+}
+
+.content-wrapper--l .content-wrapper__section {
+  max-width: var(--wrap-l);
+}
+
+.body-container-wrapper {
+  background: var(--background);
+}
+
+.body-container-wrapper--light {
+  background: var(--light-background);
+}
+
+@media (min-width: 960px) {
+  .content-wrapper {
+    padding-right: var(--space-7);
+    padding-left: var(--space-7);
+  }
+}
+
+@media (min-width: 1280px) {
+  .content-wrapper {
+    padding-right: var(--space-10);
+    padding-left: var(--space-10);
+  }
+}
+
+/* sections */
+.dnd-section,
+.f-section {
+  padding: var(--space-8) var(--space-5);
+}
+
+.dnd-section > .row-fluid,
+.f-section > .f-row {
+  max-width: var(--wrap);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.body-container--s .dnd-section > .row-fluid,
+.body-container--s .f-section > .f-row {
+  max-width: var(--wrap-s);
+}
+
+.body-container--l .dnd-section > .row-fluid,
+.body-container--l .f-section > .f-row {
+  max-width: var(--wrap-l);
+}
+
+.body-container--pull .dnd-section:first-child,
+.body-container--pull .f-section:first-child,
+.body-container--pull-top .dnd-section:first-child,
+.body-container--pull-top .f-section:first-child {
+  padding-top: 0;
+}
+
+.body-container--pull .dnd-section:last-child,
+.body-container--pull .f-section:last-child,
+.body-container--pull-bottom .dnd-section:last-child,
+.body-container--pull-bottom .f-section:last-child {
+  padding-bottom: 0;
+}
+
+.f-section.f-section--pull,
+.f-section.f-section--pull-top {
+  padding-top: 0;
+}
+
+.f-section.f-section--pull,
+.f-section.f-section--pull-bottom {
+  padding-bottom: 0;
+}
+
+.f-section.f-section--black {
+  background: var(--black);
+}
+
+.f-section.f-section--light-grey {
+  background: var(--light-background);
+}
+
+@media (min-width: 960px) {
+  .dnd-section,
+  .f-section {
+    padding: var(--space-10) var(--space-7);
+  }
+}
+
+@media (min-width: 1280px) {
+  .dnd-section,
+  .f-section {
+    padding: var(--space-12) var(--space-10);
+  }
+}
+
+/* rows */
+.dnd-section .dnd-row + .dnd-row,
+.f-section .f-row + .f-row {
+  margin-top: var(--space-6);
+}
+
+@media (min-width: 960px) {
+  .dnd-section .dnd-row + .dnd-row,
+  .f-section .f-row + .f-row {
+    margin-top: var(--space-7);
+  }
+}
+
+@media (min-width: 1280px) {
+  .dnd-section .dnd-row + .dnd-row,
+  .f-section .f-row + .f-row {
+    margin-top: var(--space-8);
+  }
+}

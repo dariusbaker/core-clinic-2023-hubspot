@@ -1,0 +1,77 @@
+#email-prefs-form input[type='checkbox'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: var(--space-2);
+  border: var(--border-width-2) solid var(--grey);
+  border-radius: var(--border-radius-1);
+  background-color: var(--white);
+}
+
+#email-prefs-form input[type='checkbox']:checked {
+  background-image: url('data:image/svg+xml,%3C%3Fxml version="1.0" encoding="UTF-8"%3F%3E%3Csvg enable-background="new 0 0 32 32" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"%3E%3Cstyle type="text/css"%3E .st0%7Bfill:%2320201D;%7D%0A%3C/style%3E%3Cpath class="st0" d="m12.8 19.9-4.2-4.2-1.4 1.4 5.6 5.6 12-12-1.4-1.4-10.6 10.6z"/%3E%3C/svg%3E%0A');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* preferences */
+.email-prefs .header {
+  margin-bottom: var(--space-3);
+  font-weight: 700;
+}
+
+.email-prefs .item + .item {
+  margin-top: var(--space-4);
+}
+
+.email-prefs .item .checkbox-row {
+  display: block;
+  margin-bottom: var(--space-1);
+  color: var(--dark-grey);
+  font-size: var(--font-scale-7);
+  font-weight: 700;
+  letter-spacing: var(--track-wide);
+  line-height: var(--line-height-solid);
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.email-prefs .item .fakelabel {
+  display: flex;
+  align-items: center;
+}
+
+.email-prefs .item .checkbox-row + p {
+  margin-left: calc(1.5rem + var(--space-2));
+  font-size: var(--font-scale-7);
+}
+
+/* subscription options */
+.email-prefs .subscribe-options {
+  margin-top: var(--space-6);
+}
+
+@media (min-width: 960px) {
+  .email-prefs .subscribe-options {
+    margin-top: var(--space-7);
+  }
+}
+
+@media (min-width: 1280px) {
+  .email-prefs .subscribe-options {
+    margin-top: var(--space-8);
+  }
+}
+
+.email-prefs .subscribe-options label {
+  display: flex;
+  align-items: center;
+}
+
+/* submit */
+.email-prefs #submitbutton {
+  margin-top: var(--space-6);
+}

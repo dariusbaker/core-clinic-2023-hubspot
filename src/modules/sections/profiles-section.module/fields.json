@@ -1,0 +1,105 @@
+[ {
+  "id" : "title",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Section title"
+}, {
+  "id" : "is_featured",
+  "name" : "is_featured",
+  "display_width" : null,
+  "label" : "Feature profiles",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : false
+}, {
+  "id" : "profiles",
+  "name" : "profiles",
+  "display_width" : null,
+  "label" : "Profiles",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : null,
+    "sorting_label_field" : "profile.title",
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "profile.title",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Name",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Person name"
+  }, {
+    "id" : "profile.job",
+    "name" : "job",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Job title"
+  }, {
+    "id" : "profile.thumb",
+    "name" : "thumb",
+    "display_width" : null,
+    "label" : "Thumbnail",
+    "required" : true,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://via.placeholder.com/180x240.png",
+      "alt" : null
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "title" : "Michelle Yong",
+    "job" : "CEO & Founder",
+    "thumb" : {
+      "size_type" : "auto",
+      "src" : "https://via.placeholder.com/180x240.png",
+      "alt" : null
+    }
+  }, {
+    "title" : "Michelle Yong",
+    "job" : "CEO & Founder",
+    "thumb" : {
+      "size_type" : "auto",
+      "src" : "https://via.placeholder.com/180x240.png",
+      "alt" : null
+    }
+  }, {
+    "title" : "Michelle Yong",
+    "job" : "CEO & Founder",
+    "thumb" : {
+      "size_type" : "auto",
+      "src" : "https://via.placeholder.com/180x240.png",
+      "alt" : null
+    }
+  } ]
+} ]

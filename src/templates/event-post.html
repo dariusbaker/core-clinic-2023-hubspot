@@ -1,0 +1,76 @@
+<!--
+  templateType: blog
+  isAvailableForNewContent: true
+  label: Core Collective - event post
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+  <main class="body-container-wrapper">
+    {# hero images #}
+    <div class="body-container body-container--l body-container--pull">
+      <div class="f-section f-section--black">
+        <div class="f-row">
+          {% module "hero_images"
+            path='/core-collective-theme/modules/media/hero-images',
+            label="Hero images",
+            hero_images=[{
+              size_type: "auto",
+              src: content.featured_image,
+              alt: content.featured_image_alt_text,
+            }]
+          %}
+        </div>
+      </div>
+    </div>
+
+    {# header #}
+    <div class="body-container body-container--s">
+      <div class="f-section f-section--black">
+        {# headings #}
+        <div class="f-row">
+          {% module "page_header"
+            path="/core-collective-theme/modules/headers/page-header",
+            label="Page header",
+            title={{ content.name | striptags }},
+            label_text=""
+            is_dark_theme=true,
+          %}
+        </div>
+
+        {# meta #}
+        <div class="
+          event-post__meta
+          post__meta post__meta--dark
+          f-row">
+          <div class="event-post__start">
+            {% module "start_datetime"
+              path="/core-collective-theme/modules/elements/datetime",
+              label="Event start",
+              is_dark_theme=true,
+            %}
+          </div>
+          <div class="
+            event-post__price
+            h4">
+            {% module "price"
+              path="@hubspot/text",
+              label="Price"
+              value="Free"
+            %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {# body #}
+    <div class="body-container body-container--s">
+      <div class="f-section">
+        {# content #}
+        <div class="f-row">
+           {{ content.post_body }}
+        </div>
+      </div>
+    </div>
+  </main>
+{% endblock body %}

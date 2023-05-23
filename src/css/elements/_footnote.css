@@ -1,0 +1,21 @@
+.footnote {
+  display: flex;
+  align-items: baseline;
+  color: var(--dark-grey);
+}
+
+.footnote__type {
+  flex: 0 0 auto;
+  margin-right: var(--space-3);
+}
+
+.footnote__desc {
+  flex: 1 1 auto;
+  font-size: var(--font-scale-7);
+}
+
+@media (min-width: 480px) {
+  .footnote__type {
+    margin-right: var(--space-4);
+  }
+}

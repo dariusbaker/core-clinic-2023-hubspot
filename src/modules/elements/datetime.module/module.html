@@ -1,0 +1,7 @@
+<time
+  datetime="{{ module.datetime }}"
+  class="
+    {{ module.is_dark_theme ? "time--dark" : "" }}
+    time">
+  {{ module.datetime | datetimeformat('%e %b %Y') }}
+</time>

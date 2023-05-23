@@ -1,0 +1,67 @@
+<section class="faq-section">
+  <h1 class="
+    faq-section__title
+    h4">
+    {{ module.title }}
+  </h1>
+  <div class="
+    faq-section__body
+    mat-shadow">
+    {% set blog_id = group.id or module.blog %}
+    {% set feat_posts = blog_recent_tag_posts(blog_id, "featured", 100) %}
+    {% if feat_posts is truthy %}
+      <ul class="
+        faq-section__list
+        list">
+        {% for content in feat_posts %}
+          <li class="
+            faq-section__item
+            li">
+            <div
+              class="faq-section__item-term"
+              data-controls="{{ content.slug | replace("/", "-") }}">
+              <h2 class="
+                faq-section__item-term-title
+                h5">
+                {{ content.name }}
+              </h2>
+              <i class="
+                faq-section__item-term-icon
+                icon icon--s
+                fas fa-chevron-right">
+              </i>
+            </div>
+            <div
+              class="faq-section__item-def"
+              id="{{ content.slug | replace("/", "-") }}">
+              <div class="faq-section__item-def-content">
+                {{ content.post_body }}
+                <div class="faq-section__item-def-updated">
+                  Updated: <time
+                    datetime="{{ content.updated | datetimeformat('%Y-%m-%e %H:%M:%S') }}"
+                    class="time">
+                    {{ content.updated | datetimeformat('%e %b %Y') }}
+                  </time>
+                </div>
+              </div>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    {% if module.is_linked is truthy %}
+      {% set href = module.link.url.href || '' %}
+      {% if href is truthy %}
+        <div class="faq-section__footer">
+          <a
+            {% if module.link.open_in_new_tab %}target="_blank"{% endif %}
+            href="{{ href }}"
+            rel ="{{ rel }}"
+            class="button">
+            {{ module.button_text }}
+          </a>
+        </div>
+      {% endif %}
+    {% endif %}
+  </div>
+</section>

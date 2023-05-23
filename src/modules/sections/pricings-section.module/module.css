@@ -1,0 +1,68 @@
+.pricings-section__title {
+  margin-bottom: var(--space-5);
+}
+
+.pricings-section__footnotes-list {
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: var(--border-width-1) solid var(--grey);
+}
+
+.pricings-section__footnotes-item + .pricings-section__footnotes-item {
+  margin-top: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .pricings-section__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--space-5));
+    margin-left: calc(-1 * var(--space-5));
+  }
+
+  .pricings-section__item {
+    flex: 1 1 50%;
+    max-width: 50%;
+    padding-top: var(--space-5);
+    padding-left: var(--space-5);
+  }
+}
+
+/* pricing card */
+.pricing-card {
+  height: 100%;
+  padding: var(--space-6) var(--space-5);
+  border-radius: var(--border-radius-3);
+  background: var(--white);
+}
+
+.pricing-card__title {
+  color: var(--dark-grey);
+}
+
+.pricing-card__subtitle {
+  margin-bottom: var(--space-2);
+}
+
+.pricing-card__list {
+  margin-top: var(--space-5);
+}
+
+.pricing-card__item + .pricing-card__item {
+  margin-top: var(--space-3);
+}
+
+@media (min-width: 640px) {
+  .pricing-card {
+    padding: var(--space-7) var(--space-6);
+  }
+}
+
+@media (min-width: 960px) {
+  .pricing-card {
+    padding: var(--space-8) var(--space-7);
+  }
+}
+
+/* package card */
+/* components/_package-card.css */

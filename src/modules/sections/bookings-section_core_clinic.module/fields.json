@@ -1,0 +1,191 @@
+[ {
+  "id" : "title",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : true,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Section title"
+}, {
+  "id" : "desc",
+  "name" : "desc",
+  "display_width" : null,
+  "label" : "Description",
+  "required" : true,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>One to two lines describing this item</p>"
+}, {
+  "id" : "is_link_enabled",
+  "name" : "is_link_enabled",
+  "display_width" : null,
+  "label" : "Enable link",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : true
+}, {
+  "id" : "link",
+  "name" : "link",
+  "display_width" : null,
+  "label" : "Link",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "href" : "https://google.com",
+      "type" : "EXTERNAL"
+    },
+    "no_follow" : false,
+    "open_in_new_tab" : false
+  }
+}, {
+  "id" : "button_text",
+  "name" : "button_text",
+  "display_width" : null,
+  "label" : "Button text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Click here"
+}, {
+  "id" : "bookings",
+  "name" : "bookings",
+  "display_width" : null,
+  "label" : "Bookings",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : null,
+    "sorting_label_field" : "booking.title",
+    "default" : 1
+  },
+  "children" : [ {
+    "id" : "booking.title",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Item name"
+  }, {
+    "id" : "booking.locations",
+    "name" : "locations",
+    "display_width" : null,
+    "label" : "Locations",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : 1,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : 1
+    },
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : true,
+    "type" : "text",
+    "default" : [ "Location" ]
+  }, {
+    "id" : "booking.link",
+    "name" : "link",
+    "display_width" : null,
+    "label" : "Link",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "href" : "https://google.com",
+        "type" : "EXTERNAL"
+      },
+      "no_follow" : false,
+      "open_in_new_tab" : false
+    }
+  }, {
+    "id" : "booking.button_text",
+    "name" : "button_text",
+    "display_width" : null,
+    "label" : "Button text",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Book"
+  }, {
+    "id" : "booking.thumb",
+    "name" : "thumb",
+    "display_width" : null,
+    "label" : "Thumbnail",
+    "required" : true,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://via.placeholder.com/120.png",
+      "alt" : null
+    }
+  }, {
+    "id" : "a55b41a3-780d-525e-1905-ba3157cf26ac",
+    "name" : "color_field",
+    "display_width" : null,
+    "label" : "Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : null,
+      "opacity" : null
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "title" : "Item name",
+    "locations" : [ "Location" ],
+    "link" : {
+      "url" : {
+        "href" : "https://google.com",
+        "type" : "EXTERNAL"
+      },
+      "no_follow" : false,
+      "open_in_new_tab" : false
+    },
+    "button_text" : "Book",
+    "thumb" : {
+      "size_type" : "auto",
+      "src" : "https://via.placeholder.com/120.png",
+      "alt" : null
+    },
+    "color_field" : {
+      "color" : null,
+      "opacity" : null
+    }
+  } ]
+} ]

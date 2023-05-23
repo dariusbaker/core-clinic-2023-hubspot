@@ -1,0 +1,4 @@
+{
+  "./src/**/*.js": ["prettier --check --ignore-unknown --write", "eslint"],
+  "./src/**/*.css": ["prettier --check --ignore-unknown --write", "stylelint --allow-empty-input"]
+}

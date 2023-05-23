@@ -1,0 +1,7 @@
+{
+  "global" : false,
+  "host_template_types" : [ "PAGE" ],
+  "module_id" : 32333957909,
+  "label" : "Bookings section",
+  "is_available_for_new_content" : true
+}

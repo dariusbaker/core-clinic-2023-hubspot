@@ -1,0 +1,21 @@
+[ {
+  "id" : "title",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Section title"
+}, {
+  "id" : "blog",
+  "name" : "blog",
+  "display_width" : null,
+  "label" : "Blog",
+  "required" : true,
+  "locked" : false,
+  "type" : "blog"
+} ]

@@ -1,0 +1,34 @@
+<section class="steps-section">
+  <div class="steps-section__list">
+    {% for step in module.steps %}
+      <div class="steps-section__item">
+        <article class="step-card">
+          <div class="
+            step-card__index
+            h6">
+            Step {{ loop.index }}
+          </div>
+          <h1 class="
+            step-card__title
+            h4">
+            {{ step.title }}
+          </h1>
+          <div class="step-card__excerpt">
+            {{ step.excerpt }}
+          </div>
+          {% set href = step.link.url.href || '' %}
+          {% set rel = (step.link.open_in_new_tab ? 'noopener ' : null) ~ (step.link.no_follow ? 'nofollow' : null) %}
+          <a
+            {% if step.link.open_in_new_tab %}target="_blank"{% endif %}
+            href="{{ href }}"
+            rel ="{{ rel }}"
+            class="
+              step-card__button
+              button">
+            {{ step.button_text }}
+          </a>
+        </article>
+      </div>
+    {% endfor %}
+  </div>
+</section>

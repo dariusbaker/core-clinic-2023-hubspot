@@ -1,0 +1,5 @@
+.menu-nav__section + .menu-nav__section {
+  margin-top: var(--space-5);
+  padding-top: var(--space-5);
+  border-top: var(--border-width-1) solid var(--grey);
+}

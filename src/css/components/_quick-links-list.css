@@ -1,0 +1,13 @@
+.quick-links-list__item + .quick-links-list__item {
+  margin-top: var(--space-3);
+}
+
+.quick-links-list__a {
+  font-family: var(--secondary-font);
+  font-size: var(--font-scale-5);
+  line-height: var(--line-height-solid);
+}
+
+.quick-links-list__a:hover {
+  color: var(--dark-grey);
+}

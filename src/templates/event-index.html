@@ -1,0 +1,39 @@
+<!--
+  templateType: blog
+  isAvailableForNewContent: true
+  label: Core Collective - event index
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+  <main class="body-container-wrapper">
+    <div class="body-container">
+      {# header #}
+      <div class="f-section">
+        <div class="f-row">
+          {% module "page_header"
+            path="/core-collective-theme/modules/headers/page-header",
+            label="Page header",
+            title="Upcoming Events",
+            label_text="Events",
+            desc="",
+          %}
+        </div>
+      </div>
+    </div>
+
+    <div class="body-container body-container--pull-top">
+      {# posts #}
+      <div class="f-section">
+        <div class="f-row">
+          {% module "events_section"
+            path="/core-collective-theme/modules/sections/events-section",
+            label="Events section",
+            title="",
+            blog={{ group.id }},
+          %}
+        </div>
+      </div>
+    </div>
+  </main>
+{% endblock body %}

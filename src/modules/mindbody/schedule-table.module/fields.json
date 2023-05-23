@@ -1,0 +1,13 @@
+[ {
+  "id" : "widget_id",
+  "name" : "widget_id",
+  "display_width" : null,
+  "label" : "Mindbody widget-id",
+  "required" : true,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "661376609b0d"
+} ]

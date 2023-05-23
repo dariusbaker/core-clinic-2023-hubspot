@@ -1,0 +1,44 @@
+[ {
+  "id" : "title",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : true,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Page title"
+}, {
+  "id" : "label_text",
+  "name" : "label_text",
+  "display_width" : null,
+  "label" : "Label",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Page label"
+}, {
+  "id" : "desc",
+  "name" : "desc",
+  "display_width" : null,
+  "label" : "Description",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>One to two lines describing this page</p>"
+}, {
+  "id" : "is_dark_theme",
+  "name" : "is_dark_theme",
+  "display_width" : null,
+  "label" : "Dark theme",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : false
+} ]

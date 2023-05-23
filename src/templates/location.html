@@ -1,0 +1,107 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Location
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+  <main class="body-container-wrapper">
+    {% dnd_area 'header_area'
+      class='body-container',
+      label='Header area',
+    %}
+      {# header #}
+      {% dnd_section %}
+        {% dnd_module
+          path='/core-collective-theme/modules/headers/page-header',
+          label="Page header",
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
+
+    {% dnd_area 'body_area'
+      class='body-container',
+      label='Body area',
+    %}
+      {# locations #}
+      {% dnd_section
+        background_color={
+          'r': 255,
+          'g': 255,
+          'b': 255,
+          'a': 1.0
+        },
+      %}
+        {% dnd_column %}
+          {# location #}
+          {% dnd_row %}
+            {% dnd_module
+              path='/core-collective-theme/modules/articles/location-article',
+              label="Location",
+            %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+
+          <iframe src="https://www.google.com/maps/embed?pb=!4v1616752580477!6m8!1m7!1sCAoSLEFGMVFpcE8xZ0xKUGt4ZjNPanBWVFZXTW5GekRiWFRwMmRlbGtQSzA0eG9a!2m2!1d1.27428754!2d103.84565236!3f95.81!4f-9.799999999999997!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+          {# location #}
+          {% dnd_row %}
+            {% dnd_module
+              path='/core-collective-theme/modules/sections/pro-profiles-section',
+              label="Featured pros",
+            %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
+
+    {% dnd_area 'footer_area'
+      class='body-container',
+      label='footer area',
+    %}
+      {# divider #}
+      {% dnd_section
+        padding={
+          'bottom': 0,
+          'left': 0,
+          'right': 0
+        },
+      %}
+        {% dnd_module
+          path="/core-collective-theme/modules/elements/divider",
+          label="Divider",
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_section %}
+
+      {# overseas locations #}
+      {% dnd_section %}
+        {% dnd_module
+          path="/core-collective-theme/modules/sections/infos-section",
+          label="Overseas locations",
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_section %}
+
+      {# map #}
+      {% dnd_section
+        full_width=true,
+        padding={
+          'top': 0,
+          'bottom': 0,
+          'left': 0,
+          'right': 0
+        },
+      %}
+        {% dnd_module
+          path="/core-collective-theme/modules/media/map",
+          label="Map",
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
+  </main>
+{% endblock body %}

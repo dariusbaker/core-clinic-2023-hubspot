@@ -1,0 +1,71 @@
+<section class="
+  {{ module.filter.is_enabled ? "pro-profiles-section--filter" : "" }}
+  pro-profiles-section">
+  {% if module.title %}
+    <h1 class="
+      pro-profiles-section__title
+      h4">
+      {{ module.title }}
+    </h1>
+  {% endif %}
+  {% if module.filter.is_enabled %}
+    <div class="pro-profiles-section__filter">
+      {% if module.filter.title %}
+        <h2 class="
+          pro-profiles-section__filter-title
+          h5">
+          {{ module.filter.title }}
+        </h2>
+      {% endif %}
+      <div class="pro-profiles-section__filter-list"></div>
+    </div>
+  {% endif %}
+  <div class="pro-profiles-section__list-wrap">
+    <div class="pro-profiles-section__list">
+      {% for profile in module.pro_profiles %}
+        <div
+          class="
+            {{ module.is_featured ? "pro-profiles-section__item--feat" : "" }}
+            pro-profiles-section__item"
+          data-specialisations='{{ profile.specialisations | tojson | lower }}'>
+          <article class="
+            {{ module.is_featured ? "pro-profile-card--feat" : "" }}
+            pro-profile-card
+            mat-shadow">
+            {% set href = profile.link.url.href || '' %}
+            {% set rel = (profile.link.open_in_new_tab ? 'noopener ' : null) ~ (profile.link.no_follow ? 'nofollow' : null) %}
+            <a
+              {% if profile.link.open_in_new_tab %}target="_blank"{% endif %}
+              href="{{ href }}"
+              rel ="{{ rel }}"
+              class="
+                pro-profile-card__a
+                a">
+              <img
+                src="{{ profile.thumb.src }}"
+                alt="{{ profile.thumb.alt }}"
+                class="
+                  pro-profile-card__thumb
+                  img">
+              <div class="pro-profile-card__body">
+                <h1 class="
+                  pro-profile-card__title
+                  h5">
+                  {{ profile.title }}
+                </h1>
+                <div class="pro-profile-card__specs">
+                  {% for specialisation in profile.specialisations %}
+                    {{ specialisation }}{{ loop.last ? "" : ", " }}
+                  {% endfor %}
+                </div>
+                <div class="pro-profile-card__org">
+                  {{ profile.organisation }}
+                </div>
+              </div>
+            </a>
+          </article>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

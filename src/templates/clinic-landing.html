@@ -1,0 +1,235 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Clinic - landing
+-->
+{% extends "./layouts/clinic.html" %}
+
+{% block body %}
+  <main class="body-container-wrapper">
+    {# header area #}
+    {% dnd_area 'header_area'
+      class='body-container',
+      label='Header area',
+    %}
+      {% dnd_section
+        background_color={
+          'r': 231,
+          'g': 227,
+          'b': 224,
+          'a': 1.0
+        },
+      %}
+        {% dnd_column %}
+          {# header #}
+          {% dnd_row %}
+            {% dnd_module
+              path='/core-collective-theme/modules/headers/page-header',
+              label="Page header",
+            %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+
+          {# form #}
+          {% dnd_row %}
+            {% dnd_module
+              path="/core-collective-theme/modules/cards/form-card",
+              label="Application form",
+              style={
+                color_option: "grey",
+              }
+            %}
+            {% end_dnd_module %%}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
+
+    {# hero area #}
+    {% dnd_area 'hero_area'
+      class='body-container body-container--l body-container--pull-top',
+      label='Hero area',
+    %}
+      {# gallery #}
+      {% dnd_section
+        background_color={
+          'r': 231,
+          'g': 227,
+          'b': 224,
+          'a': 1.0
+        },
+      %}
+        {% dnd_module
+          path='/core-collective-theme/modules/media/hero-images',
+          label="Hero images",
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
+
+    {# body area #}
+    {% dnd_area 'body_area'
+      class='body-container',
+      label='Body area',
+    %}
+      {# main section #}
+      {% dnd_section %}
+        {% dnd_column %}
+          {# content section #}
+          {% dnd_row %}
+            {% dnd_module
+              path='/core-collective-theme/modules/sections/section',
+              label="Section",
+            %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+
+          {# divider #}
+          {% dnd_row %}
+            {% dnd_module
+              path="/core-collective-theme/modules/elements/divider",
+              label="Divider",
+              style={
+                color_option: "teal",
+              }
+            %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+
+          {# featured items section #}
+          {% dnd_row %}
+            {% dnd_module
+              path='/core-collective-theme/modules/sections/summary-list-section',
+              label="Summary list section",
+            %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+
+          {# form #}
+          {% dnd_row %}
+            {% dnd_module
+              path="/core-collective-theme/modules/cards/form-card",
+              label="Application form",
+              style={
+                color_option: "grey",
+              }
+            %}
+            {% end_dnd_module %%}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_section %}
+
+      {# divider #}
+      {% dnd_section
+        padding={
+          'top': 0,
+          'bottom': 0,
+          'left': 0,
+          'right': 0
+        },
+      %}
+        {% dnd_module
+          path="/core-collective-theme/modules/elements/divider",
+          label="Divider",
+          style={
+            color_option: "teal",
+          }
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_section %}
+
+      {# testimonials #}
+      {% dnd_section %}
+        {% dnd_column %}
+          {% dnd_row %}
+            {% dnd_module
+              path="/core-collective-theme/modules/sections/testimonials-section",
+              label="Custom packages section",
+              testimonials=[{
+                title: "Item title",
+                thumb: {
+                  size_type: "auto",
+                  src: "https://via.placeholder.com/480x360.png",
+                  alt: null
+                },
+                quote: "<p>One to two lines of quotation for this item</p>",
+                caption: "<p>One line of quotation caption for this item</p>",
+              }],
+              card_style={
+                option: "in-situ",
+              }
+            %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_section %}
+
+      {# divider #}
+      {% dnd_section
+        padding={
+          'top': 0,
+          'bottom': 0,
+          'left': 0,
+          'right': 0
+        },
+      %}
+        {% dnd_module
+          path="/core-collective-theme/modules/elements/divider",
+          label="Divider",
+          style={
+            color_option: "teal",
+          }
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_section %}
+
+      {# location #}
+      {% dnd_section %}
+        {% dnd_column %}
+          {% dnd_row %}
+            {% dnd_module
+              path='/core-collective-theme/modules/articles/location-article',
+              label="Location",
+              button_style={
+                color_option: "teal",
+              }
+            %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_section %}
+
+      {# divider #}
+      {% dnd_section
+        padding={
+          'top': 0,
+          'bottom': 0,
+          'left': 0,
+          'right': 0
+        },
+      %}
+        {% dnd_module
+          path="/core-collective-theme/modules/elements/divider",
+          label="Divider",
+          style={
+            color_option: "teal",
+          }
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_section %}
+
+      {# gallery #}
+      {% dnd_section %}
+        {% dnd_column %}
+          {% dnd_row %}
+            {% dnd_module
+              path='/core-collective-theme/modules/media/hero-images',
+              label="Hero images",
+            %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
+  </main>
+{% endblock body %}

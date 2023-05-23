@@ -1,0 +1,131 @@
+<section class="testimonials-section">
+  <h1 class="
+    testimonials-section__title
+    h4">
+    {{ module.title }}
+  </h1>
+  <div class="testimonials-section__list-wrap">
+    <div class="testimonials-section__list">
+      {% for testimonial in module.testimonials %}
+        <div class="testimonials-section__item">
+          <article class="
+            {{ testimonial.package.is_feature_package ? "testimonial-card--package" : "" }}
+            testimonial-card testimonial-card--{{ module.card_style.option }}">
+            <div class="testimonial-card__body">
+              <img
+                src="{{ testimonial.thumb.src }}"
+                alt="{{ testimonial.thumb.alt }}"
+                class="
+                  testimonial-card__thumb
+                  img">
+              <div class="testimonial-card__quote testimonial-card__quote--{{ module.card_style.option }}">
+                {{ testimonial.quote }}
+              </div>
+              <div class="
+                testimonial-card__caption
+                small-desc">
+                {{ testimonial.caption }}
+              </div>
+            </div>
+            {# package #}
+            {% if testimonial.package.is_feature_package %}
+              <div class="testimonial-card__package">
+                {# categories #}
+                {% if testimonial.package.categories is truthy %}
+                  <ul class="
+                    testimonial-card__package-services-list
+                    services-cat-list
+                    list">
+                    {% for category in testimonial.package.categories %}
+                      <li class="
+                        services-cat-list__item
+                        li">
+                        <span class="
+                          services-cat-list__item-content">
+                          <span class="
+                            services-cat-list__badge
+                            service-badge service-badge--{{ category|replace("_", "-") }}">
+                          </span>
+                          <span class="
+                            services-cat-list__label">
+                            {{ category|replace("_", " ") }}
+                          </span>
+                        </span>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+                {# card #}
+                <article class="
+                  {{ testimonial.package.badge_text is truthy ? "package-card--badge" : "" }}
+                  package-card">
+                  {% if testimonial.package.badge_text is truthy %}
+                    <div class="
+                      package-card__badge
+                      badge">
+                      <i class="
+                        package-card__badge-icon
+                        icon icon--s
+                        fas fa-star">
+                      </i>
+                      {{ testimonial.package.badge_text }}
+                    </div>
+                  {% endif %}
+                  <div class="package-card__body {{ testimonial.package.badge_text is truthy ? "package-card__body--badge" : "" }}">
+                    <div class="package-card__header">
+                      <h1 class="
+                        package-card__title
+                        h5">
+                        {{ testimonial.package.title }}
+                      </h1>
+                      <div class="package-card__price-grp">
+                        <div class="
+                          package-card__price
+                          h3">
+                          {{ testimonial.package.price }}
+                        </div>
+                        <div class="package-card__label">
+                          {{ testimonial.package.label_text }}
+                        </div>
+                      </div>
+                    </div>
+                    <div class="package-card__buy-grp">
+                      <div class="package-card__button-wrap">
+                        {% if testimonial.package.is_mb_enabled %}
+                          <healcode-widget
+                            data-version="0.2"
+                            data-link-class="package-card__button button button--s"
+                            data-site-id="{{ widget_data.site_config.mindbody.site_id }}"
+                            data-mb-site-id="{{ widget_data.site_config.mindbody.mb_site_id }}"
+                            data-type="pricing-link"
+                            data-inner-html="{{ testimonial.package.button_text }}"
+                            data-service-id="{{ testimonial.package.service_id }}"
+                          />
+                        {% else %}
+                          {% set href = testimonial.package.link.url.href || '' %}
+                          {% set rel = (testimonial.package.link.open_in_new_tab ? 'noopener ' : null) ~ (package.link.no_follow ? 'nofollow' : null) %}
+                          <a
+                            {% if testimonial.package.link.open_in_new_tab %}target="_blank"{% endif %}
+                            href="{{ href }}"
+                            rel ="{{ rel }}"
+                            class="
+                              package-card__button
+                              button button--s">
+                            {{ testimonial.package.button_text }}
+                          </a>
+                        {% endif %}
+                      </div>
+                      <div class="package-card__excerpt">
+                        {{ testimonial.package.excerpt }}
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            {% endif %}
+          </article>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

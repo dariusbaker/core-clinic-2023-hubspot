@@ -1,0 +1,78 @@
+<section class="events-section">
+  {% if module.title is truthy %}
+    <div class="events-section__header">
+      <h1 class="
+        events-section__title
+        h4">
+        {{ module.title }}
+      </h1>
+    </div>
+  {% endif %}
+  {% if module.blog is truthy %}
+    {% set posts = blog_recent_posts(module.blog, 200) %}
+    {% if posts is truthy %}
+      <ul class="
+        events-section__list
+        list">
+        {% for content in posts %}
+          <li class="
+            events-section__item
+            li">
+            <article class="event-card">
+              <div class="event-card__thumb-wrap">
+                <a
+                  href="{{ content.absolute_url }}"
+                  rel ="{{ content.link_rel_canonical_url }}"
+                  class="
+                    event-card__thumb-a
+                    a">
+                    <img
+                      src="{{ content.featured_image }}"
+                      alt="{{ content.featured_image_alt_text }}"
+                      class="
+                        event-card__thumb
+                        img">
+                  </a>
+              </div>
+              <div class="event-card__info">
+                <div class="event-card__meta">
+                  <time
+                    datetime="{{ content.widgets.start_datetime.body.datetime }}"
+                    class="
+                      event-card__time
+                      time">
+                    {{ content.widgets.start_datetime.body.datetime | datetimeformat('%e %b %Y') }}
+                  </time>
+                  <div class="event-card__price">
+                    {{ content.widgets.price.body.value }}
+                  </div>
+                </div>
+                <div class="event-card__body">
+                  <h1 class="
+                    event-card__title
+                    h3">
+                    <a
+                      href="{{ content.absolute_url }}"
+                      rel ="{{ content.link_rel_canonical_url }}"
+                      class="
+                        event-card__title-a
+                        a">
+                      {{ content.name }}
+                    </a>
+                  </h1>
+                  <div class="event-card__excerpt">
+                    {{ content.post_list_content }}
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <div class="events-section__empty">
+        {{ module.empty_text }}
+      </div>
+    {% endif %}
+  {% endif %}
+</section>

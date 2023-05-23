@@ -1,0 +1,7 @@
+{
+  "global" : false,
+  "host_template_types" : [ "PAGE" ],
+  "module_id" : 32333675353,
+  "label" : "Featured post card",
+  "is_available_for_new_content" : true
+}

@@ -1,0 +1,72 @@
+<article class="blog-post-card">
+  {% if content.featured_image %}
+    <a
+      href="{{ content.absolute_url }}"
+      class="
+        blog-post-card__thumb-a
+        a">
+      <img
+        src="{{ content.featured_image }}"
+        alt="{{ content.featured_image_alt_text }}"
+        class="
+          blog-post-card__thumb
+          img">
+    </a>
+  {% endif %}
+  {% if content.tag_list is truthy %}
+    <div class="blog-post-card__tags">
+      <ul class="
+        blog-post-card__tag-list
+        card-tag-list__list
+        list">
+        {% for tag in content.tag_list %}
+          <li class="
+            blog-post-card__tag-item
+            card-tag-list__item
+            li">
+            <a
+              href="{{ blog_tag_url(group.id, tag.slug) }}"
+              class="
+                blog-post-card__tag
+                card-tag-list__tag
+                a">
+              {{ tag.name }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+  <div class="blog-post-card__header">
+    <h1 class="
+      blog-post-card__title
+      h3">
+      <a
+        href="{{ content.absolute_url }}"
+        class="
+          blog-post-card__title-a
+          a">
+        {{ content.name }}
+      </a>
+    </h1>
+    <time
+      datetime="{{ content.publish_date | datetimeformat('%Y-%m-%e %H:%M:%S') }}"
+      class="time">
+      {{ content.publish_date | datetimeformat('%e %b %Y') }}
+    </time>
+  </div>
+  {% if content.post_list_content is truthy %}
+    <div class="blog-post-card__desc">
+      {{ content.post_list_content }}
+    </div>
+  {% endif %}
+  <div class="blog-post-card__footer">
+    <a
+      href="{{ content.absolute_url }}"
+      class="
+        blog-post-card__a
+        a">
+      Read more
+    </a>
+  </div>
+</article>

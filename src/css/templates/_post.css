@@ -1,0 +1,9 @@
+.post__meta {
+  padding-top: var(--space-3);
+  border-top: var(--border-width-1) solid var(--grey);
+}
+
+.post__meta--dark {
+  border-top-color: var(--dark-grey);
+  color: var(--grey);
+}

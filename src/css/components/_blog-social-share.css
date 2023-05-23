@@ -1,0 +1,30 @@
+div.hs-blog-social-share {
+  height: auto;
+  overflow: hidden;
+}
+
+.hs-blog-social-share-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--space-2));
+  margin-left: calc(-1 * var(--space-2));
+}
+
+.hs-blog-social-share .hs-blog-social-share-list .hs-blog-social-share-item {
+  display: block;
+  margin-right: 0;
+  margin-bottom: 0;
+  padding-top: var(--space-2);
+  padding-left: var(--space-2);
+}
+
+/* force all child tabs to align */
+.hs-blog-spcial-share-item .twitter-share-button,
+.hs-blog-social-share-item .IN-widget,
+.hs-blog-social-share-item .fb_iframe_widget > span {
+  display: block !important;
+}
+
+.hs-blog-social-share-item::before {
+  display: none;
+}

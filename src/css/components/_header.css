@@ -1,0 +1,180 @@
+:root {
+  --announcement-bar-height: 1.85rem;
+  --announcement-bar-height-m: 1.85rem;
+  --announcement-bar-height-l: 1.875rem;
+  --header-height: 4.15rem;
+  --header-height-m: 4.15rem;
+  --header-height-l: 5.35rem;
+}
+
+.header-announcement-bar,
+header.header,
+.header-menu-nav {
+  position: fixed;
+  left: 0;
+  width: 100%;
+}
+
+.header-announcement-bar {
+  z-index: 13;
+  top: 0;
+  height: var(--announcement-bar-height);
+  padding-top: var(--space-2);
+  padding-bottom: var(--space-2);
+  overflow-y: scroll;
+  background: var(--beige);
+  -webkit-overflow-scrolling: touch;
+}
+
+header.header {
+  z-index: 12;
+  top: 0;
+  height: var(--header-height);
+  background: var(--white);
+}
+
+/* theme: dark */
+header.header--dark {
+  background: var(--black);
+  color: var(--white);
+}
+
+/* theme: clinic */
+header.header--clinic {
+  background: var(--teal);
+}
+
+.header-menu-nav {
+  display: none; /* control by JS */
+  z-index: 11;
+  top: var(--header-height);
+  height: 100%;
+  max-height: calc(100% - var(--header-height));
+  overflow-y: auto;
+  background: var(--background);
+  -webkit-overflow-scrolling: touch;
+}
+
+.header-menu-nav[data-hidden='false'] {
+  display: block;
+}
+
+.header-menu-nav__container {
+  padding-top: var(--space-5);
+  padding-bottom: var(--space-7);
+  transition: opacity var(--transition-time-fast);
+  opacity: 0;
+}
+
+.header-menu-nav[data-hidden='false'] .header-menu-nav__container {
+  opacity: 1;
+}
+
+@media (min-width: 960px) {
+  .header-menu-nav[data-hidden='false'] {
+    display: none !important; /* always hide menu navigation on large screens */
+  }
+}
+
+.header-spacer {
+  padding-top: var(--header-height);
+}
+
+header.header--announcement-bar {
+  top: var(--announcement-bar-height);
+}
+
+header.header--announcement-bar + .header-menu-nav {
+  top: calc(var(--announcement-bar-height) + var(--header-height));
+  max-height: calc(
+    100% - var(--announcement-bar-height) - var(--header-height)
+  );
+}
+
+header.header--announcement-bar + .header-menu-nav + .header-spacer {
+  padding-top: calc(var(--announcement-bar-height) + var(--header-height));
+}
+
+@media (min-width: 480px) {
+  .header-announcement-bar {
+    height: var(--announcement-bar-height-m);
+  }
+
+  header.header {
+    height: var(--header-height-m);
+  }
+
+  .header-menu-nav {
+    top: var(--header-height-m);
+    max-height: calc(100% - var(--header-height-m));
+  }
+
+  .header-spacer {
+    padding-top: var(--header-height-m);
+  }
+
+  header.header--announcement-bar {
+    top: var(--announcement-bar-height-m);
+  }
+
+  header.header--announcement-bar + .header-menu-nav {
+    top: calc(var(--announcement-bar-height-m) + var(--header-height-m));
+    max-height: calc(
+      100% - var(--announcement-bar-height-m) - var(--header-height-m)
+    );
+  }
+
+  header.header--announcement-bar + .header-menu-nav + .header-spacer {
+    padding-top: calc(
+      var(--announcement-bar-height-m) + var(--header-height-m)
+    );
+  }
+}
+
+@media (min-width: 960px) {
+  .header-announcement-bar {
+    height: var(--announcement-bar-height-l);
+  }
+
+  header.header {
+    height: var(--header-height-l);
+  }
+
+  .header-menu-nav {
+    top: var(--header-height-l);
+    max-height: calc(100% - var(--header-height-l));
+  }
+
+  .header-spacer {
+    padding-top: var(--header-height-l);
+  }
+
+  header.header--announcement-bar {
+    top: var(--announcement-bar-height-l);
+  }
+
+  header.header--announcement-bar + .header-menu-nav {
+    top: calc(var(--announcement-bar-height-l) + var(--header-height-l));
+    max-height: calc(
+      100% - var(--announcement-bar-height-l) - var(--header-height-l)
+    );
+  }
+
+  header.header--announcement-bar + .header-menu-nav + .header-spacer {
+    padding-top: calc(
+      var(--announcement-bar-height-l) + var(--header-height-l)
+    );
+  }
+}
+
+.header__container {
+  padding-top: var(--space-3);
+  padding-bottom: var(--space-3);
+}
+
+@media (min-width: 960px) {
+  .header__container {
+    padding-top: var(--space-4);
+    padding-bottom: var(--space-4);
+  }
+}

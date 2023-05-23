@@ -1,0 +1,123 @@
+[ {
+  "id" : "title",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : true,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Section title"
+}, {
+  "id" : "desc",
+  "name" : "desc",
+  "display_width" : null,
+  "label" : "Description",
+  "required" : true,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>One to two lines describing this section</p>"
+}, {
+  "id" : "locations",
+  "name" : "locations",
+  "display_width" : null,
+  "label" : "Locations",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : null,
+    "sorting_label_field" : "location.title",
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "location.title",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Name",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Location name"
+  }, {
+    "id" : "location.address",
+    "name" : "address",
+    "display_width" : null,
+    "label" : "Address",
+    "required" : true,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>One to two lines of<br>location address</p>"
+  }, {
+    "id" : "location.tel",
+    "name" : "tel",
+    "display_width" : null,
+    "label" : "Tel",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : 1,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : 1
+    },
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : [ "+65 6789 3210" ]
+  }, {
+    "id" : "location.link",
+    "name" : "link",
+    "display_width" : null,
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "supported_types" : [ "EXTERNAL" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "href" : "https://google.com",
+        "type" : "EXTERNAL"
+      },
+      "no_follow" : false,
+      "open_in_new_tab" : false
+    }
+  }, {
+    "id" : "location.button_text",
+    "name" : "button_text",
+    "display_width" : null,
+    "label" : "Button text",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Get directions"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "title" : "Location name",
+    "address" : "<p>One to two lines of<br>location address</p>",
+    "tel" : [ "+65 6789 3210" ],
+    "link" : {
+      "url" : {
+        "href" : "https://google.com",
+        "type" : "EXTERNAL"
+      },
+      "no_follow" : false,
+      "open_in_new_tab" : false
+    },
+    "button_text" : "Get directions"
+  } ]
+} ]

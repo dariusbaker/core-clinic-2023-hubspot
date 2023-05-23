@@ -1,0 +1,29 @@
+[ {
+  "id" : "header_theme",
+  "name" : "header_theme",
+  "display_width" : null,
+  "label" : "Header theme",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "light", "Light" ], [ "dark", "Dark" ], [ "clinic", "Clinic" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "default" : "light"
+}, {
+  "id" : "footer_theme",
+  "name" : "footer_theme",
+  "display_width" : null,
+  "label" : "Footer theme",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "light", "Light" ], [ "clinic", "Clinic" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "default" : "light"
+} ]

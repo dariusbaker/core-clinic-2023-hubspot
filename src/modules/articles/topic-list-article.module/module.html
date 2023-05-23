@@ -1,0 +1,21 @@
+<article class="topic-list-article">
+  <div class="topic-list-article__header">
+    <h1 class="
+      topic-list-article__title
+      h4">
+      {{ module.title }}
+    </h1>
+  </div>
+  <ul class="topic-list-article__list">
+    {% set posts = blog_recent_tag_posts(module.blog, module.topic, 100) %}
+    {% for content in posts %}
+      <li class="topic-list-article__item">
+        <a
+          href="{{ content.absolute_url }}"
+          class="topic-list-article__a">
+          {{ content.name }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</article>

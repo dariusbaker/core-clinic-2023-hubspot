@@ -1,0 +1,60 @@
+<!--
+  templateType: blog
+  isAvailableForNewContent: true
+  label: Core Collective - press post
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+  <main class="body-container-wrapper">
+    {# header #}
+    <div class="body-container body-container--s">
+      <div class="f-section f-section--black">
+        {# headings #}
+        <div class="f-row">
+          {% module "page_header"
+            path="/core-collective-theme/modules/headers/page-header",
+            label="Page header",
+            title={{ content.name | striptags }},
+            label_text=""
+            is_dark_theme=true,
+          %}
+        </div>
+
+        {# meta #}
+        <div class="
+          post__meta post__meta--dark
+          f-row">
+          <time
+            datetime="{{ content.publish_date | datetimeformat('%Y-%m-%e %H:%M:%S') }}"
+            class="time time--dark">
+            {{ content.publish_date | datetimeformat('%e %b %Y') }}
+          </time>
+        </div>
+      </div>
+    </div>
+
+    {# body #}
+    <div class="body-container body-container--s">
+      <div class="f-section">
+        {# content #}
+        <div class="f-row">
+           {{ content.post_body }}
+        </div>
+      </div>
+    </div>
+
+    {# footer #}
+    <div class="body-container body-container--s">
+      <div class="f-section">
+        {# banner #}
+        <div class="f-row">
+          {% module "banner"
+            path='/core-collective-theme/modules/banners/banner',
+            label="Banner",
+          %}
+        </div>
+      </div>
+    </div>
+  </main>
+{% endblock body %}

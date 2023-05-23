@@ -1,0 +1,47 @@
+<article class="location-article">
+  <div class="location-article__body">
+    <h1 class="
+      location-article__title
+      section-header__title
+      h4">
+      {{ module.title }}
+    </h1>
+    <div class="
+      location-article__desc
+      section-header__desc">
+      {{ module.desc }}
+    </div>
+    {% if module.is_link_enabled %}
+      {% set href = module.link.url.href || '' %}
+      {% set rel = (module.link.open_in_new_tab ? 'noopener ' : null) ~ (module.link.no_follow ? 'nofollow' : null) %}
+      <a
+        {% if module.link.open_in_new_tab %}target="_blank"{% endif %}
+        href="{{ href }}"
+        rel ="{{ rel }}"
+        class="
+          location-article__button
+          section-header__button
+          button button--{{ module.button_style.color_option }}">
+        {{ module.button_text }}
+      </a>
+    {% endif %}
+  </div>
+  <div class="location-article__thumb-list">
+    {% for thumb in module.thumbs %}
+      <div class="
+        location-article__thumb-item--{{ loop.index }}
+        location-article__thumb-item">
+        <div class="
+          location-article__thumb-wrap--{{ loop.index }}
+          location-article__thumb-wrap">
+          <img
+            src="{{ thumb.src }}"
+            alt="{{ thumb.alt }}"
+            class="
+              location-article__thumb
+              img">
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</article>

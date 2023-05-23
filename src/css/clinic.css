@@ -1,0 +1,11 @@
+:root {
+  --primary-font: var(--montserrat);
+  --secondary-font: var(--montserrat);
+  --background: var(--white);
+  --secondary-text-color: var(--black);
+}
+
+.clinic h1,
+.clinic .h1 {
+  font-weight: 600;
+}

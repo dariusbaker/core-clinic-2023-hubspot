@@ -1,0 +1,105 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Service - get started
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+  <main class="body-container-wrapper">
+    {% dnd_area 'hero_area'
+      class='body-container body-container--l body-container--pull',
+      label='Hero area',
+    %}
+      {# hero images #}
+      {% dnd_section
+        background_color={
+          'r': 32,
+          'g': 32,
+          'b': 29,
+          'a': 1.0
+        },
+      %}
+        {% dnd_module
+          path='/core-collective-theme/modules/media/hero-images',
+          label="Hero images",
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
+
+    {% dnd_area 'header_area'
+      class='body-container',
+      label='Header area',
+    %}
+      {% dnd_section
+        background_color={
+          'r': 32,
+          'g': 32,
+          'b': 29,
+          'a': 1.0
+        },
+      %}
+        {% dnd_column %}
+          {# page header #}
+          {% dnd_row %}
+            {% dnd_module
+              path='/core-collective-theme/modules/headers/page-header',
+              label="Page header",
+              is_dark_theme=true,
+            %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+
+          {# steps to get started #}
+          {% dnd_row %}
+            {% dnd_module
+              path='/core-collective-theme/modules/sections/steps-section',
+              label="Steps section",
+            %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
+
+    {% dnd_area 'body_area'
+      class='body-container',
+      label='Body area',
+    %}
+      {# custom packages #}
+      {% dnd_section %}
+        {% dnd_module
+          path="/core-collective-theme/modules/sections/testimonials-section",
+          label="Custom packages section",
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_section %}
+
+      {# divider #}
+      {% dnd_section
+        padding={
+          'top': 0,
+          'bottom': 0,
+          'left': 0,
+          'right': 0
+        },
+      %}
+        {% dnd_module
+          path="/core-collective-theme/modules/elements/divider",
+          label="Divider",
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_section %}
+
+      {# statistics #}
+      {% dnd_section %}
+        {% dnd_module
+          path="/core-collective-theme/modules/sections/statistics-section",
+          label="Statistics section",
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
+  </main>
+{% endblock body %}

@@ -1,0 +1,23 @@
+<header class="
+  {{ module.is_dark_theme ? "page-header--dark" : "" }}
+  page-header">
+  {% if module.label_text is truthy %}
+    <div class="
+      page-header__label
+      h6">
+      {{ module.label_text }}
+    </div>
+  {% endif %}
+  <h1 class="
+    page-header__title
+    h1">
+    {{ module.title }}
+  </h1>
+  {% if module.desc is truthy %}
+    <div class="
+      page-header__desc
+      preamble-desc">
+      {{ module.desc }}
+    </div>
+  {% endif %}
+</header>

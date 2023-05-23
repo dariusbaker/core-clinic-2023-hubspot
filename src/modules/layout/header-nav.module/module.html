@@ -1,0 +1,115 @@
+<nav class="
+  header-nav--{{ widget_data.page_config.header_theme }}
+  header-nav">
+  {# logo #}
+  <div class="header-logo">
+    <a
+      href="{{ company_domain }}"
+      class="header-logo__a">
+      {% if widget_data.page_config.header_theme == "clinic" %}
+        <img
+          src="{{ module.logo.clinic.src }}"
+          alt="{{ module.logo.clinic.alt }}"
+          class="header-logo__img img">
+      {% elif widget_data.page_config.header_theme == "dark" %}
+        <img
+          src="{{ module.logo.dark.src }}"
+          alt="{{ module.logo.dark.alt }}"
+          class="header-logo__img img">
+      {% else %}
+        <img
+          src="{{ module.logo.light.src }}"
+          alt="{{ module.logo.light.alt }}"
+          class="header-logo__img img">
+      {% endif %}
+    </a>
+  </div>
+
+  {# quick nav #}
+  <div class="header-quick-nav">
+    {% set menu_list = menu(module.quick_nav) %}
+    {% if menu_list is truthy %}
+      <ul class="
+        header-quick-nav__list
+        quick-links-list
+        list">
+        {% for link in menu_list.children %}
+          <li class="
+            header-quick-nav__item
+            quick-links-list__item
+            li">
+            <a
+              href="{{ link.url }}"
+              target="{{ link.linkTarget }}"
+              class="
+                {{ link.activeBranch ? "header-quick-nav__a--active quick-links-list__a--active" : "" }}
+                header-quick-nav__a
+                quick-links-list__a
+                a">
+              {{ link.label }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+
+  {# utils #}
+  <div class="header-utils">
+    {#  driver #}
+    <div class="
+      header-utils__driver
+      driver">
+      {% set href = module.driver.link.url.href || '' %}
+      {% set rel = (module.driver.link.open_in_new_tab ? 'noopener ' : null) ~ (module.driver.link.no_follow ? 'nofollow' : null) %}
+      <a
+        {% if module.driver.link.open_in_new_tab %}target="_blank"{% endif %}
+        href="{{ href }}"
+        rel ="{{ rel }}"
+        class="
+          header-utils__driver-a
+          driver__a
+          a">
+        <div class="
+          header-utils__driver-header
+          driver__header">
+          <h1 class="
+            header-utils__driver-title
+            driver__title
+            h3">
+            {{ module.driver.title }}
+          </h1>
+          <i class="
+            driver__a-icon header-utils__driver-a-icon
+            icon icon--s
+            fas fa-external-link-alt">
+          </i>
+        </div>
+        <div class="
+          header-utils__driver-excerpt
+          driver__excerpt">
+          {{ module.driver.excerpt }}
+        </div>
+      </a>
+    </div>
+
+    {# menu button #}
+    <div class="header-utils__menu-button">
+      <button
+        class="header-menu-button"
+        id="menu-button"
+        data-controls="menu">
+        <i class="
+          header-menu-button__icon header-menu-button__open
+          icon icon--l
+          fas fa-bars">
+        </i>
+        <i class="
+          header-menu-button__icon header-menu-button__close
+          icon icon--l
+          fas fa-times">
+        </i>
+      </button>
+    </div>
+  </div>
+</nav>

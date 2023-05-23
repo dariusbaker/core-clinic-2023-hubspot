@@ -1,0 +1,37 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Service category index - get started
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+  <main class="body-container-wrapper">
+    {% dnd_area 'header_area'
+      class='body-container',
+      label='Header area',
+    %}
+      {% dnd_section %}
+        {% dnd_column %}
+          {# header #}
+          {% dnd_row %}
+            {% dnd_module
+              path='/core-collective-theme/modules/headers/page-header',
+              label="Page header",
+            %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+
+          {# service groups #}
+          {% dnd_row %}
+            {% dnd_module
+              path='/core-collective-theme/modules/sections/groups-section',
+              label="Service categories section",
+            %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
+  </main>
+{% endblock body %}

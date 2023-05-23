@@ -1,0 +1,21 @@
+.main-links-list {
+  column-gap: var(--space-5);
+  column-count: 2;
+  column-width: 8rem;
+}
+
+.main-links-list__item + .main-links-list__item {
+  margin-top: var(--space-2);
+}
+
+.main-links-list__a {
+  font-size: var(--font-scale-8);
+  font-weight: 700;
+  letter-spacing: var(--track);
+  line-height: var(--line-height-solid);
+  text-transform: uppercase;
+}
+
+.main-links-list__a:hover {
+  color: var(--dark-grey);
+}

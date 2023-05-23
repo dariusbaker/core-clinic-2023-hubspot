@@ -1,0 +1,168 @@
+[ {
+  "id" : "title",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Name",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Section title"
+}, {
+  "id" : "is_featured",
+  "name" : "is_featured",
+  "display_width" : null,
+  "label" : "Feature profiles",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : true
+}, {
+  "id" : "pro_profiles",
+  "name" : "pro_profiles",
+  "display_width" : null,
+  "label" : "Profiles",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : null,
+    "sorting_label_field" : "profile.title",
+    "default" : 1
+  },
+  "children" : [ {
+    "id" : "profile.title",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Name",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Person name"
+  }, {
+    "id" : "profile.specialisations",
+    "name" : "specialisations",
+    "display_width" : null,
+    "label" : "Specialisations",
+    "required" : true,
+    "locked" : false,
+    "occurrence" : {
+      "min" : 1,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : 1
+    },
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : true,
+    "type" : "text",
+    "default" : [ "Specialisation" ]
+  }, {
+    "id" : "profile.organisation",
+    "name" : "organisation",
+    "display_width" : null,
+    "label" : "Organisation",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Organisation"
+  }, {
+    "id" : "profile.thumb",
+    "name" : "thumb",
+    "display_width" : null,
+    "label" : "Thumbnail",
+    "required" : true,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://via.placeholder.com/120.png",
+      "alt" : null
+    }
+  }, {
+    "id" : "profile.link",
+    "name" : "link",
+    "display_width" : null,
+    "label" : "Link",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "href" : "https://google.com",
+        "type" : "EXTERNAL"
+      },
+      "no_follow" : false,
+      "open_in_new_tab" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "title" : "Person name",
+    "job" : "Personal Trainer",
+    "organisation" : "Absolute Training Performance",
+    "thumb" : {
+      "size_type" : "auto",
+      "src" : "https://via.placeholder.com/120.png",
+      "alt" : null
+    },
+    "link" : {
+      "url" : {
+        "href" : "https://google.com",
+        "type" : "EXTERNAL"
+      },
+      "no_follow" : false,
+      "open_in_new_tab" : false
+    }
+  } ]
+}, {
+  "id" : "filter",
+  "name" : "filter",
+  "display_width" : null,
+  "label" : "Filter options",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "filter.is_enabled",
+    "name" : "is_enabled",
+    "display_width" : null,
+    "label" : "Enable filter",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "filter.title",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Filter title"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group"
+} ]

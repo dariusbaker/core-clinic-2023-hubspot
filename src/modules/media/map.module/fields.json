@@ -1,0 +1,135 @@
+[ {
+  "id" : "title",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : true,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Map title"
+}, {
+  "id" : "center",
+  "name" : "center",
+  "display_width" : null,
+  "label" : "Center",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "center.lat",
+    "name" : "lat",
+    "display_width" : null,
+    "label" : "Latitude",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "1.314"
+  }, {
+    "id" : "center.lng",
+    "name" : "lng",
+    "display_width" : null,
+    "label" : "Longitude",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "103.85"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group"
+}, {
+  "id" : "zoom",
+  "name" : "zoom",
+  "display_width" : null,
+  "label" : "Zoom",
+  "required" : true,
+  "locked" : false,
+  "display" : "slider",
+  "min" : 0,
+  "max" : 18,
+  "step" : 1,
+  "type" : "number",
+  "default" : 12
+}, {
+  "id" : "markers",
+  "name" : "markers",
+  "display_width" : null,
+  "label" : "Markers",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : null,
+    "sorting_label_field" : "marker.title",
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "marker.title",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Marker title"
+  }, {
+    "id" : "marker.lat",
+    "name" : "lat",
+    "display_width" : null,
+    "label" : "Latitude",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "1.314"
+  }, {
+    "id" : "marker.lng",
+    "name" : "lng",
+    "display_width" : null,
+    "label" : "Longitude",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "103.85"
+  }, {
+    "id" : "marker.pin",
+    "name" : "pin",
+    "display_width" : null,
+    "label" : "Pin",
+    "required" : true,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://via.placeholder.com/40.png",
+      "alt" : null
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "title" : "Item title",
+    "lat" : "1.314",
+    "lng" : "103.85"
+  } ]
+} ]

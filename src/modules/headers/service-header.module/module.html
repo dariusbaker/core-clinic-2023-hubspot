@@ -1,0 +1,52 @@
+<header class="
+  {{ module.is_dark_theme ? "service-header--dark" : "" }}
+  service-header">
+  <div class="service-header__title-wrap">
+    <h1 class="
+      service-header__title
+      h1">
+      {{ module.title }}
+    </h1>
+  </div>
+  <div class="service-header__body">
+    <div class="
+      service-header__desc
+      preamble-desc">
+      {{ module.desc }}
+    </div>
+    {% if module.footnotes is truthy %}
+      <div class="service-header__footnotes-list-wrap">
+        <ul class="
+          service-header__footnotes-list
+          list">
+          {% for footnote in module.footnotes %}
+            <li class="
+              service-header__footnotes-item
+              li">
+              {# footnote #}
+              <div class="
+                service-header__footnote--{{ footnote.type }}
+                service-header__footnote
+                footnote">
+                <div class="
+                  service-header__footnote-type
+                  footnote__type">
+                  <i class="
+                    fa-{{ footnote.type == "note" ? "exclamation-triangle" : "star" }}
+                    icon
+                    fas">
+                  </i>
+                </div>
+                <div class="
+                  service-header__footnote-desc
+                  footnote__desc">
+                  {{ footnote.desc }}
+                </div>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  </div>
+</header>

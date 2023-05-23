@@ -1,0 +1,27 @@
+<section class="statistics-section">
+  <h1 class="
+    statistics-section__title
+    h2">
+    {{ module.title }}
+  </h1>
+  <div class="statistics-section__list-wrap">
+    <div class="statistics-section__list">
+      {% for statistic in module.statistics %}
+        <div class="statistics-section__item">
+          <div class="statistic-card">
+            <div class="
+              statistic-card__display
+              h4">
+              {% set prefix = statistic.number_prefix is truthy ? statistic.number_prefix : "" %}
+              {% set suffix = statistic.number_suffix is truthy ? statistic.number_suffix : "" %}
+              <span class="statistic-card__prefix">{{ prefix }}</span>{{ statistic.number }}<span class="statistic-card__suffix">{{ suffix }}</span>
+            </div>
+            <div class="statistic-card__desc">
+              {{ statistic.desc }}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

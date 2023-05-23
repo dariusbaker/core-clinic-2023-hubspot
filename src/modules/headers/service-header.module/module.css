@@ -1,0 +1,105 @@
+.service-header {
+  color: var(--secondary-text-color);
+}
+
+.service-header__title-wrap {
+  margin-bottom: var(--space-4);
+}
+
+.service-header__body {
+  margin-top: var(--space-5);
+}
+
+.service-header__footnotes-list-wrap {
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: var(--border-width-1) solid var(--grey);
+}
+
+.service-header__footnotes-item + .service-header__footnotes-item {
+  margin-top: var(--space-4);
+}
+
+.service-header__footnotes--tip {
+  color: inherit;
+}
+
+@media (min-width: 640px) {
+  .service-header {
+    display: flex;
+  }
+
+  .service-header__title-wrap,
+  .service-header__body {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+
+  .service-header__title-wrap {
+    margin-bottom: 0;
+    padding-right: var(--space-3);
+  }
+
+  .service-header__body {
+    margin-top: 0;
+    padding-left: var(--space-3);
+  }
+}
+
+@media (min-width: 960px) {
+  .service-header__title-wrap {
+    flex: 1 1 calc(100% / 12 * 5);
+    max-width: calc(100% / 12 * 5);
+  }
+
+  .service-header__body {
+    flex: 1 1 calc(100% / 12 * 7);
+    max-width: calc(100% / 12 * 7);
+  }
+}
+
+@media (min-width: 1280px) {
+  .service-header__footnote {
+    display: block;
+  }
+
+  .service-header__footnotes-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--space-5));
+    margin-left: calc(-1 * var(--space-5));
+  }
+
+  .service-header__footnotes-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-top: var(--space-5);
+    padding-left: var(--space-5);
+  }
+
+  .service-header__footnotes-item + .service-header__footnotes-item {
+    margin-top: 0;
+  }
+
+  .service-header__footnote-type {
+    display: block;
+    margin-bottom: var(--space-2);
+  }
+}
+
+/* theme: dark */
+.service-header--dark {
+  color: var(--white);
+}
+
+.service-header--dark .service-header__footnotes-list-wrap {
+  border-top-color: var(--dark-grey);
+}
+
+.service-header--dark .service-header__footnote {
+  color: var(--light-teal);
+}
+
+.service-header--dark .service-header__footnote--tip {
+  color: var(--beige);
+}

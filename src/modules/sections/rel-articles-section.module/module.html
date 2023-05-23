@@ -1,0 +1,46 @@
+<section class="rel-articles-section">
+  <div class="rel-articles-section__header">
+    <h1 class="
+      rel-articles-section__title
+      section-header__title
+      h4">
+      {{ module.title }}
+    </h1>
+  </div>
+  <div class="rel-articles-section__list">
+    {% for article in module.articles %}
+      <div class="rel-articles-section__item">
+        <article class="rel-article-card">
+          {% set href = article.link.url.href || '' %}
+          {% set rel = (article.link.open_in_new_tab ? 'noopener ' : null) ~ (article.link.no_follow ? 'nofollow' : null) %}
+          <a
+            {% if article.link.open_in_new_tab %}target="_blank"{% endif %}
+            href="{{ href }}"
+            rel ="{{ rel }}"
+            class="
+              rel-article-card__a
+              a">
+            <img
+              src="{{ article.thumb.src }}"
+              alt="{{ article.thumb.alt }}"
+              class="
+                rel-article-card__thumb
+                img">
+            <div class="rel-article-card__body">
+              <div class="
+                rel-article-card__kicker
+                h6">
+                {{ article.kicker }}
+              </div>
+              <h1 class="
+                rel-article-card__title
+                h3">
+                {{ article.title }}
+              </h1>
+            </div>
+          </a>
+        </article>
+      </div>
+    {% endfor %}
+  </div>
+</section>

@@ -1,0 +1,52 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Service index
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+  <main class="body-container-wrapper">
+    {% dnd_area 'header_area'
+      class='body-container',
+      label='Header area',
+    %}
+      {# page header #}
+      {% dnd_section %}
+        {% dnd_module
+          path='/core-collective-theme/modules/headers/page-header',
+          label="Page header",
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
+
+    {% dnd_area 'hero_area'
+      class='body-container body-container--l body-container--pull',
+      label='Hero area',
+    %}
+      {# hero images #}
+      {% dnd_section %}
+        {% dnd_module
+          path='/core-collective-theme/modules/media/hero-images',
+          label="Hero images",
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
+
+    {% dnd_area 'body_area'
+      class='body-container',
+      label='Body area',
+    %}
+      {# body #}
+      {% dnd_section %}
+        {% dnd_module
+          path='/core-collective-theme/modules/sections/services-section',
+          label="Services",
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
+  </main>
+{% endblock body %}

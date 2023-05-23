@@ -1,0 +1,29 @@
+<section class="summary-list-section">
+  <div class="summary-list-section__header">
+    {% if module.title is truthy %}
+      <h1 class="
+        summary-list-section__title
+        summary-list-section-header__title
+        h4">
+        {{ module.title }}
+      </h1>
+    {% endif %}
+  </div>
+  <div class="summary-list-section__list-wrap">
+    <ul class="summary-list-section__list">
+      {% for item in module.items %}
+        <li class="summary-list-section__item">
+          <div class="summary-list-section__item-thumb-wrap">
+            <img
+              src="{{ item.thumb.src }}"
+              alt="{{ item.thumb.alt }}"
+              class="summary-list-section__item-thumb img">
+          </div>
+          <div class="summary-list-section__item-desc">
+            {{ item.description }}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

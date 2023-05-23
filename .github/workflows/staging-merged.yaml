@@ -1,0 +1,29 @@
+name: "Upload theme to staging HubSpot account"
+on:
+  pull_request:
+    branches:
+      - staging
+    types: [closed]
+    paths:
+      - 'src/**'
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup node 18.15.0 and Build
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18.15.0'
+      - name: Install Node modules
+        run: |
+            npm install --legacy-peer-deps
+      - name: Generate hubspot.config.yml and deploy
+        env:
+          HUBSPOT_PORTAL_ID: ${{ secrets.HUBSPOT_PORTAL_ID }}
+          HUBSPOT_PERSONAL_ACCESS_KEY: ${{ secrets.HUBSPOT_PERSONAL_ACCESS_KEY }}
+        run: |
+          ./scripts/create-hubspot-config.js
+          ./run.sh upload
+

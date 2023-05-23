@@ -1,0 +1,12 @@
+[ {
+  "id" : "test_global_variable",
+  "name" : "test_global_variable",
+  "display_width" : null,
+  "label" : "Test variable",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+} ]

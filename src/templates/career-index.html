@@ -1,0 +1,90 @@
+<!--
+  templateType: blog
+  isAvailableForNewContent: true
+  label: Core Collective - career index
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+  <main class="body-container-wrapper body-container-wrapper--light">
+    <div class="body-container">
+      {# header #}
+      <div class="f-section">
+        <div class="f-row">
+          {% module "page_header"
+            path="/core-collective-theme/modules/headers/page-header",
+            label="Page header",
+            title="Job Opportunities at Core Collective",
+            label_text="Careers",
+            desc="",
+          %}
+        </div>
+      </div>
+    </div>
+
+    <div class="body-container body-container--pull-top">
+      {# posts #}
+      <div class="f-section">
+        {% set tags = blog_tags(group.id, 250) %}
+        {% for tag in tags %}
+          {% if tag.slug != "featured" %}
+            <div class="
+              faq-index__topic-row
+              f-row">
+              <div class="faq-index__topic-row-content">
+                {% module "topic_list_article"
+                  path="/core-collective-theme/modules/articles/topic-list-article",
+                  label="Topic list article",
+                  title={{ tag.name }},
+                  blog={{ group.id }},
+                  topic={{ tag.slug }},
+                %}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="body-container">
+      {# divider #}
+      <div class="f-section f-section--pull">
+        <div class="f-row">
+          {% module "divider"
+            path="/core-collective-theme/modules/elements/divider",
+            label="Divider",
+          %}
+        </div>
+      </div>
+
+      {# philosophy #}
+      <div class="f-section">
+        <div class="f-row">
+          {% module "page_header"
+            path="/core-collective-theme/modules/sections/infos-section",
+            label="Principles",
+            title="Our Philosophy",
+            infos=[
+              {
+                "title": "Empowerment",
+                "desc": "<p>Reach your full potential with our curated selection of top professionals in the industry. We give you the power to control your destiny.</p>"
+              },
+              {
+                "title": "Community",
+                "desc": "<p>There is strength in unity. We facilitate cross-sharing of knowledge and expertise between professionals to deliver unmatched solutions and results for you.</p>"
+              },
+              {
+                "title": "Betterment",
+                "desc": "<p>By getting the fundamentals right, we set the foundation for a life we hope to have. Life is about getting stronger. Change is in our hands.</p>"
+              },
+              {
+                "title": "Care",
+                "desc": "<p>We understand your needs and goals. Success to us means helping you achieve your aspirations to lead a happier and healthier life.</p>"
+              }
+            ],
+          %}
+        </div>
+      </div>
+    </div>
+  </main>
+{% endblock body %}

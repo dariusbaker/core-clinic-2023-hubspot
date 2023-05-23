@@ -1,0 +1,8 @@
+**/*/.DS_Store
+**/*/*.svg
+**/*/*.png
+
+src/css/main.css
+src/css/theme-overrides.css
+src/css/tools/_macros.css
+

@@ -1,0 +1,324 @@
+.footer-flex-area,
+.footer-main-nav,
+.footer-social-nav,
+.footer-legal-nav {
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: var(--border-width-1) solid var(--grey);
+}
+
+/* theme: clinic */
+.footer-nav--clinic .footer-flex-area,
+.footer-nav--clinic .footer-main-nav,
+.footer-nav--clinic .footer-social-nav,
+.footer-nav--clinic .footer-legal-nav {
+  border-top-color: var(--teal);
+}
+
+@media (min-width: 640px) {
+  .footer-nav__top,
+  .footer-nav__bottom {
+    display: flex;
+  }
+
+  .footer-nav__top {
+    flex-wrap: wrap;
+  }
+
+  .footer-nav__bottom-wrap {
+    margin-top: var(--space-5);
+    padding-top: var(--space-5);
+    border-top: var(--border-width-1) solid var(--grey);
+  }
+
+  .footer-nav__bottom {
+    align-items: baseline;
+    justify-content: space-between;
+    margin-left: calc(-1 * var(--space-5));
+  }
+
+  .footer-flex-area,
+  .footer-main-nav,
+  .footer-social-nav,
+  .footer-legal-nav {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .footer-quick-nav {
+    flex: 1 1 100%;
+    margin-bottom: var(--space-5);
+    padding-bottom: var(--space-5);
+    border-bottom: var(--border-width-1) solid var(--grey);
+  }
+
+  .footer-flex-area {
+    flex: 1 1 calc(100% / 12 * 4);
+    max-width: calc(100% / 12 * 4);
+    padding-right: var(--space-5);
+  }
+
+  .footer-main-nav {
+    flex: 1 1 calc(100% / 12 * 8);
+    max-width: calc(100% / 12 * 8);
+    padding-left: var(--space-5);
+    border-left: var(--border-width-1) solid var(--grey);
+  }
+
+  .footer-copyright,
+  .footer-legal-nav,
+  .footer-social-nav {
+    flex: 0 1 calc(100% / 3);
+    padding-left: var(--space-5);
+  }
+
+  .footer-copyright {
+    margin-top: 0;
+  }
+
+  .footer-legal-nav {
+    order: 2;
+  }
+
+  .footer-social-nav {
+    order: 3;
+  }
+
+  /* theme: clinic */
+  .footer-nav--clinic .footer-nav__bottom-wrap {
+    border-top-color: var(--teal);
+  }
+
+  .footer-nav--clinic .footer-quick-nav {
+    border-bottom-color: var(--teal);
+  }
+
+  .footer-nav--clinic .footer-main-nav {
+    border-left-color: var(--teal);
+  }
+}
+
+@media (min-width: 960px) {
+  .footer-nav__top {
+    flex-wrap: nowrap;
+    margin-left: calc(-1 * var(--space-5));
+  }
+
+  .footer-nav__bottom-wrap {
+    margin-top: var(--space-7);
+  }
+
+  .footer-quick-nav {
+    flex: 1 1 calc(100% / 12 * 2);
+    max-width: calc(100% / 12 * 2);
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-left: var(--space-5);
+    border-bottom: 0;
+  }
+
+  .footer-flex-area {
+    padding-right: 0;
+    padding-left: var(--space-5);
+  }
+
+  .footer-main-nav {
+    flex: 1 1 calc(100% / 12 * 6);
+    max-width: calc(100% / 12 * 6);
+  }
+
+  .footer-legal-nav,
+  .footer-social-nav {
+    flex: 0 1 25%;
+  }
+
+  .footer-copyright {
+    flex: 0 1 50%;
+  }
+}
+
+/* quick nav */
+.footer-quick-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin-top: calc(-1 * var(--space-3));
+  margin-left: calc(-1 * var(--space-7));
+}
+
+.footer-quick-nav__item {
+  width: auto;
+  padding-top: var(--space-3);
+  padding-left: var(--space-7);
+}
+
+.footer-quick-nav__item + .footer-quick-nav__item {
+  margin-top: 0;
+}
+
+.footer-quick-nav__a {
+  font-size: var(--font-scale-6);
+  font-weight: 700;
+  letter-spacing: var(--track);
+  line-height: var(--line-height-solid);
+}
+
+@media (min-width: 960px) {
+  .footer-quick-nav__list {
+    display: block;
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .footer-quick-nav__item {
+    padding-top: 0;
+    padding-left: 0;
+  }
+
+  .footer-quick-nav__item + .footer-quick-nav__item {
+    margin-top: var(--space-3);
+  }
+}
+
+/* services nav */
+.footer-services-nav__a:hover {
+  color: var(--dark-grey);
+}
+
+/* main nav */
+.footer-main-nav__label {
+  font-size: var(--font-scale-7);
+  font-weight: 700;
+  letter-spacing: var(--track);
+  line-height: var(--line-height-solid);
+  text-transform: uppercase;
+}
+
+.footer-main-nav__a {
+  color: var(--secondary-text-color);
+}
+
+/* theme: clinic */
+.footer-nav--clinic .footer-main-nav .main-links-list__a {
+  font-weight: 600;
+}
+
+/* social nav */
+.footer-social-nav__list {
+  display: flex;
+  align-items: center;
+}
+
+.footer-social-nav__item {
+  flex: 0 0 var(--font-scale-4);
+}
+
+.footer-social-nav__item + .footer-social-nav__item {
+  margin-left: var(--space-5);
+}
+
+.footer-social-nav__a {
+  fill: currentColor;
+  color: var(--mid-grey);
+}
+
+.footer-social-nav__a:hover {
+  color: var(--grey);
+}
+
+.footer-social-nav__icon svg {
+  transition: fill var(--transition-time-fast);
+}
+
+@media (min-width: 640px) {
+  .footer-social-nav__list {
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 960px) {
+  .footer-social-nav__item {
+    flex: 0 0 var(--font-scale-5);
+  }
+}
+
+/* legal nav */
+.footer-legal-nav__list {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-legal-nav__item + .footer-legal-nav__item {
+  margin-left: var(--space-4);
+  padding-left: var(--space-4);
+  border-left: var(--border-width-1) solid var(--grey);
+}
+
+.footer-legal-nav__a {
+  color: var(--dark-grey);
+  font-size: var(--font-scale-7);
+  letter-spacing: var(--track);
+  line-height: var(--line-height-solid);
+}
+
+.footer-legal-nav__a:hover {
+  color: var(--mid-grey);
+}
+
+@media (min-width: 640px) {
+  .footer-legal-nav__list {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 960px) {
+  .footer-legal-nav__list {
+    justify-content: flex-start;
+  }
+}
+
+/* copyright */
+.footer-copyright {
+  display: flex;
+  align-items: baseline;
+  margin-top: var(--space-5);
+  color: var(--dark-grey);
+  font-size: var(--font-scale-7);
+  letter-spacing: var(--track);
+  line-height: var(--line-height-solid);
+}
+
+.footer-copyright__logo-a {
+  flex: 0 0 2rem;
+  max-width: 2rem;
+  height: 0;
+  margin-right: var(--space-2);
+  transition: opacity var(--transition-time-fast);
+}
+
+.footer-copyright__logo-a:hover {
+  opacity: var(--opacity-dim);
+}
+
+.footer-copyright__logo {
+  transform: translate(0, calc(-50% - 0.25em));
+}
+
+@media (max-width: 959px) {
+  .footer-copyright__desc {
+    font-size: var(--font-scale-8);
+  }
+}
+
+/* variant: clinic description */
+.footer-clinic-desc {
+  font-size: var(--font-scale-7);
+  font-weight: 700;
+}
+
+@media (min-width: 960px) {
+  .footer-clinic-desc {
+    padding-right: var(--space-5);
+  }
+}

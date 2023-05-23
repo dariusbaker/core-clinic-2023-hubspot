@@ -1,0 +1,90 @@
+[ {
+  "id" : "title",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : true,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Item title"
+}, {
+  "id" : "kicker",
+  "name" : "kicker",
+  "display_width" : null,
+  "label" : "Kicker",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Item kicker text"
+}, {
+  "id" : "excerpt",
+  "name" : "excerpt",
+  "display_width" : null,
+  "label" : "Excerpt",
+  "required" : true,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>One to two lines describing this item</p>"
+}, {
+  "id" : "link",
+  "name" : "link",
+  "display_width" : null,
+  "label" : "Link",
+  "required" : true,
+  "locked" : false,
+  "validation_regex" : "",
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "href" : "https://google.com",
+      "type" : "EXTERNAL"
+    },
+    "no_follow" : false,
+    "open_in_new_tab" : false
+  }
+}, {
+  "id" : "button_text",
+  "name" : "button_text",
+  "display_width" : null,
+  "label" : "Button text",
+  "required" : true,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Click here"
+}, {
+  "id" : "style",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "style.color_option",
+    "name" : "color_option",
+    "display_width" : null,
+    "label" : "Color option",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "green", "Green" ], [ "beige", "Beige" ], [ "grey", "Grey" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "green"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group"
+} ]

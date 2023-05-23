@@ -1,0 +1,25 @@
+<!--
+  templateType: error_page
+  isAvailableForNewContent: true
+  label: Core Collective - 404 error
+-->
+{% extends '../layouts/base.html' %}
+
+{% block body %}
+  <main class="body-container-wrapper">
+    <div class="body-container body-container--s">
+      <section
+        class="
+          f-section
+          error-page"
+        data-error="404">
+        <div class="
+          f-row
+          error-page__content">
+          <h1 class="error-page__heading">Page not found</h1>
+          <a class="button" href="/">Go Home</a>
+        </div>
+      </section>
+    </div>
+  </main>
+{% endblock body %}

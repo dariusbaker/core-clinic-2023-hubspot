@@ -1,0 +1,207 @@
+<nav class="
+  footer-nav--{{ widget_data.page_config.footer_theme }}
+  footer-nav">
+  {# top row #}
+  <div class="footer-nav__top">
+    {# quick nav #}
+    <div class="footer-quick-nav">
+      {% set menu_list = menu(module.quick_nav) %}
+      {% if menu_list is truthy %}
+        <ul class="
+          footer-quick-nav__list
+          quick-links-list
+          list">
+          {% for link in menu_list.children %}
+            <li class="
+              footer-quick-nav__item
+              quick-links-list__item
+              li">
+              <a
+                href="{{ link.url }}"
+                target="{{ link.linkTarget }}"
+                class="
+                  {{ link.activeBranch ? "footer-quick-nav__a--active quick-links-list__a--active" : "" }}
+                  footer-quick-nav__a
+                  quick-links-list__a
+                  a">
+                {{ link.label }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+
+    {# services nav #}
+    <div class="footer-flex-area">
+      {% if widget_data.page_config.footer_theme == "clinic" %}
+        <div class="footer-clinic-desc">
+          {{ module.description.clinic }}
+        </div>
+      {% else %}
+        {% set menu_list = menu(module.services_nav) %}
+        {% if menu_list is truthy %}
+          <div class="footer-services-nav">
+            <ul class="
+              services-cat-list
+              list">
+              {% for link in menu_list.children %}
+                <li class="
+                  services-cat-list__item
+                  li">
+                  <a
+                    href="{{ link.url }}"
+                    target="{{ link.linkTarget }}"
+                    data-slug="{{ link.slug }}"
+                    class="
+                      {{ link.activeBranch ? "footer-services-nav__a--active" : "" }}
+                      footer-services-nav__a
+                      services-cat-list__item-content
+                      a">
+                    <span class="
+                      services-cat-list__badge
+                      service-badge {{ link.slug is truthy ? "service-badge--" + link.slug : "" }}">
+                    </span>
+                    <span class="
+                      services-cat-list__label">
+                      {{ link.label }}
+                    </span>
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+
+    {# main nav #}
+    <div class="footer-main-nav">
+      {% set menu_list = menu(module.main_nav) %}
+      {% if menu_list is truthy %}
+        {% unless widget_data.page_config.footer_theme == "light" or widget_data.page_config.footer_theme == "dark" %}
+          <h3 class="footer-main-nav__label">
+            About Core Collective
+          </h3>
+        {% endunless %}
+
+        <ul class="
+          footer-main-nav__list
+          main-links-list
+          list">
+          {% for link in menu_list.children %}
+            <li class="
+              footer-main-nav__item
+              main-links-list__item
+              li">
+              <a
+                href="{{ link.url }}"
+                target="{{ link.linkTarget }}"
+                class="
+                  {{ link.activeBranch ? "footer-main-nav__a--active main-links-list__a--active" : "" }}
+                  footer-main-nav__a
+                  main-links-list__a
+                  a">
+                {{ link.label }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  </div>
+
+  {# bottom row #}
+  <div class="footer-nav__bottom-wrap">
+    <div class="footer-nav__bottom">
+      {# social nav #}
+      <div class="footer-social-nav">
+        {% if module.social_nav is truthy %}
+          <ul class="
+            footer-social-nav__list
+            list">
+            {% for social in module.social_nav %}
+              {% if social.account != 'custom_icon' %}
+                {% set icon = social.account %}
+              {% else %}
+                {% set icon = social.custom_icon.name %}
+              {% endif %}
+              {% set href = social.link.url.href %}
+              {% if social.link.url.type is equalto 'EMAIL_ADDRESS' %}
+                {% set href = 'mailto:' + href %}
+              {% endif %}
+              <li class="
+                footer-social-nav__item
+                li">
+                <a
+                  href="{{ href }}"
+                  {% if social.link.open_in_new_tab %}target="_blank"{% endif %}
+                  {% if social.link.no_follow %}rel="nofollow"{% endif %}
+                  class="
+                    footer-social-nav__a
+                    a">
+                  {% icon
+                    extra_classes="footer-social-nav__icon",
+                    name='{{ icon }}',
+                    purpose='semantic',
+                    style='SOLID',
+                    title='{{ social.accessibility.title }}',
+                    unique_in_loop=True
+                  %}
+                  {# {{ icon }} #}
+                  {# <i class="
+                    icon
+                    fab fa-{{ icon }}">
+                  </i> #}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+
+      {# legal nav #}
+      <div class="footer-legal-nav">
+        {% set menu_list = menu(module.legal_nav) %}
+        {% if menu_list is truthy %}
+          <ul class="
+            footer-legal-nav__list
+            list">
+            {% for link in menu_list.children %}
+              <li class="
+                footer-legal-nav__item
+                li">
+                <a
+                  href="{{ link.url }}"
+                  target="{{ link.linkTarget }}"
+                  class="
+                    {{ link.activeBranch ? "footer-legal-nav__a--active" : "" }}
+                    footer-legal-nav__a
+                    a">
+                  {{ link.label }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+
+      {# copyright #}
+      <div class="footer-copyright">
+        <a
+          href="{{ company_domain }}"
+          class="footer-copyright__logo-a">
+          <img
+            src="{{ module.copyright.logo.src }}"
+            alt="{{ module.copyright.logo.alt }}"
+            class="
+              footer-copyright__logo
+              img">
+        </a>
+        <small class="footer-copyright__desc">
+          {{ module.copyright.desc }}
+        </small>
+      </div>
+    </div>
+  </div>
+</nav>

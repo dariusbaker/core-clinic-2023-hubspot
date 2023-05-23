@@ -1,0 +1,39 @@
+/* inherits style: components/_card.css */
+
+.form-card__form-wrap .hs-form-field {
+  margin-bottom: var(--space-3);
+}
+
+/* override child hubspot form inline styles */
+.form-card .hs-form fieldset {
+  max-width: none;
+}
+
+.form-card .hs-form fieldset.form-columns-1 .hs-input {
+  width: 100%;
+}
+
+/* variant: green */
+.form-card.card--green label,
+.form-card.card--green legend {
+  color: var(--grey);
+}
+
+.form-card.card--green input[type='submit'],
+.form-card.card--green .hs-button {
+  border-color: var(--light-green);
+  background: var(--light-green);
+  color: var(--primary-text-color);
+}
+
+/* variant: grey */
+.form-card.card--grey .form-card__kicker {
+  text-transform: uppercase;
+}
+
+.form-card.card--grey input[type='submit'],
+.form-card.card--grey .hs-button {
+  border-color: var(--teal);
+  background: var(--teal);
+  color: var(--black);
+}

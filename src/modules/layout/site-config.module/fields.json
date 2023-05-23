@@ -1,0 +1,57 @@
+[ {
+  "id" : "content",
+  "name" : "content",
+  "display_width" : null,
+  "label" : "Content",
+  "required" : false,
+  "locked" : true,
+  "children" : [ {
+    "id" : "content.is_announcement_published",
+    "name" : "is_announcement_published",
+    "display_width" : null,
+    "label" : "Publish announcement",
+    "required" : true,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : true
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group"
+}, {
+  "id" : "mindbody",
+  "name" : "mindbody",
+  "display_width" : null,
+  "label" : "Mindbody",
+  "required" : false,
+  "locked" : true,
+  "children" : [ {
+    "id" : "mindbody.site_id",
+    "name" : "site_id",
+    "display_width" : null,
+    "label" : "Mindbody site-id",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "43134"
+  }, {
+    "id" : "mindbody.mb_site_id",
+    "name" : "mb_site_id",
+    "display_width" : null,
+    "label" : "Mindbody mb-site-id",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "754050"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group"
+} ]

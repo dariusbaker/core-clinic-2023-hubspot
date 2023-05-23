@@ -1,0 +1,263 @@
+[ {
+  "id" : "title",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : true,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Section title"
+}, {
+  "id" : "testimonials",
+  "name" : "testimonials",
+  "display_width" : null,
+  "label" : "Testimonials",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : null,
+    "sorting_label_field" : "testimonial.quote",
+    "default" : 1
+  },
+  "children" : [ {
+    "id" : "testimonial.thumb",
+    "name" : "thumb",
+    "display_width" : null,
+    "label" : "Thumbnail",
+    "required" : true,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://via.placeholder.com/480x360.png",
+      "alt" : null
+    }
+  }, {
+    "id" : "testimonial.quote",
+    "name" : "quote",
+    "display_width" : null,
+    "label" : "Quote",
+    "required" : true,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>One to two lines of quotation for this item</p>"
+  }, {
+    "id" : "testimonial.caption",
+    "name" : "caption",
+    "display_width" : null,
+    "label" : "Caption",
+    "required" : true,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>One line of quotation caption for this item</p>"
+  }, {
+    "id" : "testimonial.package",
+    "name" : "package",
+    "display_width" : null,
+    "label" : "Package",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "testimonial.package.is_feature_package",
+      "name" : "is_feature_package",
+      "display_width" : null,
+      "label" : "Feature package",
+      "required" : false,
+      "locked" : false,
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : true
+    }, {
+      "id" : "testimonial.package.title",
+      "name" : "title",
+      "display_width" : null,
+      "label" : "Title",
+      "required" : true,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Item title"
+    }, {
+      "id" : "testimonial.package.categories",
+      "name" : "categories",
+      "display_width" : null,
+      "label" : "Categories",
+      "required" : false,
+      "locked" : false,
+      "occurrence" : {
+        "min" : 1,
+        "max" : null,
+        "sorting_label_field" : null,
+        "default" : 1
+      },
+      "display" : "select",
+      "choices" : [ [ "group_fitness", "Group Fitness" ], [ "personal_training", "Personal Training" ], [ "medical", "Medical" ], [ "beauty_aesthetics", "Beauty & Aesthetics" ], [ "lifestyle_children", "Lifestyle & Children" ], [ "wellness", "Wellness" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : [ "group_fitness" ]
+    }, {
+      "id" : "testimonial.package.badge_text",
+      "name" : "badge_text",
+      "display_width" : null,
+      "label" : "Badge text",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Item badge text"
+    }, {
+      "id" : "testimonial.package.price",
+      "name" : "price",
+      "display_width" : null,
+      "label" : "Price",
+      "required" : true,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "S$10.00"
+    }, {
+      "id" : "testimonial.package.label_text",
+      "name" : "label_text",
+      "display_width" : null,
+      "label" : "Label",
+      "required" : true,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Item label text"
+    }, {
+      "id" : "testimonial.package.excerpt",
+      "name" : "excerpt",
+      "display_width" : null,
+      "label" : "Excerpt",
+      "required" : false,
+      "locked" : false,
+      "type" : "richtext",
+      "default" : "<p>One to two lines describing this item</>"
+    }, {
+      "id" : "testimonial.package.link",
+      "name" : "link",
+      "display_width" : null,
+      "label" : "Link",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "type" : "EXTERNAL",
+          "content_id" : null,
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "id" : "testimonial.package.is_mb_enabled",
+      "name" : "is_mb_enabled",
+      "display_width" : null,
+      "label" : "Enable Mindbody button",
+      "required" : false,
+      "locked" : false,
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : true
+    }, {
+      "id" : "testimonial.package.service_id",
+      "name" : "service_id",
+      "display_width" : null,
+      "label" : "Mindbody service-id",
+      "required" : true,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "100000"
+    }, {
+      "id" : "testimonial.package.button_text",
+      "name" : "button_text",
+      "display_width" : null,
+      "label" : "Button text",
+      "required" : true,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Buy"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "title" : "Item title",
+    "thumb" : {
+      "size_type" : "auto",
+      "src" : "https://via.placeholder.com/480x360.png",
+      "alt" : null
+    },
+    "quote" : "<p>One to two lines of quotation for this item</p>",
+    "caption" : "<p>One line of quotation caption for this item</p>",
+    "package" : {
+      "is_feature_package" : true,
+      "title" : "Item title",
+      "categories" : [ "group_fitness" ],
+      "badge_text" : "Item badge text",
+      "price" : "S$10.00",
+      "label_text" : "Item label text",
+      "excerpt" : "<p>One to two lines describing this item</p>",
+      "is_mb_enabled" : true,
+      "service_id" : "100000",
+      "button_text" : "Buy"
+    }
+  } ]
+}, {
+  "id" : "card_style",
+  "name" : "card_style",
+  "display_width" : null,
+  "label" : "Card style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "card_style.option",
+    "name" : "option",
+    "display_width" : null,
+    "label" : "Option",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "card", "Card" ], [ "in-situ", "In Situ" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "card"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group"
+} ]

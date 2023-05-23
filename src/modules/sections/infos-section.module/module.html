@@ -1,0 +1,38 @@
+<section class="infos-section">
+  <h1 class="
+    infos-section__title
+    h2">
+    {{ module.title }}
+  </h1>
+  <div class="infos-section__list-wrap">
+    <div class="infos-section__list">
+      {% for card in module.infos %}
+        <div class="infos-section__item">
+          <div class="info-card">
+            <h2 class="
+              info-card__title
+              h4">
+              {{ card.title }}
+            </h2>
+            <div class="info-card__desc">
+              {{ card.desc }}
+            </div>
+            {% set href = card.link.url.href || '' %}
+            {% if href is truthy %}
+              {% set rel = (card.link.open_in_new_tab ? 'noopener ' : null) ~ (card.link.no_follow ? 'nofollow' : null) %}
+              <a
+                {% if card.link.open_in_new_tab %}target="_blank"{% endif %}
+                href="{{ href }}"
+                rel ="{{ rel }}"
+                class="
+                  info-card__button
+                  button button--s">
+                {{ card.button_text }}
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

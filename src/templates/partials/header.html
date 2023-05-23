@@ -1,0 +1,42 @@
+<!--
+  templateType: global_partial
+  label: Header
+-->
+
+{% module 'announcement_bar'
+  path='/core-collective-theme/modules/layout/announcement-bar',
+  label='Announcement bar',
+%}
+
+<header class="
+  header--{{ widget_data.page_config.header_theme }}
+  {{ widget_data.site_config.content.is_announcement_published ? "header--announcement-bar" : "" }}
+  header">
+  <div class="content-wrapper content-wrapper--l">
+    <div class="
+      header__container
+      content-wrapper__section">
+      {% module 'header_nav'
+        path='/core-collective-theme/modules/layout/header-nav',
+        label='Navigation',
+      %}
+    </div>
+  </div>
+</header>
+
+<nav
+  class="header-menu-nav"
+  id="menu">
+  <div class="content-wrapper">
+    <div class="
+      header-menu-nav__container
+      content-wrapper__section">
+      {% module 'menu_nav'
+        path='/core-collective-theme/modules/layout/menu-nav',
+        label='Menu',
+      %}
+    </div>
+  </div>
+</nav>
+
+<div class="header-spacer"></div>

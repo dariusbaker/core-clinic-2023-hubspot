@@ -1,0 +1,11 @@
+.icon {
+  font-size: var(--font-scale-5);
+}
+
+.icon--s {
+  font-size: var(--font-scale-6);
+}
+
+.icon--l {
+  font-size: var(--font-scale-4);
+}

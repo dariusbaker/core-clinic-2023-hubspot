@@ -1,0 +1,99 @@
+<!--
+  templateType: blog
+  isAvailableForNewContent: true
+  label: Core Collective - blog index
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+  <main class="body-container-wrapper">
+    <div class="body-container">
+      <div class="f-section">
+        {# header #}
+        <div class="f-row">
+          {% module "page_header"
+            path="/core-collective-theme/modules/headers/page-header",
+            label="Page header",
+            title="Articles & Resources",
+            label_text="Blog",
+            desc="",
+          %}
+        </div>
+
+        {# featured posts #}
+        {% unless tag %}
+          {# important to use `content` as var name, data is passed down to module #}
+          {% set feat_posts = blog_recent_tag_posts(group.id, 'featured', 3) %}
+          {% if feat_posts is truthy and current_page_num == 1 %}
+            <div class="
+              blog-index__feat-posts
+              f-row">
+              <div class="blog-index__feat-posts-list">
+                {% for content in feat_posts %}
+                  <div class="blog-index__feat-posts-item">
+                    {% module "post_card"
+                      path="/core-collective-theme/modules/cards/feat-blog-post-card",
+                    %}
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          {% endif %}
+        {% endunless %}
+      </div>
+
+      {# body #}
+      <div class="
+        {{ tag ? "f-section--pull-top" : "bye" }}
+        f-section">
+        <div class="
+          blog-index__body
+          f-row">
+          {# tags #}
+          <div class="
+            blog-index__tags-nav
+            f-row">
+            {% module "tag_nav"
+              path="/core-collective-theme/modules/navs/blog-tag-nav",
+              label="Tags",
+              title="Categories",
+            %}
+          </div>
+
+          {# posts #}
+          <div class="
+            blog-index__posts
+            f-row">
+            {% if tag %}
+              <h2 class="
+                blog-index__posts-list-title
+                h4">
+                {{ page_meta.html_title|split(' | ')|last }}
+              </h2>
+            {% endif %}
+            <div class="blog-index__posts-list">
+              {# important to use `content` as var name, data is passed down to module #}
+              {% for content in contents %}
+                <div class="blog-index__posts-item">
+                  {% module "post_card"
+                    path="/core-collective-theme/modules/cards/blog-post-card"
+                  %}
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {# footer #}
+      <div class="f-section">
+        <div class="f-row">
+          {# pagination #}
+          {% module "blog_pagination_nav"
+            path="/core-collective-theme/modules/navs/blog-pagination-nav"
+          %}
+        </div>
+      </div>
+    </div>
+  </main>
+{% endblock body %}

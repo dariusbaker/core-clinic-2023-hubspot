@@ -1,0 +1,18 @@
+.blog-tag-nav__list {
+  margin-top: var(--space-3);
+}
+
+.blog-tag-nav__item + .blog-tag-nav__item {
+  margin-top: var(--space-1);
+}
+
+.blog-tag-nav__tag {
+  color: var(--dark-grey);
+  font-size: var(--font-scale-7);
+  letter-spacing: var(--track);
+  text-transform: uppercase;
+}
+
+.blog-tag-nav__tag:hover {
+  color: var(--grey);
+}

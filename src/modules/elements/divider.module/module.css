@@ -1,0 +1,13 @@
+.hr {
+  margin: 0;
+}
+
+/* variant: grey */
+.hr--grey {
+  border-bottom-color: var(--grey);
+}
+
+/* variant: teal */
+.hr--teal {
+  border-bottom-color: var(--teal);
+}

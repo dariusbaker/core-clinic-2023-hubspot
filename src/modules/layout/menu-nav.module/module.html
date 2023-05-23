@@ -1,0 +1,124 @@
+<div class="menu-nav">
+  {# quick nav #}
+  <div class="
+    menu-nav__section
+    menu-quick-nav">
+    {% set menu_list = menu(module.quick_nav) %}
+    {% if menu_list is truthy %}
+      <ul class="
+        quick-links-list
+        list">
+        {% for link in menu_list.children %}
+          <li class="
+            quick-links-list__item
+            li">
+            <a
+              href="{{ link.url }}"
+              target="{{ link.linkTarget }}"
+              class="
+                {{ link.activeBranch ? "--active" : "" }}
+                quick-links-list__a
+                a">
+              {{ link.label }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+
+  {# services nav #}
+  <div class="
+    menu-nav__section
+    menu-services-nav">
+    {% set menu_list = menu(module.services_nav) %}
+    {% if menu_list is truthy %}
+      <ul class="
+        services-cat-list
+        list">
+        {% for link in menu_list.children %}
+          <li class="
+            services-cat-list__item
+            li">
+            <a
+              href="{{ link.url }}"
+              target="{{ link.linkTarget }}"
+              data-slug="{{ link.slug }}"
+              class="
+                {{ link.activeBranch ? "services-cat-list__item-content--active" : "" }}
+                services-cat-list__item-content
+                a">
+              <span class="
+                services-cat-list__badge
+                service-badge {{ link.slug is truthy ? "service-badge--" + link.slug : "" }}">
+              </span>
+              <span class="
+                services-cat-list__label">
+                {{ link.label }}
+              </span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+
+  {#  driver #}
+  <div class="
+    menu-nav__section
+    driver">
+    {% set href = module.driver.link.url.href || '' %}
+    {% set rel = (module.driver.link.open_in_new_tab ? 'noopener ' : null) ~ (module.driver.link.no_follow ? 'nofollow' : null) %}
+    <a
+      {% if module.driver.link.open_in_new_tab %}target="_blank"{% endif %}
+      href="{{ href }}"
+      rel ="{{ rel }}"
+      class="
+        driver__a
+        a">
+      <div class="driver__header">
+        <h1 class="
+          driver__title
+          h3">
+          {{ module.driver.title }}
+        </h1>
+        <i class="
+          driver__a-icon
+          icon icon--s
+          fas fa-external-link-alt">
+        </i>
+      </div>
+      <div class="driver__excerpt">
+        {{ module.driver.excerpt }}
+      </div>
+    </a>
+  </div>
+
+  {# main nav #}
+  <div class="
+    menu-nav__section
+    menu-main-nav">
+    {% set menu_list = menu(module.main_nav) %}
+    {% if menu_list is truthy %}
+      <ul class="
+        main-links-list
+        list">
+        {% for link in menu_list.children %}
+          <li class="
+            main-links-list__item
+            li">
+            <a
+              href="{{ link.url }}"
+              target="{{ link.linkTarget }}"
+              class="
+                {{ link.activeBranch ? "main-links-list__a--active" : "" }}
+                main-links-list__a
+                a">
+              {{ link.label }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</div>

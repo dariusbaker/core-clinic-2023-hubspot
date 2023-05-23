@@ -1,0 +1,15 @@
+<section class="section">
+  <div class="section__header">
+    {% if module.title is truthy %}
+      <h1 class="
+        section__title
+        section-header__title
+        h4">
+        {{ module.title }}
+      </h1>
+    {% endif %}
+  </div>
+  <div class="section__body">
+    {{ module.section_body }}
+  </div>
+</section>

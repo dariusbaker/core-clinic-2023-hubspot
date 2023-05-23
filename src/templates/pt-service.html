@@ -1,0 +1,84 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Service - professional training
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+  <main class="body-container-wrapper">
+    {% dnd_area 'header_area'
+      class='body-container',
+      label='Header area',
+    %}
+      {# page header #}
+      {% dnd_section %}
+        {% dnd_module
+          path='/core-collective-theme/modules/headers/page-header',
+          label="Page header",
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
+
+    {% dnd_area 'hero_area'
+      class='body-container body-container--l body-container--pull',
+      label='Hero area',
+    %}
+      {# hero images #}
+      {% dnd_section %}
+        {% dnd_module
+          path='/core-collective-theme/modules/media/hero-images',
+          label="Hero images",
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
+
+    {% dnd_area 'body_area'
+      class='body-container',
+      label='Body area',
+    %}
+      {# body #}
+      {% dnd_section %}
+        {% dnd_column %}
+          {# banner #}
+          {% dnd_row %}
+            {% dnd_module
+              path='/core-collective-theme/modules/banners/package-banner',
+              label="Pro package banner",
+              color_option="black",
+            %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+
+          {# personal trainers #}
+          {% dnd_row %}
+            {% dnd_module
+              path='/core-collective-theme/modules/sections/pro-profiles-section',
+              label="Personal trainers",
+              filter={
+                is_enabled: true,
+              },
+            %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
+
+    {% dnd_area 'footer_area'
+      class='body-container',
+      label='Footer area',
+    %}
+      {# banner #}
+      {% dnd_section %}
+        {% dnd_module
+          path='/core-collective-theme/modules/banners/banner',
+          label="Banner",
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
+  </main>
+{% endblock body %}

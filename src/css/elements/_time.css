@@ -1,0 +1,11 @@
+.time {
+  color: var(--dark-grey);
+  font-size: var(--font-scale-7);
+  font-weight: 600;
+  letter-spacing: var(--track);
+  text-transform: uppercase;
+}
+
+.time--dark {
+  color: var(--grey);
+}

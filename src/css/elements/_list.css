@@ -1,0 +1,16 @@
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.li {
+  display: block;
+  width: auto;
+  margin-bottom: 0;
+}
+
+.li::before {
+  content: '';
+  display: none;
+}

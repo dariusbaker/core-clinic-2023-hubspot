@@ -1,0 +1,260 @@
+[ {
+  "id" : "title",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Section title"
+}, {
+  "id" : "pricings",
+  "name" : "pricings",
+  "display_width" : null,
+  "label" : "Pricings",
+  "required" : true,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : null,
+    "sorting_label_field" : "pricing.title",
+    "default" : 1
+  },
+  "children" : [ {
+    "id" : "pricing.title",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Item title"
+  }, {
+    "id" : "pricing.subtitle",
+    "name" : "subtitle",
+    "display_width" : null,
+    "label" : "Subtitle",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Item subtitle"
+  }, {
+    "id" : "pricing.desc",
+    "name" : "desc",
+    "display_width" : null,
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>One to two lines describing this item</p>"
+  }, {
+    "id" : "pricing.packages",
+    "name" : "packages",
+    "display_width" : null,
+    "label" : "Packages",
+    "required" : true,
+    "locked" : false,
+    "occurrence" : {
+      "min" : 1,
+      "max" : null,
+      "sorting_label_field" : "pricing.package.title",
+      "default" : 1
+    },
+    "children" : [ {
+      "id" : "pricing.package.title",
+      "name" : "title",
+      "display_width" : null,
+      "label" : "Title",
+      "required" : true,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Item title"
+    }, {
+      "id" : "pricing.package.badge_text",
+      "name" : "badge_text",
+      "display_width" : null,
+      "label" : "Badge text",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Item badge text"
+    }, {
+      "id" : "pricing.package.price",
+      "name" : "price",
+      "display_width" : null,
+      "label" : "Price",
+      "required" : true,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "S$10.00"
+    }, {
+      "id" : "pricing.package.label_text",
+      "name" : "label_text",
+      "display_width" : null,
+      "label" : "Label",
+      "required" : true,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Item label text"
+    }, {
+      "id" : "pricing.package.excerpt",
+      "name" : "excerpt",
+      "display_width" : null,
+      "label" : "Excerpt",
+      "required" : false,
+      "locked" : false,
+      "type" : "richtext",
+      "default" : "<p>One to two lines describing this item</p>"
+    }, {
+      "id" : "pricing.package.link",
+      "name" : "link",
+      "display_width" : null,
+      "label" : "Link",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "type" : "EXTERNAL",
+          "content_id" : null,
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "id" : "pricing.package.is_mb_enabled",
+      "name" : "is_mb_enabled",
+      "display_width" : null,
+      "label" : "Enable Mindbody button",
+      "required" : false,
+      "locked" : false,
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : true
+    }, {
+      "id" : "pricing.package.service_id",
+      "name" : "service_id",
+      "display_width" : null,
+      "label" : "Mindbody service-id",
+      "required" : true,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "100000"
+    }, {
+      "id" : "pricing.package.button_text",
+      "name" : "button_text",
+      "display_width" : null,
+      "label" : "Button text",
+      "required" : true,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Buy"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : [ {
+      "title" : "Item title",
+      "badge_text" : "Item badge text",
+      "price" : "S$10.00",
+      "label_text" : "Item label text",
+      "excerpt" : "<p>One to two lines describing this item</p>",
+      "is_mb_enabled" : true,
+      "service_id" : "100000",
+      "button_text" : "Buy"
+    } ]
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "title" : "Standard",
+    "subtitle" : "Item title",
+    "desc" : "<p>One to two lines describing this item</p>",
+    "packages" : [ {
+      "title" : "Item title",
+      "badge_text" : "Item badge text",
+      "price" : "S$10.00",
+      "label_text" : "Item label text",
+      "excerpt" : "<p>One to two lines describing this item</p>",
+      "is_mb_enabled" : true,
+      "service_id" : "100000",
+      "button_text" : "Buy"
+    } ]
+  } ]
+}, {
+  "id" : "footnotes",
+  "name" : "footnotes",
+  "display_width" : null,
+  "label" : "Footnotes",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : null,
+    "sorting_label_field" : "footnote.desc",
+    "default" : 1
+  },
+  "children" : [ {
+    "id" : "footnote.type",
+    "name" : "type",
+    "display_width" : null,
+    "label" : "Type",
+    "required" : true,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "note", "Note" ], [ "tip", "Tip" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "note"
+  }, {
+    "id" : "footnote.desc",
+    "name" : "desc",
+    "display_width" : null,
+    "label" : "Description",
+    "required" : true,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>One to two lines of item footnote</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "type" : "note",
+    "desc" : "<p>One to two lines of item footnote</p>"
+  } ]
+} ]

@@ -1,0 +1,185 @@
+[ {
+  "id" : "title",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : true,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Item title"
+}, {
+  "id" : "desc",
+  "name" : "desc",
+  "display_width" : null,
+  "label" : "Description",
+  "required" : true,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>One to two lines describing this item</p>"
+}, {
+  "id" : "packages",
+  "name" : "packages",
+  "display_width" : null,
+  "label" : "Packages",
+  "required" : true,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : null,
+    "sorting_label_field" : "package.title",
+    "default" : 1
+  },
+  "children" : [ {
+    "id" : "package.title",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Item title"
+  }, {
+    "id" : "package.badge_text",
+    "name" : "badge_text",
+    "display_width" : null,
+    "label" : "Badge text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Item badge text"
+  }, {
+    "id" : "package.price",
+    "name" : "price",
+    "display_width" : null,
+    "label" : "Price",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "S$10.00"
+  }, {
+    "id" : "package.label_text",
+    "name" : "label_text",
+    "display_width" : null,
+    "label" : "Label",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Item label text"
+  }, {
+    "id" : "package.excerpt",
+    "name" : "excerpt",
+    "display_width" : null,
+    "label" : "Excerpt",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>One to two lines describing this item</p>"
+  }, {
+    "id" : "package.link",
+    "name" : "link",
+    "display_width" : null,
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "type" : "EXTERNAL",
+        "content_id" : null,
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "package.is_mb_enabled",
+    "name" : "is_mb_enabled",
+    "display_width" : null,
+    "label" : "Enable Mindbody button",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "package.service_id",
+    "name" : "service_id",
+    "display_width" : null,
+    "label" : "Mindbody service-id",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "100000"
+  }, {
+    "id" : "package.button_text",
+    "name" : "button_text",
+    "display_width" : null,
+    "label" : "Button text",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Buy"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "title" : "Item title",
+    "badge_text" : "Item badge text",
+    "price" : "S$10.00",
+    "label_text" : "Item label text",
+    "excerpt" : "<p>One to two lines describing this item</p>",
+    "is_mb_enabled" : true,
+    "service_id" : "100000",
+    "button_text" : "Buy"
+  } ]
+}, {
+  "id" : "style",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "style.color_option",
+    "name" : "color_option",
+    "display_width" : null,
+    "label" : "Color option",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "green", "Green" ], [ "black", "Black" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "green"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group"
+} ]

@@ -1,0 +1,26 @@
+{% if module.title != "" %}
+  <h3 class="
+    hero-images__label
+    h4">
+    {{ module.title }}
+  </h3>
+{% endif %}
+
+<div class="hero-images">
+  <div class="hero-images__list-wrap">
+    <div class="hero-images__list">
+      {% for image in module.hero_images %}
+        <div class="
+          hero-images__item--{{ loop.length }}-{{ loop.index }}
+          hero-images__item">
+          <img
+            src="{{ image.src }}"
+            alt="{{ image.alt }}"
+            class="
+              hero-images__img
+              img">
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

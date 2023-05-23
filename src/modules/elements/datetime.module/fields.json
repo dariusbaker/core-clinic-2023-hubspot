@@ -1,0 +1,21 @@
+[ {
+  "id" : "datetime",
+  "name" : "datetime",
+  "display_width" : null,
+  "label" : "Datetime",
+  "required" : true,
+  "locked" : false,
+  "validation_regex" : "",
+  "step" : 30,
+  "type" : "datetime"
+}, {
+  "id" : "is_dark_theme",
+  "name" : "is_dark_theme",
+  "display_width" : null,
+  "label" : "Dark theme",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : false
+} ]

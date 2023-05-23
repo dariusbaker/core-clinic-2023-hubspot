@@ -1,0 +1,137 @@
+[ {
+  "id" : "title",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : true,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Section title"
+}, {
+  "id" : "services",
+  "name" : "services",
+  "display_width" : null,
+  "label" : "Services",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : null,
+    "sorting_label_field" : "service.title",
+    "default" : 1
+  },
+  "children" : [ {
+    "id" : "service.title",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Name",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Item name"
+  }, {
+    "id" : "service.excerpt",
+    "name" : "excerpt",
+    "display_width" : null,
+    "label" : "Excerpt",
+    "required" : true,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>One to two lines describing this item</p>"
+  }, {
+    "id" : "service.thumb",
+    "name" : "thumb",
+    "display_width" : null,
+    "label" : "Thumbnail",
+    "required" : true,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://via.placeholder.com/120.png",
+      "alt" : null
+    }
+  }, {
+    "id" : "service.link",
+    "name" : "link",
+    "display_width" : null,
+    "label" : "Link",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "href" : "https://google.com",
+        "type" : "EXTERNAL"
+      },
+      "no_follow" : false,
+      "open_in_new_tab" : false
+    }
+  }, {
+    "id" : "service.category",
+    "name" : "category",
+    "display_width" : null,
+    "label" : "Category",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "group_fitness", "Group Fitness" ], [ "personal_training", "Personal Training" ], [ "medical", "Medical" ], [ "beauty_aesthetics", "Beauty & Aesthetics" ], [ "lifestyle_children", "Lifestyle & Children" ], [ "wellness", "Wellness" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "group_fitness"
+  }, {
+    "id" : "service.locations",
+    "name" : "locations",
+    "display_width" : null,
+    "label" : "Locations",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : 1,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : 1
+    },
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : true,
+    "type" : "text",
+    "default" : [ "Location" ]
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "title" : "Item name",
+    "excerpt" : "<p>One to two lines describing this item</p>",
+    "thumb" : {
+      "size_type" : "auto",
+      "src" : "https://via.placeholder.com/120.png",
+      "alt" : null
+    },
+    "link" : {
+      "url" : {
+        "href" : "https://google.com",
+        "type" : "EXTERNAL"
+      },
+      "no_follow" : false,
+      "open_in_new_tab" : false
+    },
+    "category" : "group_fitness",
+    "locations" : [ "Location" ]
+  } ]
+} ]

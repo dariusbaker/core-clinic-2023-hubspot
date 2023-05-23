@@ -1,0 +1,73 @@
+button,
+.button,
+.hs-button {
+  display: inline-block;
+  padding: var(--space-3) var(--space-5);
+  transition: all var(--transition-time-fast);
+  border: var(--border-width-2) solid var(--green);
+  border-radius: var(--border-radius-3);
+  background: var(--green);
+  color: var(--white);
+  font-size: var(--font-scale-7);
+  font-weight: 700;
+  letter-spacing: var(--track-wide);
+  line-height: var(--line-height-solid);
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  word-break: break-word;
+  cursor: pointer;
+}
+
+.button--s {
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--border-radius-3);
+  font-size: var(--font-scale-8);
+}
+
+button:disabled,
+.button:disabled,
+.hs-button:disabled {
+  border-color: var(--grey);
+  background-color: var(--grey);
+  color: var(--dark-grey);
+  cursor: not-allowed;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus,
+.hs-button:hover,
+.hs-button:focus {
+  filter: brightness(120%);
+  text-decoration: none;
+}
+
+/* theme: light-green */
+.button--light-green {
+  border-color: var(--light-green);
+  background: var(--light-green);
+  color: var(--primary-text-color);
+}
+
+/* theme: black */
+.button--black {
+  border-color: var(--black);
+  background: var(--black);
+  color: var(--light-green);
+}
+
+/* theme: teal */
+.button--teal {
+  border-color: var(--teal);
+  background: var(--teal);
+  color: var(--black);
+}
+
+/* theme: clinicblue */
+.button--clinicblue {
+  border-color: var(--clinicblue);
+  background: var(--clinicblue);
+  color: var(--black);
+}

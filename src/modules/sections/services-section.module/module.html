@@ -1,0 +1,58 @@
+<section class="services">
+  <h1 class="
+    services__title
+    h4">
+    {{ module.title }}
+  </h1>
+  <div class="services__list-wrap">
+    <div class="services__list">
+      {% for service in module.services %}
+        <div class="services__item">
+          <article class="service-card">
+            {% set href = service.link.url.href || '' %}
+            {% set rel = (service.link.open_in_new_tab ? 'noopener ' : null) ~ (service.link.no_follow ? 'nofollow' : null) %}
+            <a
+              {% if service.link.open_in_new_tab %}target="_blank"{% endif %}
+              href="{{ href }}"
+              rel ="{{ rel }}"
+              class="
+                service-card__a
+                a">
+              <img
+                src="{{ service.thumb.src }}"
+                alt="{{ service.thumb.alt }}"
+                class="
+                  service-card__thumb
+                  img">
+              <div class="service-card__body">
+                <div class="
+                  service-card__badge
+                  service-badge service-badge--{{ service.category|replace("_", "-") }}">
+                </div>
+                <div class="service-card__main">
+                  <h1 class="
+                    service-card__title
+                    h5">
+                    {{ service.title }}
+                  </h1>
+                  <div class="
+                    service-card__excerpt
+                    small-desc">
+                    {{ service.excerpt }}
+                  </div>
+                </div>
+                <div class="
+                  service-card__locations
+                  locations-line">
+                  {% for location in service.locations %}
+                    {{ location }}{{ loop.last ? "" : ", " }}
+                  {% endfor %}
+                </div>
+              </div>
+            </a>
+          </article>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,35 @@
+<section class="profiles-section">
+  {% if module.title %}
+    <h1 class="
+      profiles-section__title
+      h2">
+      {{ module.title }}
+    </h1>
+  {% endif %}
+  <div class="profiles-section__list-wrap">
+    <div class="profiles-section__list">
+      {% for profile in module.profiles %}
+        <div class="
+          {{ module.is_featured ? "profiles-section__item--feat" : "" }}
+          profiles-section__item">
+          <article class="profile-card">
+            <img
+              src="{{ profile.thumb.src }}"
+              alt="{{ profile.thumb.alt }}"
+              class="
+                profile-card__thumb
+                img">
+            <h1 class="
+              {{ module.is_featured ? "h4" : "h5" }}
+              profile-card__title">
+              {{ profile.title }}
+            </h1>
+            <div class="profile-card__job">
+              {{ profile.job }}
+            </div>
+          </article>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

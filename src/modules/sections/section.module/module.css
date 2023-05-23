@@ -1,0 +1,22 @@
+.section__body {
+  margin-top: var(--space-3);
+}
+
+@media (min-width: 640px) {
+  .section {
+    display: flex;
+  }
+
+  .section__header {
+    flex: 0 0 calc(100% / 12 * 5);
+    max-width: calc(100% / 12 * 5);
+    padding-right: var(--space-3);
+  }
+
+  .section__body {
+    flex: 0 0 calc(100% / 12 * 7);
+    max-width: calc(100% / 12 * 7);
+    margin-top: 0;
+    padding-left: var(--space-3);
+  }
+}

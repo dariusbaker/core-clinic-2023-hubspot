@@ -1,0 +1,70 @@
+[ {
+  "id" : "title",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Summary list title"
+}, {
+  "id" : "items",
+  "name" : "items",
+  "display_width" : null,
+  "label" : "Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : null,
+    "sorting_label_field" : "item.description",
+    "default" : 1
+  },
+  "children" : [ {
+    "id" : "item.thumb",
+    "name" : "thumb",
+    "display_width" : null,
+    "label" : "Thumbnail",
+    "required" : true,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://via.placeholder.com/60.png",
+      "alt" : null
+    }
+  }, {
+    "id" : "item.description",
+    "name" : "description",
+    "display_width" : null,
+    "label" : "Description",
+    "required" : true,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>One to two lines of description for this item</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "thumb" : {
+      "size_type" : "auto",
+      "src" : "https://via.placeholder.com/60.png",
+      "alt" : null
+    },
+    "description" : "<p>One to two lines of description for item #2</p>"
+  }, {
+    "thumb" : {
+      "size_type" : "auto",
+      "src" : "https://via.placeholder.com/60.png",
+      "alt" : null
+    },
+    "description" : "<p>One to two lines of description for item #2</p>"
+  } ]
+} ]

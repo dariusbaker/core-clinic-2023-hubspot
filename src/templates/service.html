@@ -1,0 +1,108 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Service
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+  <main class="body-container-wrapper">
+    {% dnd_area 'hero_area'
+      class='body-container body-container--l body-container--pull',
+      label='Hero area',
+    %}
+      {# hero images #}
+      {% dnd_section
+        background_color={
+          'r': 32,
+          'g': 32,
+          'b': 29,
+          'a': 1.0
+        },
+      %}
+        {% dnd_module
+          path='/core-collective-theme/modules/media/hero-images',
+          label="Hero images",
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
+
+    {% dnd_area 'header_area'
+      class='body-container',
+      label='Header area',
+    %}
+      {% dnd_section
+        background_color={
+          'r': 32,
+          'g': 32,
+          'b': 29,
+          'a': 1.0
+        },
+      %}
+        {% dnd_module
+          path='/core-collective-theme/modules/headers/service-header',
+          label="Page header",
+          is_dark_theme=true,
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
+
+    {% dnd_area 'body_area'
+      class='body-container',
+      label='Body area',
+    %}
+      {# body #}
+      {% dnd_section %}
+        {% dnd_column %}
+          {# section #}
+          {% dnd_row %}
+            {% dnd_module
+              path='/core-collective-theme/modules/sections/section',
+              label="Section",
+            %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
+
+    {% dnd_area 'footer_area'
+      class='body-container',
+      label='Footer area',
+    %}
+      {# booking section #}
+      {% dnd_section %}
+        {% dnd_module
+          path='/core-collective-theme/modules/sections/bookings-section',
+          label="Bookings section",
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_section %}
+
+      {# related content #}
+      {% dnd_section %}
+        {% dnd_column %}
+          {# related articles #}
+          {% dnd_row %}
+            {% dnd_module
+              path='/core-collective-theme/modules/sections/rel-articles-section',
+              label="Related articles section",
+            %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+
+          {# related services #}
+          {% dnd_row %}
+            {% dnd_module
+              path='/core-collective-theme/modules/sections/services-section',
+              label="Related services section",
+            %}
+            {% end_dnd_module %}
+          {% end_dnd_row %}
+        {% end_dnd_column %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
+  </main>
+{% endblock body %}

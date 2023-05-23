@@ -1,0 +1,12 @@
+.lead {
+  font-size: var(--font-scale-7);
+  font-weight: 700;
+  letter-spacing: var(--track);
+  line-height: var(--line-height-tight);
+  text-transform: uppercase;
+}
+
+.lead:hover,
+.lead:focus {
+  color: var(--dark-grey);
+}

@@ -1,0 +1,25 @@
+<!--
+  templateType: error_page
+  isAvailableForNewContent: true
+  label: Core Collective - 500 error
+-->
+{% extends '../layouts/base.html' %}
+
+{% block body %}
+  <main class="body-container-wrapper">
+    <div class="body-container body-container--s">
+      <section
+        class="
+          f-section
+          error-page"
+        data-error="500">
+        <div class="
+          f-row
+          error-page__content">
+          <h1 class="error-page__heading">Something isn't quite right</h1>
+          <p>Sorry, an internal server error occurred. But have no fear, we're on the case!</p>
+        </div>
+      </section>
+    </div>
+  </main>
+{% endblock body %}

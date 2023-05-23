@@ -1,0 +1,36 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Book class
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+  <main class="body-container-wrapper">
+    {% dnd_area 'header_area'
+      class='body-container',
+      label='Header area',
+    %}
+      {# header #}
+      {% dnd_section %}
+        {% dnd_module
+          path='/core-collective-theme/modules/headers/page-header',
+          label="Page header",
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
+
+    {# mindbody booking iframe #}
+    <div class="body-container body-container--pull-top">
+      <div class="f-section">
+        <div class="f-row">
+          {% module "schedule_table"
+            path="/core-collective-theme/modules/mindbody/schedule-table",
+            label="Schedule table",
+          %}
+        </div>
+      </div>
+    </div>
+  </main>
+{% endblock body %}

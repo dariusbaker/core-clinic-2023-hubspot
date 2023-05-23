@@ -1,0 +1,26 @@
+[ {
+  "id" : "style",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "style.color_option",
+    "name" : "color_option",
+    "display_width" : null,
+    "label" : "Color option",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "grey", "Grey" ], [ "teal", "Teal" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "grey"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group"
+} ]

@@ -1,0 +1,82 @@
+.locations__list-wrap {
+  margin-top: var(--space-5);
+}
+
+.locations__item + .locations__item {
+  margin-top: var(--space-5);
+}
+
+@media (min-width: 400px) {
+  .locations__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--space-7));
+    margin-left: calc(-1 * var(--space-5));
+  }
+
+  .locations__item {
+    flex: 1 1 calc(50%);
+    max-width: calc(50%);
+    padding-top: var(--space-7);
+    padding-left: var(--space-5);
+  }
+
+  .locations__item + .locations__item {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 640px) {
+  .locations {
+    display: flex;
+  }
+
+  .locations__header {
+    flex: 1 1 calc(100% / 3);
+    max-width: calc(100% / 3);
+    margin-top: 0;
+    padding-right: var(--space-3);
+  }
+
+  .locations__list-wrap {
+    flex: 1 1 calc(100% * 2 / 3);
+    max-width: calc(100% * 2 / 3);
+    margin-top: 0;
+    padding-left: var(--space-3);
+  }
+}
+
+@media (min-width: 960px) {
+  .locations__header,
+  .locations__list-wrap {
+    flex: 1 1 calc(50%);
+    max-width: calc(50%);
+  }
+}
+
+/* card */
+.location-card__icon {
+  margin-bottom: var(--space-3);
+  color: var(--mid-grey);
+}
+
+.location-card__title {
+  margin-bottom: 0;
+}
+
+.location-card__address {
+  margin-top: var(--space-2);
+  color: var(--dark-grey);
+}
+
+.location-card__tel-list {
+  margin-top: var(--space-2);
+}
+
+.location-card__tel-item + .location-card__tel-item {
+  margin-top: var(--space-1);
+}
+
+.location-card__a-wrap {
+  margin-top: var(--space-4);
+}

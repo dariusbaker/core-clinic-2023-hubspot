@@ -1,0 +1,46 @@
+<!--
+  templateType: blog
+  isAvailableForNewContent: true
+  label: Core Collective - FAQ post
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+  <main class="body-container-wrapper">
+    {# header #}
+    <div class="body-container body-container--s">
+      <div class="f-section">
+        {# headings #}
+        <div class="f-row">
+          {% module "page_header"
+            path="/core-collective-theme/modules/headers/page-header",
+            label="Page header",
+            title={{ content.name | striptags }},
+            label_text=""
+          %}
+        </div>
+
+        {# meta #}
+        <div class="
+          post__meta
+          f-row">
+          <time
+            datetime="{{ content.publish_date | datetimeformat('%Y-%m-%e %H:%M:%S') }}"
+            class="time">
+            {{ content.publish_date | datetimeformat('%e %b %Y') }}
+          </time>
+        </div>
+      </div>
+    </div>
+
+    {# body #}
+    <div class="body-container body-container--s body-container--pull-top">
+      <div class="f-section">
+        {# content #}
+        <div class="f-row">
+           {{ content.post_body }}
+        </div>
+      </div>
+    </div>
+  </main>
+{% endblock body %}
