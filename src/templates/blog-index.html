@@ -12,7 +12,7 @@
         {# header #}
         <div class="f-row">
           {% module "page_header"
-            path="/core-collective-theme/modules/headers/page-header",
+            path="/core-clinic-theme/modules/headers/page-header",
             label="Page header",
             title="Articles & Resources",
             label_text="Blog",
@@ -32,7 +32,7 @@
                 {% for content in feat_posts %}
                   <div class="blog-index__feat-posts-item">
                     {% module "post_card"
-                      path="/core-collective-theme/modules/cards/feat-blog-post-card",
+                      path="/core-clinic-theme/modules/cards/feat-blog-post-card",
                     %}
                   </div>
                 {% endfor %}
@@ -54,7 +54,7 @@
             blog-index__tags-nav
             f-row">
             {% module "tag_nav"
-              path="/core-collective-theme/modules/navs/blog-tag-nav",
+              path="/core-clinic-theme/modules/navs/blog-tag-nav",
               label="Tags",
               title="Categories",
             %}
@@ -76,7 +76,7 @@
               {% for content in contents %}
                 <div class="blog-index__posts-item">
                   {% module "post_card"
-                    path="/core-collective-theme/modules/cards/blog-post-card"
+                    path="/core-clinic-theme/modules/cards/blog-post-card"
                   %}
                 </div>
               {% endfor %}
@@ -90,7 +90,7 @@
         <div class="f-row">
           {# pagination #}
           {% module "blog_pagination_nav"
-            path="/core-collective-theme/modules/navs/blog-pagination-nav"
+            path="/core-clinic-theme/modules/navs/blog-pagination-nav"
           %}
         </div>
       </div>
