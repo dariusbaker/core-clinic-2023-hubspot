@@ -4,12 +4,12 @@ const path = require('path');
 const fs = require('fs');
 const yaml = require('js-yaml');
 
-const portalID = process.env.HUBSPOT_PORTAL_ID;
+const portalId = process.env.HUBSPOT_PORTAL_ID;
 const personalAccessKey = process.env.HUBSPOT_PERSONAL_ACCESS_KEY;
 
 const portalConfig = {
   name: 'production',
-  portalID,
+  portalId,
   authType: 'personalaccesskey',
   personalAccessKey
 };
