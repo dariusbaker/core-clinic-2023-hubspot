@@ -13,6 +13,7 @@ case "$1" in
     # check for local hubspot config, if doesn't exists, tell user to setup first
     if [ -f "$HUBSPOT_YML_FILE" ]; then
         echo 'Booting up local watcher'
+        nvm install
         nvm use
         npm install --legacy-peer-deps
 
@@ -27,6 +28,7 @@ case "$1" in
   upload)
     if [ -f "$HUBSPOT_YML_FILE" ]; then
         echo 'Uploading theme'
+        nvm install
         nvm use
         npm install --legacy-peer-deps
         # remove existing files
@@ -43,6 +45,7 @@ case "$1" in
   setup)
     echo 'Setting up HubSpot'
 
+    nvm install
     nvm use
     npm install --legacy-peer-deps
     npx hs init
