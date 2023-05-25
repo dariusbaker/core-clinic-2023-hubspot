@@ -14,9 +14,13 @@
 }
 
 @media (min-width: 960px) {
-  .header-logo,
-  .header-utils {
+  .header-logo {
     flex: 0 0 12.5rem;
+  }
+
+  .header-utils {
+    flex: 0 0 auto;
+    width: 12.5rem;
   }
 
   .header-quick-nav,
