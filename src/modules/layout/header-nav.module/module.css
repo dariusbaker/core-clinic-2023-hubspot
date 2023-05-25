@@ -76,7 +76,7 @@
 /* utils */
 .header-utils__driver {
   padding-left: var(--space-4);
-  border-left: var(--border-width-1) solid var(--grey);
+  border-left: var(--border-width-1) solid var(--black);
 }
 
 .header-menu-button {
@@ -103,19 +103,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
-}
-
-/* theme: clinic */
-.header-nav--clinic {
-  background: var(--teal);
-}
-
-.header-nav--clinic .header-utils__driver {
-  border-left-color: var(--black);
-}
-
-.header-nav--clinic .header-utils__driver-excerpt {
-  color: var(--black);
 }
 
 /* theme: dark */
