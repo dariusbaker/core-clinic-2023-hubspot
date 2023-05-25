@@ -1,7 +1,6 @@
 :root {
   --open-sans: 'Open Sans', sans-serif;
   --tenor-sans: 'Tenor Sans', sans-serif;
-  --montserrat: 'Montserrat', sans-serif;
   --primary-font: var(--open-sans);
   --secondary-font: var(--tenor-sans);
   --base-font-size: 13px;

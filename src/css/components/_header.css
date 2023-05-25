@@ -22,7 +22,7 @@ header.header,
   padding-top: var(--space-2);
   padding-bottom: var(--space-2);
   overflow-y: scroll;
-  background: var(--beige);
+  background: var(--anakiwa);
   -webkit-overflow-scrolling: touch;
 }
 
@@ -30,18 +30,13 @@ header.header {
   z-index: 12;
   top: 0;
   height: var(--header-height);
-  background: var(--white);
+  background: var(--clinical-blue);
 }
 
 /* theme: dark */
 header.header--dark {
   background: var(--black);
   color: var(--white);
-}
-
-/* theme: clinic */
-header.header--clinic {
-  background: var(--teal);
 }
 
 .header-menu-nav {
