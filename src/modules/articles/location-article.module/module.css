@@ -31,7 +31,7 @@
   height: 0;
   padding-bottom: 100%;
   overflow: hidden;
-  border-radius: var(--border-radiu_subs-3);
+  border-radius: var(--border-radius-3);
 }
 
 .location-article__thumb-wrap--1 {
