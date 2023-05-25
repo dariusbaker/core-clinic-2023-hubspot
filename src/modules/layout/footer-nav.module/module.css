@@ -273,7 +273,7 @@
 /* copyright */
 .footer-copyright {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   margin-top: var(--space-5);
   color: var(--dark-grey);
   font-size: var(--font-scale-7);
@@ -284,17 +284,13 @@
 .footer-copyright__logo-a {
   flex: 0 0 2rem;
   max-width: 2rem;
-  height: 0;
+  height: auto;
   margin-right: var(--space-2);
   transition: opacity var(--transition-time-fast);
 }
 
 .footer-copyright__logo-a:hover {
   opacity: var(--opacity-dim);
-}
-
-.footer-copyright__logo {
-  transform: translate(0, calc(-50% - 0.25em));
 }
 
 @media (max-width: 959px) {
