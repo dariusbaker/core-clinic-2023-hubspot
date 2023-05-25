@@ -15,17 +15,26 @@
 }
 
 .driver__title {
+  width: calc(100% - 16px); /* accommodate icon beside it*/
   margin-right: var(--space-1);
   margin-bottom: 0;
+  overflow: hidden;
   font-size: var(--font-scale-6);
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .driver__excerpt {
+  display: -webkit-box;
+  overflow: hidden;
   transition: color var(--transition-time-fast);
   font-size: var(--font-scale-8);
   font-weight: 600;
   letter-spacing: var(--track);
   line-height: var(--line-height-snug);
+
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .driver__a:hover .driver__excerpt {
