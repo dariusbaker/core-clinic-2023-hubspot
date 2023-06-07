@@ -111,20 +111,25 @@
 
 /* theme: dark */
 .header-nav--dark {
-  background: var(--black);
+  background: var(--blue-chill);
   color: var(--white);
 }
 
 .header-nav--dark .header-utils__driver {
-  border-left-color: var(--dark-grey);
+  border-left-color: var(--white);
 }
 
 .header-nav--dark .header-utils__driver-excerpt {
-  color: var(--grey);
+  color: var(--white);
 }
 
 .header-nav--dark .header-utils__driver-a:hover .header-utils__driver-excerpt {
-  color: var(--mid-grey);
+  color: var(--white);
+}
+
+.header-nav--dark .header-quick-nav__a:hover,
+.header-nav--dark .header-utils__driver-a:hover {
+  color: var(--shark);
 }
 
 /* JS enhancements */

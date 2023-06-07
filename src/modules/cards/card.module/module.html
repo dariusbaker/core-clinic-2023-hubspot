@@ -1,14 +1,12 @@
 <article class="card card--{{ module.style.color_option }}">
-  <div class="
-    card__kicker
-    h6">
+  <div class="card__kicker h6">
     {{ module.kicker }}
   </div>
-  <h1 class="
-    card__title
-    h4">
+
+  <h1 class="card__title h4">
     {{ module.title }}
   </h1>
+
   <div class="card__excerpt">
     {{ module.excerpt }}
   </div>
@@ -19,8 +17,9 @@
     href="{{ href }}"
     rel ="{{ rel }}"
     class="
-      {{ module.style.color_option == "green" ? "button--light-green" : "" }}
-      {{ module.style.color_option == "grey" ? "button--teal" : "" }}
+      {{ module.style.color_option == "shark" ? "button--anakiwa" : "" }}
+      {{ module.style.color_option == "anakiwa" ? "button--shark" : "" }}
+      {{ module.style.color_option == "grey" ? "button--shark" : "" }}
       card__button
       button">
     {{ module.button_text }}

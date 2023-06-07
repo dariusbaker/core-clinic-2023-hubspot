@@ -234,9 +234,9 @@ form .hs-button {
   display: inline-block;
   padding: var(--space-3) var(--space-5);
   transition: all var(--transition-time-fast);
-  border: var(--border-width-2) solid var(--green);
+  border: var(--border-width-2) solid var(--shark);
   border-radius: var(--border-radius-3);
-  background: var(--green);
+  background: var(--shark);
   color: var(--white);
   font-size: var(--font-scale-7);
   font-weight: 700;

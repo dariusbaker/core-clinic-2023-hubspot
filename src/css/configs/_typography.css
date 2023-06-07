@@ -282,7 +282,7 @@ hr:last-child {
 
 :focus {
   outline: auto;
-  outline-color: green;
+  outline-color: var(--clinical-blue);
 }
 
 .disable-focus-styles :focus {

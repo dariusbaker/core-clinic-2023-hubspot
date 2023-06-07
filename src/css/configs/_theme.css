@@ -1,4 +1,9 @@
 :root {
+  /*
+   * Some colours are named using:
+   * https://chir.ag/projects/name-that-color/
+   */
+  --anakiwa: #80f7ff;
   --beige: #fadaba;
   --black: #20201d;
   --clinical-blue: #00c1d5;
@@ -6,6 +11,7 @@
   --dark-grey: #696969;
   --green: #005133;
   --grey: #c5c5c5;
+  --lagoon: #008c95;
   --light-blue: #8dadae;
   --light-green: #7aea7a;
   --light-grey: #f5f5f5;
@@ -13,13 +19,16 @@
   --lime: #c5eb74;
   --mid-grey: #a8a8ae;
   --off-white: #ecede4;
+  --onahau: #bffbff;
+  --polar: #e8f6f9;
   --red: #ea7566;
   --slate: #466061;
   --teal: #02b9cf;
   --white: #ffffff;
-  --onahau: #bffbff;
-  --lagoon: #008c95;
-  --anakiwa: #80f7ff;
+  --ziggurat: #b8d4de;
+  --shark: #1d1e20;
+  --sherpa: #005151;
+  --blue-chill: #158f95;
 
   --border-width-1: 0.0625rem;
   --border-width-2: 0.125rem;
@@ -35,8 +44,8 @@
   --transition-time-fast: 0.15s;
   --transition-time-slow: 0.85s;
 
-  --background: var(--white);
+  --background: var(--polar);
   --light-background: var(--light-grey);
-  --primary-text-color: var(--black);
-  --secondary-text-color: var(--green);
+  --primary-text-color: var(--shark);
+  --secondary-text-color: var(--sherpa);
 }

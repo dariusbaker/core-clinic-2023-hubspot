@@ -77,12 +77,12 @@
     "required" : false,
     "locked" : false,
     "display" : "select",
-    "choices" : [ [ "green", "Green" ], [ "beige", "Beige" ], [ "grey", "Grey" ] ],
+    "choices" : [ [ "shark", "Shark" ], [ "anakiwa", "Anakiwa" ], [ "grey", "Grey" ] ],
     "multiple" : false,
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "green"
+    "default" : "shark"
   } ],
   "tab" : "CONTENT",
   "expanded" : false,

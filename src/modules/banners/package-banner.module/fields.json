@@ -172,12 +172,12 @@
     "required" : false,
     "locked" : false,
     "display" : "select",
-    "choices" : [ [ "green", "Green" ], [ "black", "Black" ] ],
+    "choices" : [ [ "sherpa", "Sherpa" ], [ "black", "Black" ] ],
     "multiple" : false,
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "green"
+    "default" : "sherpa"
   } ],
   "tab" : "CONTENT",
   "expanded" : false,

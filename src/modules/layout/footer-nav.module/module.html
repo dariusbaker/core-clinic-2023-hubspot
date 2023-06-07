@@ -1,3 +1,4 @@
+{% from '../../../macros/macros.html' import slugify %}
 <nav class="footer-nav">
   {# top row #}
   <div class="footer-nav__top">
@@ -50,15 +51,12 @@
                   <a
                     href="{{ link.url }}"
                     target="{{ link.linkTarget }}"
-                    data-slug="{{ link.slug }}"
                     class="
                       {{ link.activeBranch ? "footer-services-nav__a--active" : "" }}
                       footer-services-nav__a
                       services-cat-list__item-content
                       a">
-                    <span class="
-                      services-cat-list__badge
-                      service-badge {{ link.slug is truthy ? "service-badge--" + link.slug : "" }}">
+                    <span data-id="{{ slugify(link.label) }}" class="services-cat-list__badge service-badge">
                     </span>
                     <span class="
                       services-cat-list__label">

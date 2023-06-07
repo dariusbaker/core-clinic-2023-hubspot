@@ -1,3 +1,5 @@
+{% from '../../../macros/macros.html' import slugify %}
+
 <div class="menu-nav">
   {# quick nav #}
   <div class="
@@ -43,14 +45,11 @@
             <a
               href="{{ link.url }}"
               target="{{ link.linkTarget }}"
-              data-slug="{{ link.slug }}"
               class="
                 {{ link.activeBranch ? "services-cat-list__item-content--active" : "" }}
                 services-cat-list__item-content
                 a">
-              <span class="
-                services-cat-list__badge
-                service-badge {{ link.slug is truthy ? "service-badge--" + link.slug : "" }}">
+              <span data-id="{{ slugify(link.label) }}" class="services-cat-list__badge service-badge">
               </span>
               <span class="
                 services-cat-list__label">

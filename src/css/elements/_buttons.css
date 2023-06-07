@@ -4,10 +4,10 @@ button,
   display: inline-block;
   padding: var(--space-3) var(--space-5);
   transition: all var(--transition-time-fast);
-  border: var(--border-width-2) solid var(--green);
+  border: var(--border-width-2) solid var(--anakiwa);
   border-radius: var(--border-radius-3);
-  background: var(--green);
-  color: var(--white);
+  background: var(--anakiwa);
+  color: var(--shark);
   font-size: var(--font-scale-7);
   font-weight: 700;
   letter-spacing: var(--track-wide);
@@ -55,7 +55,7 @@ button:focus,
 .button--black {
   border-color: var(--black);
   background: var(--black);
-  color: var(--light-green);
+  color: var(--anakiwa);
 }
 
 /* theme: teal */
@@ -70,4 +70,16 @@ button:focus,
   border-color: var(--clinicblue);
   background: var(--clinicblue);
   color: var(--black);
+}
+
+.button--anakiwa {
+  border-color: var(--anakiwa);
+  background: var(--anakiwa);
+  color: var(--shark);
+}
+
+.button--shark {
+  border-color: var(--shark);
+  background: var(--shark);
+  color: var(--white);
 }
