@@ -46,7 +46,7 @@
 
 .faq-section__item-term-icon {
   transition: transform var(--transition-time-fast);
-  color: var(--light-green);
+  color: var(--clinical-blue);
 }
 
 .faq-section__item-def {

@@ -75,7 +75,7 @@
     "required" : false,
     "locked" : false,
     "display" : "select",
-    "choices" : [ [ "black", "Black" ], [ "teal", "Teal" ] ],
+    "choices" : [ [ "black", "Black" ], [ "anakiwa", "Anakiwa" ] ],
     "multiple" : false,
     "reordering_enabled" : true,
     "preset" : null,

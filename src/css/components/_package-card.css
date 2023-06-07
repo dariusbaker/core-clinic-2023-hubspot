@@ -79,3 +79,17 @@
 .package-card__body--badge {
   padding-top: calc(var(--space-4) + var(--space-3));
 }
+
+.package-banner--sherpa .package-card__body {
+  background-color: var(--shark);
+  color: var(--white);
+}
+
+.package-banner--sherpa .package-card__badge {
+  background-color: var(--white);
+  color: var(--blue-chill);
+}
+
+.package-banner--sherpa .package-card__badge-icon {
+  color: var(--sherpa);
+}

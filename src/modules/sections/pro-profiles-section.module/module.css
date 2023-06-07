@@ -110,7 +110,7 @@
 }
 
 .pro-profile-card__org {
-  color: var(--dark-grey);
+  color: var(--grey);
   font-size: var(--font-scale-8);
   font-weight: 700;
   letter-spacing: var(--track);
@@ -186,15 +186,14 @@
 .pro-profiles-section__filter-list .button {
   margin-top: var(--space-2);
   margin-right: var(--space-2);
-  border-color: var(--dark-grey);
-  background: var(--dark-grey);
-  color: var(--grey);
+  border-color: var(--shark);
+  background: var(--shark);
+  color: var(--anakiwa);
 }
 
 .pro-profiles-section__filter-list .button[data-active='true'] {
-  border-color: var(--black);
-  background: var(--black);
-  color: var(--light-green);
+  background: var(--anakiwa);
+  color: var(--shark);
 }
 
 .pro-profiles-section__item[data-hidden='true'] {

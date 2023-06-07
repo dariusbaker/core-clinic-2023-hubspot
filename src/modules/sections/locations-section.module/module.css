@@ -57,7 +57,7 @@
 /* card */
 .location-card__icon {
   margin-bottom: var(--space-3);
-  color: var(--mid-grey);
+  color: var(--grey);
 }
 
 .location-card__title {

@@ -58,3 +58,22 @@
 .card--grey .card__kicker {
   color: var(--black);
 }
+
+/* variant: shark */
+.card--shark {
+  background: var(--shark);
+  color: var(--white);
+}
+
+.card--shark .card__kicker {
+  color: var(--grey);
+}
+
+/* variant: anakiwa */
+.card--anakiwa {
+  background: var(--anakiwa);
+}
+
+.card--anakiwa .card__kicker {
+  color: var(--sherpa);
+}

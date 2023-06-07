@@ -65,7 +65,9 @@
                     rel ="{{ rel }}"
                     class="
                       package-card__button
-                      button button--s">
+                      button
+                      button--s
+                      {{ 'button--shark' if module.style.color_option == 'black' else '' }}">
                     {{ package.button_text }}
                   </a>
                 {% endif %}

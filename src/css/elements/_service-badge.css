@@ -2,33 +2,29 @@
   width: 1.25rem;
   height: 1.25rem;
   border-radius: 50%;
-  background: var(--grey);
+  background-color: var(--grey);
 }
 
-.service-badge--group-fitness {
-  background: var(--green);
+.service-badge[data-id*='beauty-aesthetics'] {
+  background-color: var(--clinical-blue);
 }
 
-.service-badge--personal-training {
-  background: var(--black);
+.service-badge[data-id*='group-fitness-classes'] {
+  background-color: var(--sherpa);
 }
 
-.service-badge--medical {
-  background: var(--clinical-blue);
+.service-badge[data-id*='lifestyle-children'] {
+  background-color: var(--onahau);
 }
 
-.service-badge--beauty-aesthetics {
-  background: var(--light-teal);
+.service-badge[data-id*='medical'] {
+  background-color: var(--anakiwa);
 }
 
-.service-badge--lifestyle-children {
-  background: var(--beige);
+.service-badge[data-id*='personal-training'] {
+  background-color: var(--shark);
 }
 
-.service-badge--wellness {
-  background: var(--light-blue);
-}
-
-.service-badge--services-beauty-aesthetics {
-  background: var(--light-teal);
+.service-badge[data-id*='wellness'] {
+  background-color: var(--grey);
 }
