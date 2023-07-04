@@ -1,0 +1,14 @@
+/* Overrides for the "slick" carousel used by HubSpot's image gallery module */
+.slick-dots li::before {
+  display: none;
+}
+
+.slick-dots li button::before {
+  font-family: sans-serif !important;
+}
+
+.hs_cos_gallery_main .slick-dots li button::before,
+.hs_cos_gallery_thumbnails .slick-dots li button::before,
+.hs_cos_gallery_lightbox .slick-dots li button::before {
+  font-size: 45px !important;
+}
