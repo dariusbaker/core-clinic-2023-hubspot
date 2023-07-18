@@ -68,13 +68,21 @@
     "name" : "button_text",
     "display_width" : null,
     "label" : "Button text",
-    "required" : true,
+    "required" : false,
     "locked" : false,
     "validation_regex" : "",
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
     "default" : "Click here"
+  }, {
+    "id" : "card.button_visible",
+    "name" : "button_visible",
+    "label" : "Show button",
+    "required" : false,
+    "show_emoji_picker" : false,
+    "type" : "boolean",
+    "default" : true
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
