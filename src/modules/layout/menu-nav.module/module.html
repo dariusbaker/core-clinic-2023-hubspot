@@ -62,37 +62,6 @@
     {% endif %}
   </div>
 
-  {#  driver #}
-  <div class="
-    menu-nav__section
-    driver">
-    {% set href = module.driver.link.url.href || '' %}
-    {% set rel = (module.driver.link.open_in_new_tab ? 'noopener ' : null) ~ (module.driver.link.no_follow ? 'nofollow' : null) %}
-    <a
-      {% if module.driver.link.open_in_new_tab %}target="_blank"{% endif %}
-      href="{{ href }}"
-      rel ="{{ rel }}"
-      class="
-        driver__a
-        a">
-      <div class="driver__header">
-        <h1 class="
-          driver__title
-          h3">
-          {{ module.driver.title }}
-        </h1>
-        <i class="
-          driver__a-icon
-          icon icon--s
-          fas fa-external-link-alt">
-        </i>
-      </div>
-      <div class="driver__excerpt">
-        {{ module.driver.excerpt }}
-      </div>
-    </a>
-  </div>
-
   {# main nav #}
   <div class="
     menu-nav__section
