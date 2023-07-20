@@ -1,10 +1,10 @@
 :root {
-  --announcement-bar-height: 1.85rem;
-  --announcement-bar-height-m: 1.85rem;
+  --announcement-bar-height: 1.875rem;
+  --announcement-bar-height-m: 1.875rem;
   --announcement-bar-height-l: 1.875rem;
-  --header-height: 4.15rem;
-  --header-height-m: 4.15rem;
-  --header-height-l: 5.35rem;
+  --header-height: 4rem;
+  --header-height-m: 4rem;
+  --header-height-l: 5rem;
 }
 
 .header-announcement-bar,
@@ -27,8 +27,12 @@ header.header,
 }
 
 header.header {
+  display: flex;
   z-index: 12;
   top: 0;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: center;
   height: var(--header-height);
   background: var(--white);
 }

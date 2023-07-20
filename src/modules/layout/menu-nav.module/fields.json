@@ -1,76 +1,29 @@
-[ {
-  "id" : "quick_nav",
-  "name" : "quick_nav",
-  "display_width" : null,
-  "label" : "Quick navigation",
-  "required" : true,
-  "locked" : true,
-  "type" : "menu"
-}, {
-  "id" : "services_nav",
-  "name" : "services_nav",
-  "display_width" : null,
-  "label" : "Services navigation",
-  "required" : true,
-  "locked" : true,
-  "type" : "menu"
-}, {
-  "id" : "driver",
-  "name" : "driver",
-  "display_width" : null,
-  "label" : "Driver",
-  "required" : false,
-  "locked" : true,
-  "children" : [ {
-    "id" : "driver.title",
-    "name" : "title",
+[
+  {
+    "id" : "quick_nav",
+    "name" : "quick_nav",
     "display_width" : null,
-    "label" : "Title",
+    "label" : "Quick navigation",
     "required" : true,
-    "locked" : false,
-    "validation_regex" : "",
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text",
-    "default" : "Item title"
-  }, {
-    "id" : "driver.excerpt",
-    "name" : "excerpt",
+    "locked" : true,
+    "type" : "menu"
+  },
+  {
+    "id" : "services_nav",
+    "name" : "services_nav",
     "display_width" : null,
-    "label" : "Excerpt",
+    "label" : "Services navigation",
     "required" : true,
-    "locked" : false,
-    "type" : "richtext",
-    "default" : "<p>One to two lines describing this item</p>"
-  }, {
-    "id" : "driver.link",
-    "name" : "link",
+    "locked" : true,
+    "type" : "menu"
+  },
+  {
+    "id" : "main_nav",
+    "name" : "main_nav",
     "display_width" : null,
-    "label" : "Link",
+    "label" : "Main navigation",
     "required" : true,
-    "locked" : false,
-    "validation_regex" : "",
-    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
-    "show_advanced_rel_options" : false,
-    "type" : "link",
-    "default" : {
-      "url" : {
-        "href" : "https://google.com",
-        "type" : "EXTERNAL"
-      },
-      "no_follow" : false,
-      "open_in_new_tab" : false
-    }
-  } ],
-  "tab" : "CONTENT",
-  "expanded" : false,
-  "type" : "group"
-}, {
-  "id" : "main_nav",
-  "name" : "main_nav",
-  "display_width" : null,
-  "label" : "Main navigation",
-  "required" : true,
-  "locked" : true,
-  "type" : "menu"
-} ]
+    "locked" : true,
+    "type" : "menu"
+  }
+]
