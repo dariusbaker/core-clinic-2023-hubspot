@@ -69,11 +69,11 @@
   color: var(--grey);
 }
 
-/* variant: turqoise */
-.card--turqoise {
-  background: var(--turqoise);
+/* variant: turquoise */
+.card--turquoise {
+  background: var(--turquoise);
 }
 
-.card--turqoise .card__kicker {
+.card--turquoise .card__kicker {
   color: var(--sherpa);
 }

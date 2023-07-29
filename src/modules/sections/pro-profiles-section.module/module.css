@@ -188,11 +188,11 @@
   margin-right: var(--space-2);
   border-color: var(--shark);
   background: var(--shark);
-  color: var(--turqoise);
+  color: var(--turquoise);
 }
 
 .pro-profiles-section__filter-list .button[data-active='true'] {
-  background: var(--turqoise);
+  background: var(--turquoise);
   color: var(--shark);
 }
 

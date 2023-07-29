@@ -75,7 +75,7 @@
     "required" : false,
     "locked" : false,
     "display" : "select",
-    "choices" : [ [ "black", "Black" ], [ "anakiwa", "Anakiwa" ] ],
+    "choices" : [ [ "black", "Black" ], [ "turquoise", "Bright Turquoise" ] ],
     "multiple" : false,
     "reordering_enabled" : true,
     "preset" : null,

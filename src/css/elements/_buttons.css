@@ -4,9 +4,9 @@ button,
   display: inline-block;
   padding: var(--space-3) var(--space-5);
   transition: all var(--transition-time-fast);
-  border: var(--border-width-2) solid var(--turqoise);
+  border: var(--border-width-2) solid var(--turquoise);
   border-radius: var(--border-radius-3);
-  background: var(--turqoise);
+  background: var(--turquoise);
   color: var(--shark);
   font-size: var(--font-scale-7);
   font-weight: 700;
@@ -55,7 +55,7 @@ button:focus,
 .button--black {
   border-color: var(--black);
   background: var(--black);
-  color: var(--turqoise);
+  color: var(--turquoise);
 }
 
 /* theme: teal */
@@ -72,9 +72,9 @@ button:focus,
   color: var(--black);
 }
 
-.button--turqoise {
-  border-color: var(--turqoise);
-  background: var(--turqoise);
+.button--turquoise {
+  border-color: var(--turquoise);
+  background: var(--turquoise);
   color: var(--shark);
 }
 

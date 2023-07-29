@@ -60,7 +60,7 @@
     "required" : false,
     "locked" : false,
     "display" : "select",
-    "choices" : [ [ "shark", "Black" ], [ "turqoise", "Bright Turqoise" ], [ "grey", "Dark Grey" ] ],
+    "choices" : [ [ "shark", "Black" ], [ "turquoise", "Bright Turquoise" ], [ "grey", "Dark Grey" ] ],
     "multiple" : false,
     "reordering_enabled" : true,
     "preset" : null,
