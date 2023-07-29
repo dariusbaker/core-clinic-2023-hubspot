@@ -188,11 +188,11 @@
   margin-right: var(--space-2);
   border-color: var(--shark);
   background: var(--shark);
-  color: var(--anakiwa);
+  color: var(--turqoise);
 }
 
 .pro-profiles-section__filter-list .button[data-active='true'] {
-  background: var(--anakiwa);
+  background: var(--turqoise);
   color: var(--shark);
 }
 

@@ -69,11 +69,11 @@
   color: var(--grey);
 }
 
-/* variant: anakiwa */
-.card--anakiwa {
-  background: var(--anakiwa);
+/* variant: turqoise */
+.card--turqoise {
+  background: var(--turqoise);
 }
 
-.card--anakiwa .card__kicker {
+.card--turqoise .card__kicker {
   color: var(--sherpa);
 }
