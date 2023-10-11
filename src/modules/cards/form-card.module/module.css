@@ -45,19 +45,19 @@
 
 .form-card.card--shark input[type='submit'],
 .form-card.card--shark .hs-button {
-  border-color: var(--anakiwa);
-  background: var(--anakiwa);
+  border-color: var(--turquoise);
+  background: var(--turquoise);
   color: var(--shark);
 }
 
-/* variant: anakiwa */
-.form-card.card--anakiwa .form-card__kicker {
+/* variant: turquoise */
+.form-card.card--turquoise .form-card__kicker {
   text-transform: uppercase;
 }
 
-.form-card.card--anakiwa input[type='submit'],
-.form-card.card--anakiwa .hs-button {
+.form-card.card--turquoise input[type='submit'],
+.form-card.card--turquoise .hs-button {
   border-color: var(--shark);
   background: var(--shark);
-  color: var(--anakiwa);
+  color: var(--turquoise);
 }

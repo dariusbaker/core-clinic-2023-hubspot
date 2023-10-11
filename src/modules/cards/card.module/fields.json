@@ -77,7 +77,7 @@
     "required" : false,
     "locked" : false,
     "display" : "select",
-    "choices" : [ [ "shark", "Shark" ], [ "anakiwa", "Anakiwa" ], [ "grey", "Grey" ] ],
+    "choices" : [ [ "shark", "Black" ], [ "turquoise", "Bright Turquoise" ], [ "grey", "Dark Grey" ] ],
     "multiple" : false,
     "reordering_enabled" : true,
     "preset" : null,
