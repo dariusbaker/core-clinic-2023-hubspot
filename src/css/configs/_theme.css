@@ -1,22 +1,35 @@
 :root {
+  /*
+   * Some colours are named using:
+   * https://chir.ag/projects/name-that-color/
+   */
+  --turquoise: #80f7ff;
   --beige: #fadaba;
-  --green: #005133;
-  --light-green: #7aea7a;
-  --lime: #c5eb74;
-  --teal: #02b9cf;
-  --light-teal: #b8dedc;
-  --light-blue: #8dadae;
-  --red: #ea7566;
-  --slate: #466061;
   --black: #20201d;
-  --dark-grey: #696969;
-  --mid-grey: #a8a8ae;
-  --grey: #c5c5c5;
-  --light-grey: #f5f5f5;
-  --white: #ffffff;
-  --off-white: #ecede4;
   --clinical-blue: #00c1d5;
   --clinical-grey: #eae7e4;
+  --dark-grey: #696969;
+  --green: #005133;
+  --grey: #c5c5c5;
+  --lagoon: #008c95;
+  --light-blue: #8dadae;
+  --light-green: #7aea7a;
+  --light-grey: #f5f5f5;
+  --light-teal: #b8dedc;
+  --lime: #c5eb74;
+  --mid-grey: #a8a8ae;
+  --off-white: #ecede4;
+  --onahau: #bffbff;
+  --polar: #e8f6f9;
+  --red: #ea7566;
+  --slate: #466061;
+  --teal: #02b9cf;
+  --white: #ffffff;
+  --ziggurat: #b8d4de;
+  --shark: #1d1e20;
+  --sherpa: #005151;
+  --blue-chill: #158f95;
+
   --border-width-1: 0.0625rem;
   --border-width-2: 0.125rem;
   --border-width-3: 0.25rem;
@@ -31,8 +44,8 @@
   --transition-time-fast: 0.15s;
   --transition-time-slow: 0.85s;
 
-  --background: var(--off-white);
+  --background: var(--polar);
   --light-background: var(--light-grey);
-  --primary-text-color: var(--black);
-  --secondary-text-color: var(--green);
+  --primary-text-color: var(--shark);
+  --secondary-text-color: var(--sherpa);
 }

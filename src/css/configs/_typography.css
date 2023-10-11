@@ -1,9 +1,8 @@
 :root {
   --open-sans: 'Open Sans', sans-serif;
-  --tenor-sans: 'Tenor Sans', sans-serif;
   --montserrat: 'Montserrat', sans-serif;
   --primary-font: var(--open-sans);
-  --secondary-font: var(--tenor-sans);
+  --secondary-font: var(--montserrat);
   --base-font-size: 13px;
   --base-font-size-m: 14px;
   --base-font-size-l: 16px;
@@ -283,7 +282,7 @@ hr:last-child {
 
 :focus {
   outline: auto;
-  outline-color: green;
+  outline-color: var(--clinical-blue);
 }
 
 .disable-focus-styles :focus {

@@ -2,33 +2,5 @@
   width: 1.25rem;
   height: 1.25rem;
   border-radius: 50%;
-  background: var(--grey);
-}
-
-.service-badge--group-fitness {
-  background: var(--green);
-}
-
-.service-badge--personal-training {
-  background: var(--black);
-}
-
-.service-badge--medical {
-  background: var(--clinical-blue);
-}
-
-.service-badge--beauty-aesthetics {
-  background: var(--light-teal);
-}
-
-.service-badge--lifestyle-children {
-  background: var(--beige);
-}
-
-.service-badge--wellness {
-  background: var(--light-blue);
-}
-
-.service-badge--services-beauty-aesthetics {
-  background: var(--light-teal);
+  background-color: var(--clinical-blue);
 }

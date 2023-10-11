@@ -8,23 +8,22 @@
   flex: 0 0 8.75rem;
 }
 
-.header-quick-nav,
-.header-utils__driver {
+.header-quick-nav {
   display: none;
 }
 
 @media (min-width: 960px) {
-  .header-logo,
-  .header-utils {
+  .header-logo {
     flex: 0 0 12.5rem;
   }
 
-  .header-quick-nav,
-  .header-utils__driver {
-    display: block;
+  .header-utils {
+    flex: 0 0 auto;
+    width: 12.5rem;
   }
 
   .header-quick-nav {
+    display: block;
     margin-right: var(--space-5);
     margin-left: var(--space-5);
   }
@@ -73,12 +72,6 @@
   }
 }
 
-/* utils */
-.header-utils__driver {
-  padding-left: var(--space-4);
-  border-left: var(--border-width-1) solid var(--grey);
-}
-
 .header-menu-button {
   position: relative;
   padding: 0;
@@ -105,35 +98,14 @@
   opacity: 0;
 }
 
-/* theme: clinic */
-.header-nav--clinic {
-  background: var(--teal);
-}
-
-.header-nav--clinic .header-utils__driver {
-  border-left-color: var(--black);
-}
-
-.header-nav--clinic .header-utils__driver-excerpt {
-  color: var(--black);
-}
-
 /* theme: dark */
 .header-nav--dark {
-  background: var(--black);
+  background: var(--blue-chill);
   color: var(--white);
 }
 
-.header-nav--dark .header-utils__driver {
-  border-left-color: var(--dark-grey);
-}
-
-.header-nav--dark .header-utils__driver-excerpt {
-  color: var(--grey);
-}
-
-.header-nav--dark .header-utils__driver-a:hover .header-utils__driver-excerpt {
-  color: var(--mid-grey);
+.header-nav--dark .header-quick-nav__a:hover {
+  color: var(--shark);
 }
 
 /* JS enhancements */

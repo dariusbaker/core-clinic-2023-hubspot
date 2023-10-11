@@ -60,12 +60,12 @@
     "required" : false,
     "locked" : false,
     "display" : "select",
-    "choices" : [ [ "green", "Green" ], [ "beige", "Beige" ], [ "grey", "Grey" ] ],
+    "choices" : [ [ "shark", "Black" ], [ "turquoise", "Bright Turquoise" ], [ "grey", "Dark Grey" ] ],
     "multiple" : false,
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "beige"
+    "default" : "shark"
   } ],
   "tab" : "CONTENT",
   "expanded" : false,

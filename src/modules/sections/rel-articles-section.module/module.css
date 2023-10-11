@@ -30,7 +30,7 @@
 .rel-article-card {
   overflow: hidden;
   border-radius: var(--border-radius-3);
-  background: var(--green);
+  background: var(--shark);
   color: var(--white);
 }
 

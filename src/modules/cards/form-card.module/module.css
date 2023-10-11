@@ -37,3 +37,27 @@
   background: var(--teal);
   color: var(--black);
 }
+
+/* variant: shark */
+.form-card.card--shark .form-card__kicker {
+  text-transform: uppercase;
+}
+
+.form-card.card--shark input[type='submit'],
+.form-card.card--shark .hs-button {
+  border-color: var(--turquoise);
+  background: var(--turquoise);
+  color: var(--shark);
+}
+
+/* variant: turquoise */
+.form-card.card--turquoise .form-card__kicker {
+  text-transform: uppercase;
+}
+
+.form-card.card--turquoise input[type='submit'],
+.form-card.card--turquoise .hs-button {
+  border-color: var(--shark);
+  background: var(--shark);
+  color: var(--turquoise);
+}

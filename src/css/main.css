@@ -36,7 +36,6 @@
 {% include './components/_header.css' %}
 {% include './components/_footer.css' %}
 {% include './components/_section-header.css' %}
-{% include './components/_driver.css' %}
 {% include './components/_quick-links-list.css' %}
 {% include './components/_services-cat-list.css' %}
 {% include './components/_main-links-list.css' %}
@@ -44,6 +43,7 @@
 {% include './components/_blog-social-share.css' %}
 {% include './components/_card.css' %}
 {% include './components/_package-card.css' %}
+{% include './components/_slick.css' %}
 
 /* templates */
 {% include './templates/_post.css' %}

@@ -1,0 +1,11 @@
+{%- macro slugify(text) -%}
+  {%- set output = text %}
+  {%- set output = output | string | lower -%}
+  {%- set output = output | regex_replace("[\t\n\f\r ]", "-") -%}   {# replace spaces with - #}
+  {%- set output = output | regex_replace("[^0-9A-Za-z_-]", "") -%} {# remove all non-word characters #}
+  {%- set output = output | regex_replace("-+", "-") -%}            {# replace multiple - with single - #}
+  {%- set output = output | regex_replace("^[-]", "") -%}           {# trim - from start of text #}
+  {%- set output = output | regex_replace("[-]$", "") -%}           {# trim - from end of text #}
+
+  {{- output -}}
+{%- endmacro -%}

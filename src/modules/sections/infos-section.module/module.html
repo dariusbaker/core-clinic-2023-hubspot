@@ -18,7 +18,7 @@
               {{ card.desc }}
             </div>
             {% set href = card.link.url.href || '' %}
-            {% if href is truthy %}
+            {% if href is truthy and card.button_visible %}
               {% set rel = (card.link.open_in_new_tab ? 'noopener ' : null) ~ (card.link.no_follow ? 'nofollow' : null) %}
               <a
                 {% if card.link.open_in_new_tab %}target="_blank"{% endif %}

@@ -1,119 +1,75 @@
-[ {
-  "id" : "logo",
-  "name" : "logo",
-  "display_width" : null,
-  "label" : "Logo",
-  "required" : false,
-  "locked" : true,
-  "children" : [ {
-    "id" : "logo.light",
-    "name" : "light",
-    "display_width" : null,
-    "label" : "Light",
-    "required" : true,
-    "locked" : false,
-    "responsive" : true,
-    "resizable" : true,
-    "show_loading" : false,
-    "type" : "image",
-    "default" : {
-      "size_type" : "auto",
-      "src" : "https://via.placeholder.com/200x60.png",
-      "alt" : null
-    }
-  }, {
-    "id" : "logo.dark",
-    "name" : "dark",
-    "display_width" : null,
-    "label" : "Dark",
-    "required" : true,
-    "locked" : false,
-    "responsive" : true,
-    "resizable" : true,
-    "show_loading" : false,
-    "type" : "image",
-    "default" : {
-      "size_type" : "auto",
-      "src" : "https://via.placeholder.com/200x60.png",
-      "alt" : null
-    }
-  }, {
-    "id" : "logo.clinic",
-    "name" : "clinic",
-    "display_width" : null,
-    "label" : "Clinic",
-    "required" : true,
-    "locked" : false,
-    "responsive" : true,
-    "resizable" : true,
-    "show_loading" : false,
-    "type" : "image",
-    "default" : {
-      "size_type" : "auto",
-      "src" : "https://via.placeholder.com/180x40.png",
-      "alt" : null
-    }
-  } ],
-  "tab" : "CONTENT",
-  "expanded" : false,
-  "type" : "group"
-}, {
-  "id" : "quick_nav",
-  "name" : "quick_nav",
-  "display_width" : null,
-  "label" : "Quick navigation",
-  "required" : true,
-  "locked" : true,
-  "type" : "menu"
-}, {
-  "id" : "driver",
-  "name" : "driver",
-  "display_width" : null,
-  "label" : "Driver",
-  "required" : false,
-  "locked" : true,
-  "children" : [ {
-    "id" : "driver.title",
-    "name" : "title",
-    "display_width" : null,
-    "label" : "Title",
-    "required" : true,
-    "locked" : false,
-    "validation_regex" : "",
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text",
-    "default" : "Item title"
-  }, {
-    "id" : "driver.excerpt",
-    "name" : "excerpt",
-    "display_width" : null,
-    "label" : "Excerpt",
-    "required" : true,
-    "locked" : false,
-    "type" : "richtext",
-    "default" : "<p>One to two lines describing this item</p>"
-  }, {
-    "id" : "driver.link",
-    "name" : "link",
-    "display_width" : null,
-    "label" : "Link",
-    "required" : true,
-    "locked" : false,
-    "validation_regex" : "",
-    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
-    "show_advanced_rel_options" : false,
-    "type" : "link",
-    "default" : {
-      "url" : {
-        "href" : "https://google.com",
-        "type" : "EXTERNAL"
+[
+  {
+    "id": "logo",
+    "name": "logo",
+    "display_width": null,
+    "label": "Logo",
+    "required": false,
+    "locked": true,
+    "children": [
+      {
+        "id" : "logo.light",
+        "name" : "light",
+        "display_width" : null,
+        "label" : "Light",
+        "required" : true,
+        "locked" : false,
+        "responsive" : true,
+        "resizable" : true,
+        "show_loading" : false,
+        "type" : "image",
+        "default" : {
+          "size_type" : "auto",
+          "src" : "https://via.placeholder.com/200x60.png",
+          "alt" : null
+        }
       },
-      "no_follow" : false,
-      "open_in_new_tab" : false
-    }
-  } ],
-  "tab" : "CONTENT",
-  "expanded" : false,
-  "type" : "group"
-} ]
+      {
+        "id" : "logo.dark",
+        "name" : "dark",
+        "display_width" : null,
+        "label" : "Dark",
+        "required" : true,
+        "locked" : false,
+        "responsive" : true,
+        "resizable" : true,
+        "show_loading" : false,
+        "type" : "image",
+        "default" : {
+          "size_type" : "auto",
+          "src" : "https://via.placeholder.com/200x60.png",
+          "alt" : null
+        }
+      },
+      {
+        "id" : "logo.clinic",
+        "name" : "clinic",
+        "display_width" : null,
+        "label" : "Clinic",
+        "required" : true,
+        "locked" : false,
+        "responsive" : true,
+        "resizable" : true,
+        "show_loading" : false,
+        "type" : "image",
+        "default" : {
+          "size_type" : "auto",
+          "src" : "https://via.placeholder.com/180x40.png",
+          "alt" : null
+        }
+      }
+    ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group"
+  },
+  {
+    "id" : "quick_nav",
+    "name" : "quick_nav",
+    "display_width" : null,
+    "label" : "Quick navigation",
+    "required" : true,
+    "locked" : true,
+    "type" : "menu"
+  }
+]

@@ -10,12 +10,11 @@
     {% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
     <meta name="description" content="{{ page_meta.meta_description }}">
     {{ require_css(get_asset_url('../../css/main.css')) }}
-    {{ require_css(get_asset_url('../../css/clinic.css')) }}
     {# Where possible, improve page performance and speed by combining external http requests to reduce your
       overall number of calls -- here, you can use a single call to the gFonts api to get all the fonts you need
       https://developers.google.com/fonts/docs/getting_started
     #}
-    {{ require_css("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap") }}
+    {{ require_css("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Tenor+Sans&display=swap") }}
     {# Include theme overrides #}
     {# {{ require_css(get_asset_url('../../css/theme-overrides.css')) }} #}
     {{ require_js("https://kit.fontawesome.com/3dbda9ba02.js", "footer") }}
@@ -29,7 +28,7 @@
     <div class="body-wrapper {{ builtin_body_classes }}">
       {% block site_config %}
         {% module 'site_config'
-          path='/core-collective-theme/modules/layout/site-config',
+          path='/core-clinic-theme/modules/layout/site-config',
           label='Site config',
           export_to_template_context=true,
         %}
@@ -37,11 +36,9 @@
 
       {% block page_config %}
         {% module 'page_config'
-          path='/core-collective-theme/modules/layout/page-config',
+          path='/core-clinic-theme/modules/layout/page-config',
           label='Page config',
-          export_to_template_context=true,
-          header_theme="clinic",
-          footer_theme="clinic",
+          export_to_template_context=true
         %}
       {% endblock page_config %}
 

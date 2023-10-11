@@ -56,43 +56,6 @@
 
   {# utils #}
   <div class="header-utils">
-    {#  driver #}
-    <div class="
-      header-utils__driver
-      driver">
-      {% set href = module.driver.link.url.href || '' %}
-      {% set rel = (module.driver.link.open_in_new_tab ? 'noopener ' : null) ~ (module.driver.link.no_follow ? 'nofollow' : null) %}
-      <a
-        {% if module.driver.link.open_in_new_tab %}target="_blank"{% endif %}
-        href="{{ href }}"
-        rel ="{{ rel }}"
-        class="
-          header-utils__driver-a
-          driver__a
-          a">
-        <div class="
-          header-utils__driver-header
-          driver__header">
-          <h1 class="
-            header-utils__driver-title
-            driver__title
-            h3">
-            {{ module.driver.title }}
-          </h1>
-          <i class="
-            driver__a-icon header-utils__driver-a-icon
-            icon icon--s
-            fas fa-external-link-alt">
-          </i>
-        </div>
-        <div class="
-          header-utils__driver-excerpt
-          driver__excerpt">
-          {{ module.driver.excerpt }}
-        </div>
-      </a>
-    </div>
-
     {# menu button #}
     <div class="header-utils__menu-button">
       <button
